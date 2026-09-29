@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Iontech Lenovo Catalog</title>
+<meta name="description" content="Offline-capable Lenovo product catalog and inventory reference for sales teams and dealers.">
+<meta name="theme-color" content="#111111">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#/onhand" class="brand" aria-label="Home">
+      <img src="img/iontech-logo.png" alt="Iontech" class="logo-iontech">
+      <span class="brand-sep"></span>
+      <img src="img/lenovo-logo.png" alt="Lenovo" class="logo-lenovo">
+    </a>
+    <div class="search-wrap">
+      <svg class="ico search-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 0 1 5.9 12.1l4.8 4.8-1.4 1.4-4.8-4.8A7.5 7.5 0 1 1 10.5 3zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z"/></svg>
+      <input id="search" type="search" placeholder="Search MTM, model, CPU, GPU, keyword…" autocomplete="off" enterkeyhint="search" aria-label="Search products">
+      <button id="searchClear" class="search-clear" aria-label="Clear search" hidden>&times;</button>
+    </div>
+    <nav class="topnav" aria-label="Main">
+      <a href="#/onhand" data-nav="catalog">Catalog</a>
+      <a href="#/compare" data-nav="compare">Compare <span class="pill" id="navCompareCount" hidden></span></a>
+    </nav>
+    <div class="top-actions">
+      <button id="bellBtn" class="icon-btn" aria-label="Price updates" title="Price updates">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5.5-6.84V3a1.5 1.5 0 0 0-3 0v1.16A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2z"/></svg>
+        <span class="badge" id="bellBadge" hidden></span>
+      </button>
+    </div>
+  </div>
+  <div id="netStatus" class="net-status" hidden>You're offline — showing saved catalog</div>
+</header>
+
+<div id="banner" class="banner" hidden></div>
+<main id="view" tabindex="-1"></main>
+
+<div id="compareTray" class="compare-tray" hidden></div>
+
+<nav class="bottomnav" aria-label="Main mobile">
+  <a href="#/onhand" data-nav="catalog"><svg class="ico" viewBox="0 0 24 24"><path d="M4 4h7v7H4zm9 0h7v7h-7zM4 13h7v7H4zm9 0h7v7h-7z"/></svg><span>Catalog</span></a>
+  <a href="#/compare" data-nav="compare"><svg class="ico" viewBox="0 0 24 24"><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5v2h2V1h-2v2zm0 15H5l5-6v6zm9-15h-5v2h5v13l-5-6v9h5a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg><span>Compare</span><i class="dot-count" id="bnCompareCount" hidden></i></a>
+</nav>
+
+<div id="modal" class="modal" hidden role="dialog" aria-modal="true"><div class="modal-card" id="modalCard"></div></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="vendor/qrcode.js"></script>
+<script src="data/products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
