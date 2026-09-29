@@ -1056,7 +1056,7 @@ function exportAllPdf() {
   const esc2 = (s) => s.replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)');
   const text = (x, yy, s, size, bold, rgb = '0.1 0.1 0.1') => ops.push(`BT ${rgb} rg /${bold ? 'F2' : 'F1'} ${size} Tf ${x.toFixed(2)} ${yy.toFixed(2)} Td (${esc2(s)}) Tj ET`);
   const rect = (x, yy, w, h, rgb) => ops.push(`${rgb} rg ${x.toFixed(2)} ${yy.toFixed(2)} ${w.toFixed(2)} ${h.toFixed(2)} re f`);
-  const title = clean(`Iontech - Lenovo Price List${S.data.priceListName ? '  |  ' + S.data.priceListName : ''}`);
+  const title = 'Iontech - Lenovo Price List';
   const newPage = () => {
     if (ops.length) pages.push(ops);
     ops = []; y = PH - M;

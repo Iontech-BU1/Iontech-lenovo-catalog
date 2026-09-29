@@ -396,3 +396,9 @@ body.has-tray .disclaimer{padding-bottom:90px}
   .card-title{display:block;height:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-webkit-line-clamp:unset}
 }
 .grid.list .card-img{aspect-ratio:auto}
+/* lock photo boxes to one size regardless of the photo's own dimensions (white fills any gap) */
+.card-img{position:relative;overflow:hidden;background:#fff}
+.card-img img,.card-img .img-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center}
+.card-img .card-badges{z-index:1}
+.gallery-main{contain:size;background:#fff}
+.gallery-main img{height:100%;max-height:100%;min-height:0}
