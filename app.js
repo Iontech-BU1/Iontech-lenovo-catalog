@@ -57,6 +57,8 @@ const idb = {
 
 const ADMIN_MODE = window.CATALOG_ADMIN === true; // only true in the private Admin Tool copy
 
+const DISCLAIMER = 'For internal sales and authorized dealer reference only. Pricing, product specifications, promotional offers, and availability are subject to change without prior notice. Please confirm the latest details with your Iontech sales representative prior to order placement.';
+
 /* ================= state ================= */
 const S = {
   data: null, meta: { baseVersion: null, dirty: false },
@@ -429,8 +431,8 @@ function renderDetail(mtm) {
       </div>
       ${up.recommendation ? `<div class="rec">${ICON.bulb}<div><b>Upgrade recommendation:</b> ${esc(up.recommendation)}</div></div>` : ''}
     </div>` : ''}
-    ${alts.length ? `<div class="section-title"><h2>Suggested alternatives</h2><span class="small muted">Matched on category, price, GPU and memory</span></div>
-      <div class="alt-grid">${alts.map(a => `<a class="alt" href="#/p/${encodeURIComponent(a.x.mtm)}">${imgTag(thumb(a.x), a.x.model)}<div><b>${esc(a.x.model)}</b><div class="small">${peso(effPrice(a.x))}</div><div class="why">${esc(a.why)}</div></div></a>`).join('')}</div>` : ''}
+    ${alts.length ? `<section class="alts"><div class="section-title"><h2>Suggested alternatives</h2><span class="small muted">Matched on category, price, GPU and memory</span></div>
+      <div class="alt-grid">${alts.map(a => `<a class="alt" href="#/p/${encodeURIComponent(a.x.mtm)}">${imgTag(thumb(a.x), a.x.model)}<div><b>${esc(a.x.model)}</b><div class="small">${peso(effPrice(a.x))}</div><div class="why">${esc(a.why)}</div></div></a>`).join('')}</div></section>` : ''}
     ${specRows ? `<div class="section-title"><h2>Complete specifications</h2><button class="btn btn-sm" id="copySpecs">Copy specs</button></div>
       <div class="panel" style="padding:0;overflow:hidden"><table class="specs-table">${specRows}</table></div>` : ''}
   `;
@@ -1025,7 +1027,7 @@ function exportAllExcel() {
   const widths = [11, 24, 14, 90, 14, 11, ...(anyPromo ? [11] : []), 11, 30, 60];
   const sheets = groups.filter(g => g[1].length).map(([name, list]) => ({
     name, widths,
-    rows: [head, ...list.map(p => [p.category, p.model, p.mtm, quickSpecsLine(p), p.color || '', p.srp || '', ...(anyPromo ? [promoActive(p) ? p.promoSrp : ''] : []), p.dp || '', p.bundle || '', p.psrefUrl || ''])]
+    rows: [head, ...list.map(p => [p.category, p.model, p.mtm, quickSpecsLine(p), p.color || '', p.srp || '', ...(anyPromo ? [promoActive(p) ? p.promoSrp : ''] : []), p.dp || '', p.bundle || '', p.psrefUrl || '']), [], ['Disclaimer: ' + DISCLAIMER]]
   }));
   download(XLSXLite.write(sheets), `Lenovo Price List ${todayISO()}.xlsx`);
   toast('Excel file downloaded');
@@ -1048,8 +1050,8 @@ function exportAllPdf() {
   };
   const php = (n) => n ? 'PHP ' + Number(n).toLocaleString('en-US') : '-';
   const PW = 842, PH = 595, M = 28, FS = 7.5, LH = 9.5, PAD = 3;
-  const cols = [['Category', 52], ['Model / MTM', 118], ['Specifications', 0], ['SRP', 62], ...(anyPromo ? [['Promo SRP', 62]] : []), ['DP', 62], ['Bundle', 104]];
-  const fixed = cols.reduce((s, c) => s + c[1], 0); cols[2][1] = PW - 2 * M - fixed;
+  const cols = [['Model / MTM', 128], ['Specifications', 0], ['SRP', 62], ...(anyPromo ? [['Promo SRP', 62]] : []), ['DP', 62], ['Bundle', 104]];
+  const fixed = cols.reduce((s, c) => s + c[1], 0); cols[1][1] = PW - 2 * M - fixed;
   const pages = []; let ops = [], y = 0;
   const esc2 = (s) => s.replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)');
   const text = (x, yy, s, size, bold, rgb = '0.1 0.1 0.1') => ops.push(`BT ${rgb} rg /${bold ? 'F2' : 'F1'} ${size} Tf ${x.toFixed(2)} ${yy.toFixed(2)} Td (${esc2(s)}) Tj ET`);
@@ -1070,34 +1072,38 @@ function exportAllPdf() {
     let x = M; cols.forEach(([l, w]) => { text(x + PAD, y - 10, l.toUpperCase(), 6.8, true, '0.3 0.3 0.3'); x += w; });
     y -= 14;
   };
+  const cellsFor = (p) => [
+    [[...wrap(p.model, cols[0][1] - 2 * PAD, FS, true), clean(p.mtm)], 'model'],
+    [wrap(quickSpecsLine(p) + (p.color ? ' | ' + p.color : ''), cols[1][1] - 2 * PAD, FS, false), false],
+    [[php(p.srp)], false],
+    ...(anyPromo ? [[[promoActive(p) ? php(p.promoSrp) : '-'], 'promo']] : []),
+    [[php(p.dp)], 'dp'],
+    [wrap(p.bundle || '-', cols[cols.length - 1][1] - 2 * PAD, FS, false), false]
+  ];
+  // one row height for every model: the tallest row decides
+  const maxLines = Math.max(2, ...groups.flatMap(g => g[1]).map(p => Math.max(...cellsFor(p).map(c => c[0].length))));
+  const ROWH = maxLines * LH + 2 * PAD;
+  const BOTTOM = 46;
   newPage();
   groups.forEach(([name, list]) => {
     if (!list.length) return;
-    if (y < M + 60) newPage();
+    if (y - 36 - ROWH < BOTTOM) newPage();
     rect(M, y - 16, PW - 2 * M, 16, '0.886 0.137 0.102');
     text(M + 6, y - 11.5, `${name.toUpperCase()}  (${list.length} model${list.length === 1 ? '' : 's'})`, 9, true, '1 1 1');
     y -= 20; headerRow();
     list.forEach((p, i) => {
-      const cells = [
-        [[clean(p.category)], false],
-        [[...wrap(p.model, cols[1][1] - 2 * PAD, FS, true), clean(p.mtm)], 'model'],
-        [wrap(quickSpecsLine(p) + (p.color ? ' | ' + p.color : ''), cols[2][1] - 2 * PAD, FS, false), false],
-        [[php(p.srp)], false],
-        ...(anyPromo ? [[[promoActive(p) ? php(p.promoSrp) : '-'], 'promo']] : []),
-        [[php(p.dp)], 'dp'],
-        [wrap(p.bundle || '-', cols[cols.length - 1][1] - 2 * PAD, FS, false), false]
-      ];
-      const lines = Math.max(...cells.map(c => c[0].length));
-      const h = lines * LH + 2 * PAD;
-      if (y - h < M + 14) { newPage(); headerRow(); }
+      const cells = cellsFor(p);
+      const h = ROWH;
+      if (y - h < BOTTOM) { newPage(); headerRow(); }
       if (i % 2) rect(M, y - h, PW - 2 * M, h, '0.975 0.975 0.975');
       ops.push(`0.88 0.88 0.88 RG 0.4 w ${M} ${(y - h).toFixed(2)} m ${PW - M} ${(y - h).toFixed(2)} l S`);
       let x = M;
       cells.forEach(([ls, kind], ci) => {
+        const off = (maxLines - ls.length) * LH / 2;
         ls.forEach((s, li) => {
           const bold = (kind === 'model' && li < ls.length - 1) || kind === 'dp';
           const rgb = kind === 'model' && li === ls.length - 1 ? '0.4 0.4 0.4' : kind === 'promo' && s !== '-' ? '0.886 0.137 0.102' : '0.1 0.1 0.1';
-          text(x + PAD, y - PAD - (li + 1) * LH + 2.2, s, FS, bold, rgb);
+          text(x + PAD, y - PAD - off - (li + 1) * LH + 2.2, s, FS, bold, rgb);
         });
         x += cols[ci][1];
       });
@@ -1107,7 +1113,13 @@ function exportAllPdf() {
   });
   pages.push(ops);
   // footer page numbers
-  pages.forEach((o, i) => { const s = `Page ${i + 1} of ${pages.length}`; o.push(`BT 0.5 0.5 0.5 rg /F1 7 Tf ${(PW - M - tw(s, 7)).toFixed(2)} 16 Td (${s}) Tj ET`); o.push(`BT 0.5 0.5 0.5 rg /F1 7 Tf ${M} 16 Td (Prices in Philippine Peso. Specifications per Lenovo PSREF.) Tj ET`); });
+  const discLines = wrap(DISCLAIMER + ' Prices in Philippine Peso (PHP).', PW - 2 * M - 70, 6.8, false);
+  pages.forEach((o, i) => {
+    const s = `Page ${i + 1} of ${pages.length}`;
+    o.push(`0.8 0.8 0.8 RG 0.5 w ${M} 38 m ${PW - M} 38 l S`);
+    discLines.forEach((l, li) => o.push(`BT 0.35 0.35 0.35 rg /F1 6.8 Tf ${M} ${(29 - li * 8.5).toFixed(2)} Td (${esc2(l)}) Tj ET`));
+    o.push(`BT 0.5 0.5 0.5 rg /F1 7 Tf ${(PW - M - tw(s, 7)).toFixed(2)} 29 Td (${s}) Tj ET`);
+  });
   // assemble PDF
   const objs = [];
   const add = (s) => { objs.push(s); return objs.length; };

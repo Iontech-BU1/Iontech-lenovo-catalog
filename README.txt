@@ -11,7 +11,7 @@ What's on the site
 - Product pages with a photo gallery, SRP, Promo SRP, DP, bundle, full PSREF specs,
   and RAM/SSD upgrade info.
 - Also on product pages: PSREF and PDF datasheet links, a QR code and share link,
-  and suggested alternatives.
+  and suggested alternatives (hidden on phones).
 - Export all models to Excel or PDF (Export button above the product list).
 - Compare up to 4 models side by side.
 - A recently viewed list and price-update alerts (the bell icon).

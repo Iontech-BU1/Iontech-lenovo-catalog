@@ -379,3 +379,20 @@ body.has-tray main{padding-bottom:90px}
   .upg-box .kv dd{overflow-wrap:anywhere}
   .btn-row .btn{flex:1 1 auto}
 }
+
+/* disclaimer */
+.disclaimer{max-width:1400px;margin:8px auto 0;padding:14px 16px 20px;font-size:12px;line-height:1.5;color:var(--muted);border-top:1px solid var(--line)}
+.disclaimer b{color:var(--ink-2)}
+body.has-tray .disclaimer{padding-bottom:90px}
+/* hide suggested alternatives on phones */
+@media (max-width:768px){ .alts{display:none} }
+/* product photos: white stage so Lenovo's white-background photos blend in, larger product */
+.card-img{background:#fff;aspect-ratio:5/4}
+.card-img img{padding:6px}
+.gallery-main{background:#fff}
+.recent-item img,.alt img,.tbl img{background:#fff}
+/* desktop: single-line titles so MTM, specs and prices line up */
+@media (min-width:601px){
+  .card-title{display:block;height:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-webkit-line-clamp:unset}
+}
+.grid.list .card-img{aspect-ratio:auto}
