@@ -83,7 +83,7 @@ function markEdited() {
 /* ================= product helpers ================= */
 const promoActive = (p) => !!(p.promoSrp && (!p.promoUntil || todayISO() <= p.promoUntil));
 const effPrice = (p) => promoActive(p) ? p.promoSrp : (p.srp || 0);
-const statusLabel = (p) => p.status === 'incoming' ? 'Incoming' : 'On Hand';
+const statusLabel = (p) => p.status === 'incoming' ? 'Incoming' : 'Onhand';
 const specVal = (p, name) => { const s = (p.specs || []).find(x => x[0] === name); return s ? s[1] : ''; };
 const ramKey = (p) => p.category === 'Monitor' || !p.ram ? null : ([8, 16, 24, 32].includes(p.ram) ? p.ram + 'GB' : 'Other');
 const gpuKey = (p) => p.category === 'Monitor' || !p.gpu ? null : (GPU_OPTS.includes(p.gpu) ? p.gpu : 'Other');
@@ -225,7 +225,7 @@ function copyMenu(anchor, p) {
 /* ================= card ================= */
 function card(p) {
   const promo = promoActive(p), inCmp = S.compare.includes(p.mtm);
-  const statusTag = p.status === 'incoming' ? `<span class="tag tag-incoming">${p.eta ? 'ETA ' + esc(fmtDate(p.eta)) : 'Incoming'}</span>` : (S.tab === 'all' || S.q ? '<span class="tag tag-onhand">On Hand</span>' : '');
+  const statusTag = p.status === 'incoming' ? `<span class="tag tag-incoming">${p.eta ? 'ETA ' + esc(fmtDate(p.eta)) : 'Incoming'}</span>` : (S.q ? '<span class="tag tag-onhand">Onhand</span>' : '');
   return `<article class="card" data-mtm="${esc(p.mtm)}">
     <a class="card-img" href="#/p/${encodeURIComponent(p.mtm)}" aria-label="${esc(p.model)} details">${imgTag(thumb(p), p.model)}
       <div class="card-badges"><span class="tag tag-cat">${esc(p.category)}</span>${statusTag}${promo ? '<span class="tag tag-promo">Promo</span>' : ''}</div></a>
@@ -269,9 +269,8 @@ function renderCatalog() {
 
   v.innerHTML = `
     <div class="tabs" role="tablist">
-      <a class="tab ${S.tab === 'onhand' ? 'active' : ''}" href="#/onhand" role="tab">On Hand Inventory<span class="count">${counts.onhand || 0}</span></a>
-      <a class="tab ${S.tab === 'incoming' ? 'active' : ''}" href="#/incoming" role="tab">Incoming Inventory<span class="count">${counts.incoming || 0}</span></a>
-      <a class="tab ${S.tab === 'all' ? 'active' : ''}" href="#/all" role="tab">All<span class="count">${counts.all}</span></a>
+      <a class="tab ${S.tab === 'onhand' ? 'active' : ''}" href="#/onhand" role="tab">Onhand<span class="count">${counts.onhand || 0}</span></a>
+      <a class="tab ${S.tab === 'incoming' ? 'active' : ''}" href="#/incoming" role="tab">Incoming<span class="count">${counts.incoming || 0}</span></a>
     </div>
     ${recent.length && !q ? `<section class="recent"><div class="section-title" style="margin-top:0"><h3>Recently viewed</h3><button class="btn btn-sm btn-ghost" id="clearRecent">Clear</button></div>
       <div class="recent-row">${recent.map(p => `<a class="recent-item" href="#/p/${encodeURIComponent(p.mtm)}">${imgTag(thumb(p), p.model)}<div><div class="t">${esc(p.model)}</div><div class="m">${esc(p.mtm)} · ${peso(effPrice(p))}</div></div></a>`).join('')}</div></section>` : ''}
@@ -288,6 +287,7 @@ function renderCatalog() {
           <button class="btn btn-sm filter-btn" id="openF"><svg class="ico" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M3 5h18v2H3zm4 6h10v2H7zm3 6h4v2h-4z"/></svg> Filters${activeChips.length ? ' (' + activeChips.length + ')' : ''}</button>
           <span class="result-count">${list.length} product${list.length === 1 ? '' : 's'}</span>
           <span class="spacer"></span>
+          <button class="btn btn-sm" id="exportBtn" title="Download all models"><svg class="ico" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg> Export</button>
           <select id="sortSel" aria-label="Sort by">
             ${[['default', 'Sort: Price list order'], ['price-asc', 'Price: Low to High'], ['price-desc', 'Price: High to Low'], ['category', 'Category'], ['newest', 'Newest Arrival'], ['availability', 'Availability']].map(([k, l]) => `<option value="${k}" ${S.sort === k ? 'selected' : ''}>${l}</option>`).join('')}
           </select>
@@ -295,7 +295,7 @@ function renderCatalog() {
           <button class="btn btn-sm ${S.view === 'list' ? 'on' : ''}" data-view="list" aria-label="List view" title="List view">☰</button>
         </div>
         ${activeChips.length ? `<div class="chips" style="margin-bottom:12px">${activeChips.join('')}</div>` : ''}
-        ${q && otherN ? `<div class="search-note">${otherN} more match${otherN === 1 ? '' : 'es'} for “${esc(q)}” in <a href="#/${otherTab}">${otherTab === 'incoming' ? 'Incoming' : 'On Hand'}</a>.</div>` : ''}
+        ${q && otherN ? `<div class="search-note">${otherN} more match${otherN === 1 ? '' : 'es'} for “${esc(q)}” in <a href="#/${otherTab}">${otherTab === 'incoming' ? 'Incoming' : 'Onhand'}</a>.</div>` : ''}
         ${list.length ? `<div class="grid ${S.view}">${list.map(card).join('')}</div>`
           : `<div class="empty"><h3>No products found</h3><p>${q ? 'Try a different search term, or ' : ''}clear some filters.</p><button class="btn" id="resetF2">Clear search &amp; filters</button></div>`}
       </section>
@@ -312,6 +312,7 @@ function renderCatalog() {
   $('#sortSel').onchange = (e) => { S.sort = e.target.value; ls.set('sort', S.sort); renderCatalog(); };
   v.querySelectorAll('[data-view]').forEach(b => b.onclick = () => { S.view = b.dataset.view; ls.set('view', S.view); renderCatalog(); });
   $('#openF').onclick = openFilters;
+  $('#exportBtn').onclick = (e) => { e.stopPropagation(); popMenu(e.currentTarget, [['Excel (.xlsx) - all models', exportAllExcel], ['PDF - all models', exportAllPdf]]); };
   $('#closeF').onclick = closeFilters;
   if ($('#clearRecent')) $('#clearRecent').onclick = () => { S.recent = []; ls.set('recent', []); renderCatalog(); };
 }
@@ -398,9 +399,9 @@ function renderDetail(mtm) {
         <div class="sub">${esc(p.model)}${p.color ? ' · ' + esc(p.color) : ''}</div>
         <span class="mtm" data-copy-mtm="${esc(p.mtm)}" title="Copy MTM">MTM ${esc(p.mtm)} ${ICON.copy}</span>
         ${p.status === 'incoming' ? (p.eta ? `<div style="margin-top:12px"><div class="eta">Incoming · expected ${esc(fmtDate(p.eta))}</div><div class="countdown" id="countdown"></div></div>` : `<div class="eta" style="margin-top:12px">Incoming</div>`) : ''}
-        <div class="prices" style="margin-top:14px">
+        <div class="prices ${promo ? 'cols-3' : 'cols-2'}" style="margin-top:14px">
           <div class="price"><span class="lbl">SRP</span><span class="val ${promo ? 'strike' : ''}">${peso(p.srp)}</span></div>
-          <div class="price promo"><span class="lbl">Promo SRP</span><span class="val ${promo ? '' : 'none'}">${promo ? peso(p.promoSrp) : '—'}</span>${promo && p.promoUntil ? `<span class="small muted">until ${esc(fmtDate(p.promoUntil))}</span>` : ''}</div>
+          ${promo ? `<div class="price promo"><span class="lbl">Promo SRP</span><span class="val">${peso(p.promoSrp)}</span>${p.promoUntil ? `<span class="small muted">until ${esc(fmtDate(p.promoUntil))}</span>` : ''}</div>` : ''}
           <div class="price dp"><span class="lbl">DP</span><span class="val">${peso(p.dp)}</span></div>
         </div>
         ${p.bundle ? `<div class="bundle" style="margin-top:10px">${ICON.gift}<span><b>Bundle:</b> ${esc(p.bundle)}</span></div>` : ''}
@@ -489,7 +490,7 @@ function renderCompare() {
     ['Availability', p => statusLabel(p) + (p.eta ? ' · ETA ' + p.eta : '')],
     ['Category', p => p.category],
     ['SRP', p => peso(p.srp)],
-    ['Promo SRP', p => promoActive(p) ? peso(p.promoSrp) : '—'],
+    ...(items.some(promoActive) ? [['Promo SRP', p => promoActive(p) ? peso(p.promoSrp) : '—']] : []),
     ['DP', p => peso(p.dp)],
     ['Bundle', p => p.bundle || '—'],
     ...(hasLap ? [
@@ -1010,6 +1011,126 @@ function adminSettings() {
   };
 }
 
+
+/* ================= export all models (Excel / PDF) ================= */
+function exportRows() {
+  const groups = [['onhand', 'Onhand'], ['incoming', 'Incoming']].map(([k, l]) => [l, sortList(P().filter(p => p.status === k))]);
+  const anyPromo = P().some(promoActive);
+  return { groups, anyPromo };
+}
+function exportAllExcel() {
+  if (!window.XLSXLite) { toast('Excel export not available'); return; }
+  const { groups, anyPromo } = exportRows();
+  const head = ['Category', 'Model', 'MTM', 'Specifications', 'Color', 'SRP', ...(anyPromo ? ['Promo SRP'] : []), 'DP', 'Bundle', 'Full Specs Link'];
+  const widths = [11, 24, 14, 90, 14, 11, ...(anyPromo ? [11] : []), 11, 30, 60];
+  const sheets = groups.filter(g => g[1].length).map(([name, list]) => ({
+    name, widths,
+    rows: [head, ...list.map(p => [p.category, p.model, p.mtm, quickSpecsLine(p), p.color || '', p.srp || '', ...(anyPromo ? [promoActive(p) ? p.promoSrp : ''] : []), p.dp || '', p.bundle || '', p.psrefUrl || ''])]
+  }));
+  download(XLSXLite.write(sheets), `Lenovo Price List ${todayISO()}.xlsx`);
+  toast('Excel file downloaded');
+}
+function exportAllPdf() {
+  const { groups, anyPromo } = exportRows();
+  // Helvetica widths (ASCII 32-126), 1/1000 em
+  const HW = [278,278,355,556,556,889,667,191,333,333,389,584,278,333,278,278,556,556,556,556,556,556,556,556,556,556,278,278,584,584,584,556,1015,667,667,722,722,667,611,778,722,278,500,667,556,833,722,778,667,778,722,667,611,722,667,944,667,667,611,278,278,278,469,556,333,556,556,500,556,556,278,556,556,222,222,500,222,833,556,556,556,556,333,500,278,556,500,722,500,500,500,334,260,334,584];
+  const clean = (s) => String(s ?? '').replace(/₱/g, 'PHP ').replace(/[“”″]/g, '"').replace(/[‘’]/g, "'").replace(/[–—]/g, '-').replace(/•/g, '-').replace(/[^\x20-\x7E]/g, '');
+  const tw = (s, size, bold) => { let w = 0; for (const ch of s) w += HW[ch.charCodeAt(0) - 32] || 556; return w * size / 1000 * (bold ? 1.06 : 1); };
+  const wrap = (s, width, size, bold) => {
+    const out = []; let line = '';
+    for (const word of clean(s).split(/\s+/).filter(Boolean)) {
+      const t = line ? line + ' ' + word : word;
+      if (tw(t, size, bold) <= width) line = t;
+      else { if (line) out.push(line); line = word; while (tw(line, size, bold) > width) { let i = line.length; while (i > 1 && tw(line.slice(0, i), size, bold) > width) i--; out.push(line.slice(0, i)); line = line.slice(i); } }
+    }
+    if (line) out.push(line);
+    return out.length ? out : [''];
+  };
+  const php = (n) => n ? 'PHP ' + Number(n).toLocaleString('en-US') : '-';
+  const PW = 842, PH = 595, M = 28, FS = 7.5, LH = 9.5, PAD = 3;
+  const cols = [['Category', 52], ['Model / MTM', 118], ['Specifications', 0], ['SRP', 62], ...(anyPromo ? [['Promo SRP', 62]] : []), ['DP', 62], ['Bundle', 104]];
+  const fixed = cols.reduce((s, c) => s + c[1], 0); cols[2][1] = PW - 2 * M - fixed;
+  const pages = []; let ops = [], y = 0;
+  const esc2 = (s) => s.replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)');
+  const text = (x, yy, s, size, bold, rgb = '0.1 0.1 0.1') => ops.push(`BT ${rgb} rg /${bold ? 'F2' : 'F1'} ${size} Tf ${x.toFixed(2)} ${yy.toFixed(2)} Td (${esc2(s)}) Tj ET`);
+  const rect = (x, yy, w, h, rgb) => ops.push(`${rgb} rg ${x.toFixed(2)} ${yy.toFixed(2)} ${w.toFixed(2)} ${h.toFixed(2)} re f`);
+  const title = clean(`Iontech - Lenovo Price List${S.data.priceListName ? '  |  ' + S.data.priceListName : ''}`);
+  const newPage = () => {
+    if (ops.length) pages.push(ops);
+    ops = []; y = PH - M;
+    rect(0, PH - 40, PW, 40, '0.067 0.067 0.067');
+    text(M, PH - 25, title, 13, true, '1 1 1');
+    const d = clean('Generated ' + new Date().toLocaleDateString('en-PH', { year: 'numeric', month: 'short', day: 'numeric' }));
+    text(PW - M - tw(d, 8, false), PH - 24, d, 8, false, '0.85 0.85 0.85');
+    rect(0, PH - 43, PW, 3, '0.886 0.137 0.102');
+    y = PH - 58;
+  };
+  const headerRow = () => {
+    rect(M, y - 14, PW - 2 * M, 14, '0.93 0.93 0.93');
+    let x = M; cols.forEach(([l, w]) => { text(x + PAD, y - 10, l.toUpperCase(), 6.8, true, '0.3 0.3 0.3'); x += w; });
+    y -= 14;
+  };
+  newPage();
+  groups.forEach(([name, list]) => {
+    if (!list.length) return;
+    if (y < M + 60) newPage();
+    rect(M, y - 16, PW - 2 * M, 16, '0.886 0.137 0.102');
+    text(M + 6, y - 11.5, `${name.toUpperCase()}  (${list.length} model${list.length === 1 ? '' : 's'})`, 9, true, '1 1 1');
+    y -= 20; headerRow();
+    list.forEach((p, i) => {
+      const cells = [
+        [[clean(p.category)], false],
+        [[...wrap(p.model, cols[1][1] - 2 * PAD, FS, true), clean(p.mtm)], 'model'],
+        [wrap(quickSpecsLine(p) + (p.color ? ' | ' + p.color : ''), cols[2][1] - 2 * PAD, FS, false), false],
+        [[php(p.srp)], false],
+        ...(anyPromo ? [[[promoActive(p) ? php(p.promoSrp) : '-'], 'promo']] : []),
+        [[php(p.dp)], 'dp'],
+        [wrap(p.bundle || '-', cols[cols.length - 1][1] - 2 * PAD, FS, false), false]
+      ];
+      const lines = Math.max(...cells.map(c => c[0].length));
+      const h = lines * LH + 2 * PAD;
+      if (y - h < M + 14) { newPage(); headerRow(); }
+      if (i % 2) rect(M, y - h, PW - 2 * M, h, '0.975 0.975 0.975');
+      ops.push(`0.88 0.88 0.88 RG 0.4 w ${M} ${(y - h).toFixed(2)} m ${PW - M} ${(y - h).toFixed(2)} l S`);
+      let x = M;
+      cells.forEach(([ls, kind], ci) => {
+        ls.forEach((s, li) => {
+          const bold = (kind === 'model' && li < ls.length - 1) || kind === 'dp';
+          const rgb = kind === 'model' && li === ls.length - 1 ? '0.4 0.4 0.4' : kind === 'promo' && s !== '-' ? '0.886 0.137 0.102' : '0.1 0.1 0.1';
+          text(x + PAD, y - PAD - (li + 1) * LH + 2.2, s, FS, bold, rgb);
+        });
+        x += cols[ci][1];
+      });
+      y -= h;
+    });
+    y -= 12;
+  });
+  pages.push(ops);
+  // footer page numbers
+  pages.forEach((o, i) => { const s = `Page ${i + 1} of ${pages.length}`; o.push(`BT 0.5 0.5 0.5 rg /F1 7 Tf ${(PW - M - tw(s, 7)).toFixed(2)} 16 Td (${s}) Tj ET`); o.push(`BT 0.5 0.5 0.5 rg /F1 7 Tf ${M} 16 Td (Prices in Philippine Peso. Specifications per Lenovo PSREF.) Tj ET`); });
+  // assemble PDF
+  const objs = [];
+  const add = (s) => { objs.push(s); return objs.length; };
+  const catalogId = add(''), pagesId = add('');
+  const f1 = add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>');
+  const f2 = add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>');
+  const kids = [];
+  pages.forEach(o => {
+    const stream = o.join('\n');
+    const cid = add(`<< /Length ${stream.length} >>\nstream\n${stream}\nendstream`);
+    kids.push(add(`<< /Type /Page /Parent ${pagesId} 0 R /MediaBox [0 0 ${PW} ${PH}] /Resources << /Font << /F1 ${f1} 0 R /F2 ${f2} 0 R >> >> /Contents ${cid} 0 R >>`));
+  });
+  objs[catalogId - 1] = `<< /Type /Catalog /Pages ${pagesId} 0 R >>`;
+  objs[pagesId - 1] = `<< /Type /Pages /Kids [${kids.map(k => k + ' 0 R').join(' ')}] /Count ${kids.length} >>`;
+  let pdf = '%PDF-1.4\n'; const offs = [];
+  objs.forEach((o, i) => { offs.push(pdf.length); pdf += `${i + 1} 0 obj\n${o}\nendobj\n`; });
+  const xref = pdf.length;
+  pdf += `xref\n0 ${objs.length + 1}\n0000000000 65535 f \n` + offs.map(o => String(o).padStart(10, '0') + ' 00000 n \n').join('');
+  pdf += `trailer\n<< /Size ${objs.length + 1} /Root ${catalogId} 0 R >>\nstartxref\n${xref}\n%%EOF`;
+  download(new Blob([pdf], { type: 'application/pdf' }), `Lenovo Price List ${todayISO()}.pdf`);
+  toast('PDF downloaded');
+}
+
 /* ================= offline image cache ================= */
 async function cacheImages(urls, onProgress) {
   if (!('caches' in window)) return;
@@ -1037,7 +1158,7 @@ function route() {
   if (r === 'p' && parts[1]) { S.route = 'detail'; setNav('catalog'); renderDetail(parts.slice(1).join('/')); }
   else if (r === 'compare') { S.route = 'compare'; setNav('compare'); renderCompare(); }
   else if (r === 'admin' && ADMIN_MODE) { S.route = 'admin'; setNav('admin'); renderAdmin(); }
-  else { S.route = 'catalog'; S.tab = ['incoming', 'all'].includes(r) ? r : 'onhand'; setNav('catalog'); renderCatalog(); }
+  else { S.route = 'catalog'; S.tab = r === 'incoming' ? 'incoming' : 'onhand'; setNav('catalog'); renderCatalog(); }
   updateCompareUI();
 }
 

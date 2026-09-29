@@ -4,7 +4,7 @@ This folder is the public website. Upload everything in it to GitHub.
 
 What's on the site
 ------------------
-- Catalog with three tabs: On Hand, Incoming and All.
+- Catalog with two tabs: Onhand and Incoming.
 - Filters for category, CPU brand, RAM and GPU, plus a search that updates as you type.
 - Five sort options, and a grid or list view.
 - A Copy button on every product card. One click copies the model, MTM, specs, SRP and DP.
@@ -12,6 +12,7 @@ What's on the site
   and RAM/SSD upgrade info.
 - Also on product pages: PSREF and PDF datasheet links, a QR code and share link,
   and suggested alternatives.
+- Export all models to Excel or PDF (Export button above the product list).
 - Compare up to 4 models side by side.
 - A recently viewed list and price-update alerts (the bell icon).
 - After someone opens the site once, it keeps working with no internet connection.
@@ -36,5 +37,5 @@ index.html, styles.css, app.js   the website
 sw.js                            offline support
 data/products.json               the catalog (the file you replace to update prices)
 data/products.js                 a copy used only when index.html is opened from disk
-vendor/qrcode.js                 QR code generator
+vendor/                          QR code generator and Excel writer
 img/, icons/                     logos

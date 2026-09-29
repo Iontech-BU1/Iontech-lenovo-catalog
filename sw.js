@@ -1,10 +1,10 @@
 /* Service worker: lets the website keep working offline (site files + data + product images. Bump SHELL_VERSION when app files change. */
-const SHELL_VERSION = 'shell-v3';
+const SHELL_VERSION = 'shell-v4';
 const DATA_CACHE = 'data-v1';
 const IMG_CACHE = 'img-v1';
 const SHELL = [
   './', './index.html', './styles.css', './app.js',
-  './vendor/qrcode.js',
+  './vendor/qrcode.js', './vendor/xlsx-lite.js',
   './img/iontech-logo.png', './img/lenovo-logo.png',
   './icons/icon-192.png'
 ];

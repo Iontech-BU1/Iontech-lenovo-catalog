@@ -363,3 +363,19 @@ body.has-tray main{padding-bottom:90px}
   .card-actions .btn svg{display:none}
 }
 @media (max-width:600px){ .card-actions .btn{font-size:11.5px;letter-spacing:-.01em} }
+
+/* detail page: keep everything inside the screen */
+.detail>*{min-width:0}
+.detail .prices.cols-2{grid-template-columns:1fr 1fr}
+.detail .prices.cols-3{grid-template-columns:1fr 1fr 1fr}
+.specs-table{table-layout:fixed}
+.specs-table td,.specs-table th{overflow-wrap:anywhere}
+.detail-head h1,.detail-head .sub{overflow-wrap:anywhere}
+@media (max-width:900px){ .detail{grid-template-columns:minmax(0,1fr)} }
+@media (max-width:600px){
+  .specs-table th{width:38%}
+  .specs-table th,.specs-table td{padding:7px 8px;font-size:13px}
+  .upg-box .kv{grid-template-columns:auto minmax(0,1fr)}
+  .upg-box .kv dd{overflow-wrap:anywhere}
+  .btn-row .btn{flex:1 1 auto}
+}
