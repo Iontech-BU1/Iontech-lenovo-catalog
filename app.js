@@ -199,7 +199,7 @@ function productText(p, withDP) {
   else L.push(`SRP: ${peso(p.srp)}`);
   if (withDP) L.push(`DP: ${peso(p.dp)}`);
   if (p.bundle) L.push(`Bundle: ${p.bundle}`);
-  L.push(`Availability: ${statusLabel(p)}${p.status === 'incoming' && p.eta ? ' (ETA ' + p.eta + ')' : ''}`);
+  L.push(`Availability: ${statusLabel(p)}${p.status === 'incoming' && p.eta ? ' (ETA ' + fmtDate(p.eta) + ')' : ''}`);
   if (p.psrefUrl) L.push(`Full specs: ${p.psrefUrl}`);
   return L.join('\n');
 }
@@ -207,6 +207,7 @@ const quickSpecsLine = (p) => (p.quickSpecs || '').split('|').map(s => s.trim())
 function quickCopyText(p) {
   const L = [`${p.model} (${p.mtm})`, quickSpecsLine(p)];
   L.push(promoActive(p) ? `SRP: ${peso(p.srp)} | Promo SRP: ${peso(p.promoSrp)} | DP: ${peso(p.dp)}` : `SRP: ${peso(p.srp)} | DP: ${peso(p.dp)}`);
+  if (p.status === 'incoming') L.push(p.eta ? `Incoming - ETA ${fmtDate(p.eta)}` : 'Incoming');
   return L.filter(Boolean).join('\n');
 }
 function specsCopyText(p) {
@@ -247,7 +248,8 @@ function card(p) {
     </div>
   </article>`;
 }
-function fmtDate(d) { try { return new Date(d + 'T00:00:00').toLocaleDateString('en-PH', { month: 'short', day: 'numeric', year: 'numeric' }); } catch (_) { return d; } }
+const isISODate = (d) => /^\d{4}-\d{2}-\d{2}$/.test(String(d || ''));
+function fmtDate(d) { if (!isISODate(d)) return String(d || ''); try { return new Date(d + 'T00:00:00').toLocaleDateString('en-PH', { month: 'short', day: 'numeric', year: 'numeric' }); } catch (_) { return d; } }
 
 /* ================= catalog view ================= */
 function renderCatalog() {
@@ -400,7 +402,7 @@ function renderDetail(mtm) {
         <h1>${esc(p.name && p.name !== p.model ? p.name : p.model)}</h1>
         <div class="sub">${esc(p.model)}${p.color ? ' · ' + esc(p.color) : ''}</div>
         <span class="mtm" data-copy-mtm="${esc(p.mtm)}" title="Copy MTM">MTM ${esc(p.mtm)} ${ICON.copy}</span>
-        ${p.status === 'incoming' ? (p.eta ? `<div style="margin-top:12px"><div class="eta">Incoming · expected ${esc(fmtDate(p.eta))}</div><div class="countdown" id="countdown"></div></div>` : `<div class="eta" style="margin-top:12px">Incoming</div>`) : ''}
+        ${p.status === 'incoming' ? (p.eta ? `<div style="margin-top:12px"><div class="eta">Incoming · ETA ${esc(fmtDate(p.eta))}</div>${isISODate(p.eta) ? '<div class="countdown" id="countdown"></div>' : ''}</div>` : `<div class="eta" style="margin-top:12px">Incoming</div>`) : ''}
         <div class="prices ${promo ? 'cols-3' : 'cols-2'}" style="margin-top:14px">
           <div class="price"><span class="lbl">SRP</span><span class="val ${promo ? 'strike' : ''}">${peso(p.srp)}</span></div>
           ${promo ? `<div class="price promo"><span class="lbl">Promo SRP</span><span class="val">${peso(p.promoSrp)}</span>${p.promoUntil ? `<span class="small muted">until ${esc(fmtDate(p.promoUntil))}</span>` : ''}</div>` : ''}
@@ -489,7 +491,7 @@ function renderCompare() {
   const items = S.compare.map(byMtm).filter(Boolean);
   const hasMon = items.some(p => !isLaptop(p)), hasLap = items.some(isLaptop);
   const rows = [
-    ['Availability', p => statusLabel(p) + (p.eta ? ' · ETA ' + p.eta : '')],
+    ['Availability', p => statusLabel(p) + (p.status === 'incoming' && p.eta ? ' · ETA ' + fmtDate(p.eta) : '')],
     ['Category', p => p.category],
     ['SRP', p => peso(p.srp)],
     ...(items.some(promoActive) ? [['Promo SRP', p => promoActive(p) ? peso(p.promoSrp) : '—']] : []),
@@ -685,7 +687,7 @@ function editProduct(p) {
       <div class="grid2">${f('e_model', 'Model name *', d.model, 'text', 'required')}${f('e_name', 'Full product name', d.name)}</div>
       <div class="field"><label class="fl" for="e_qs">Key / quick specifications (separate with |)</label><input type="text" id="e_qs" value="${esc(d.quickSpecs || '')}"></div>
       <div class="grid3">${f('e_srp', 'SRP (₱)', d.srp, 'number', 'step="any" min="0"')}${f('e_promo', 'Promo SRP (₱)', d.promoSrp, 'number', 'step="any" min="0"')}${f('e_dp', 'DP (₱)', d.dp, 'number', 'step="any" min="0"')}</div>
-      <div class="grid3">${f('e_promoUntil', 'Promo valid until', d.promoUntil, 'date')}${f('e_color', 'Color', d.color)}${f('e_eta', 'ETA (incoming only)', d.eta, 'date')}</div>
+      <div class="grid3">${f('e_promoUntil', 'Promo valid until', d.promoUntil, 'date')}${f('e_color', 'Color', d.color)}${f('e_eta', 'ETA (incoming only, e.g. Oct W3 or a date)', d.eta)}</div>
       <div class="grid2">${f('e_bundle', 'Bundled items', d.bundle)}${f('e_added', 'Date added (for Newest sort)', d.added, 'date')}</div>
       <h3 style="margin:8px 0 10px">Filters</h3>
       <div class="grid2">
@@ -766,7 +768,7 @@ function adminShipments() {
   b.innerHTML = `<p class="muted" style="margin-top:0">Items listed here show under <b>Incoming Inventory</b>. The ETA is optional — when set, the product page shows an arrival countdown; when blank it just says “Incoming”.</p>
     <div class="table-wrap"><table class="tbl"><thead><tr><th></th><th>MTM</th><th>Model</th><th>ETA (optional)</th><th>Shipment ref / notes</th><th></th></tr></thead><tbody>
     ${inc.map(p => `<tr><td>${imgTag(thumb(p), '')}</td><td><b>${esc(p.mtm)}</b></td><td>${esc(p.model)}</td>
-      <td><input type="date" data-eta="${esc(p.mtm)}" value="${esc(p.eta || '')}" style="width:160px"></td>
+      <td><input type="text" data-eta="${esc(p.mtm)}" value="${esc(p.eta || '')}" placeholder="e.g. Oct W3" style="width:160px"></td>
       <td><input type="text" data-ref="${esc(p.mtm)}" value="${esc(p.shipmentRef || '')}" placeholder="e.g. PO-1234 / container no." style="min-width:200px"></td>
       <td><button class="btn btn-sm btn-dark" data-arrive="${esc(p.mtm)}">Mark as arrived</button></td></tr>`).join('') || '<tr><td colspan="6" class="muted">No incoming items.</td></tr>'}
     </tbody></table></div>
@@ -873,7 +875,7 @@ function parseWorkbook(sheets) {
       if (g('Model') !== undefined) it.model = String(g('Model')).trim();
       it.quickSpecs = String(g('Specifications', 'Specs') || '').replace(/Wi"11/g, 'Win11').replace(/(\d+(?:\.\d+)?)N /g, '$1" ').trim();
       it.color = g('Color') ? String(g('Color')) : '';
-      it.srp = num(g('SRP')) || 0; it.promoSrp = num(g('Promo SRP')); it.dp = num(g('Price', 'Dealer Price', 'DP')) || 0; it.bundle = g('Bundle') ? String(g('Bundle')) : '';
+      it.srp = num(g('SRP')) || 0; it.promoSrp = num(g('Promo SRP')); it.dp = num(g('Price', 'Dealer Price', 'DP')) || 0; it.bundle = g('Bundle') ? String(g('Bundle')) : ''; { const e = g('Availability', 'ETA', 'Arrival'); if (e !== undefined) it.eta = status === 'incoming' ? excelDate(e) : ''; }
       items.push(it);
     }
     items.filter(it => it.status === status).forEach(it => { if (links[it.mtm]) it.psrefUrl = links[it.mtm]; });
@@ -1025,10 +1027,13 @@ function exportAllExcel() {
   const { groups, anyPromo } = exportRows();
   const head = ['Category', 'Model', 'MTM', 'Specifications', 'Color', 'SRP', ...(anyPromo ? ['Promo SRP'] : []), 'DP', 'Bundle', 'Full Specs Link'];
   const widths = [11, 24, 14, 90, 14, 11, ...(anyPromo ? [11] : []), 11, 30, 60];
-  const sheets = groups.filter(g => g[1].length).map(([name, list]) => ({
-    name, widths,
-    rows: [head, ...list.map(p => [p.category, p.model, p.mtm, quickSpecsLine(p), p.color || '', p.srp || '', ...(anyPromo ? [promoActive(p) ? p.promoSrp : ''] : []), p.dp || '', p.bundle || '', p.psrefUrl || '']), [], ['Disclaimer: ' + DISCLAIMER]]
-  }));
+  const sheets = groups.filter(g => g[1].length).map(([name, list]) => {
+    const inc = name === 'Incoming';
+    return {
+      name, widths: inc ? [...widths.slice(0, 3), 12, ...widths.slice(3)] : widths,
+      rows: [inc ? [...head.slice(0, 3), 'ETA', ...head.slice(3)] : head, ...list.map(p => { const r = [p.category, p.model, p.mtm, quickSpecsLine(p), p.color || '', p.srp || '', ...(anyPromo ? [promoActive(p) ? p.promoSrp : ''] : []), p.dp || '', p.bundle || '', p.psrefUrl || '']; if (inc) r.splice(3, 0, fmtDate(p.eta) || ''); return r; }), [], ['Disclaimer: ' + DISCLAIMER]]
+    };
+  });
   download(XLSXLite.write(sheets), `Lenovo Price List ${todayISO()}.xlsx`);
   toast('Excel file downloaded');
 }
@@ -1073,7 +1078,7 @@ function exportAllPdf() {
     y -= 14;
   };
   const cellsFor = (p) => [
-    [[...wrap(p.model, cols[0][1] - 2 * PAD, FS, true), clean(p.mtm)], 'model'],
+    [[...wrap(p.model, cols[0][1] - 2 * PAD, FS, true), clean(p.mtm + (p.status === 'incoming' && p.eta ? '  |  ETA ' + fmtDate(p.eta) : ''))], 'model'],
     [wrap(quickSpecsLine(p) + (p.color ? ' | ' + p.color : ''), cols[1][1] - 2 * PAD, FS, false), false],
     [[php(p.srp)], false],
     ...(anyPromo ? [[[promoActive(p) ? php(p.promoSrp) : '-'], 'promo']] : []),
