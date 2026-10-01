@@ -14,7 +14,8 @@ What's on the site
   and suggested alternatives (hidden on phones).
 - Export all models to Excel or PDF (Export button above the product list).
 - Compare up to 4 models side by side.
-- A recently viewed list and price-update alerts (the bell icon).
+- A New Arrivals banner (one slide per model, from the price list's "New Arrival" tab)
+  and price-update alerts (the bell icon).
 - After someone opens the site once, it keeps working with no internet connection.
 
 Hosting on GitHub Pages

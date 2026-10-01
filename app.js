@@ -251,6 +251,55 @@ function card(p) {
 const isISODate = (d) => /^\d{4}-\d{2}-\d{2}$/.test(String(d || ''));
 function fmtDate(d) { if (!isISODate(d)) return String(d || ''); try { return new Date(d + 'T00:00:00').toLocaleDateString('en-PH', { month: 'short', day: 'numeric', year: 'numeric' }); } catch (_) { return d; } }
 
+
+/* ================= new arrivals banner (one slide per model) ================= */
+const newArrivals = () => P().filter(p => p.newArrival).sort((x, y) => x.newArrival - y.newArrival);
+function newArrivalsBanner() {
+  const list = newArrivals();
+  if (!list.length) return '';
+  return `<section class="hero" aria-roledescription="carousel" aria-label="New arrivals">
+    <div class="hero-track" id="heroTrack">
+      ${list.map((p, i) => {
+        const promo = promoActive(p);
+        return `<div class="hero-slide" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${list.length}">
+          <div class="hero-text">
+            <span class="hero-kicker">New</span>
+            <h2 class="hero-title">${esc(p.name && p.name !== p.model ? p.name : p.model)}</h2>
+            <span class="mtm" data-copy-mtm="${esc(p.mtm)}" title="Copy MTM">${esc(p.mtm)} ${ICON.copy}</span>
+            <p class="hero-specs">${esc(quickSpecsLine(p))}</p>
+            <div class="hero-prices">
+              <div><span class="lbl">${promo ? 'Promo SRP' : 'SRP'}</span><b class="${promo ? 'promo' : ''}">${peso(promo ? p.promoSrp : p.srp)}</b>${promo ? `<s>${peso(p.srp)}</s>` : ''}</div>
+              <div><span class="lbl">DP</span><b>${peso(p.dp)}</b></div>
+              ${p.bundle ? `<div class="hero-bundle">${ICON.gift}<span>${esc(p.bundle)}</span></div>` : ''}
+            </div>
+            <div class="hero-actions"><a class="btn btn-red" href="#/p/${encodeURIComponent(p.mtm)}">View details</a><button class="btn" data-quickcopy="${esc(p.mtm)}">${ICON.copy.replace('<svg', '<svg class="ico" style="width:15px;height:15px"')} Copy</button></div>
+          </div>
+          <a class="hero-img" href="#/p/${encodeURIComponent(p.mtm)}" tabindex="-1" aria-hidden="true">${imgTag(thumb(p), p.model)}</a>
+        </div>`;
+      }).join('')}
+    </div>
+    ${list.length > 1 ? `<button class="hero-nav prev" id="heroPrev" aria-label="Previous slide">&#8249;</button><button class="hero-nav next" id="heroNext" aria-label="Next slide">&#8250;</button>
+    <div class="hero-dots" id="heroDots">${list.map((_, i) => `<button data-hero="${i}" aria-label="Go to slide ${i + 1}" class="${i ? '' : 'on'}"></button>`).join('')}</div>` : ''}
+  </section>`;
+}
+let heroTimer = null;
+function bindBanner() {
+  clearInterval(heroTimer);
+  const track = $('#heroTrack'); if (!track) return;
+  const n = track.children.length; if (n < 2) return;
+  const cur = () => Math.round(track.scrollLeft / track.clientWidth);
+  const go = (i) => track.scrollTo({ left: ((i + n) % n) * track.clientWidth, behavior: 'smooth' });
+  $('#heroPrev').onclick = () => { go(cur() - 1); restart(); };
+  $('#heroNext').onclick = () => { go(cur() + 1); restart(); };
+  $$('[data-hero]').forEach(b => b.onclick = () => { go(+b.dataset.hero); restart(); });
+  track.addEventListener('scroll', () => { const i = cur(); $$('[data-hero]').forEach(b => b.classList.toggle('on', +b.dataset.hero === i)); }, { passive: true });
+  const hero = track.parentElement; let paused = false;
+  hero.addEventListener('mouseenter', () => paused = true); hero.addEventListener('mouseleave', () => paused = false);
+  hero.addEventListener('touchstart', () => { paused = true; restart(); }, { passive: true });
+  const restart = () => { clearInterval(heroTimer); heroTimer = setInterval(() => { if (!paused && document.visibilityState === 'visible' && document.body.contains(track)) go(cur() + 1); else if (!document.body.contains(track)) clearInterval(heroTimer); paused = paused && hero.matches(':hover'); }, 5000); };
+  restart();
+}
+
 /* ================= catalog view ================= */
 function renderCatalog() {
   const v = $('#view');
@@ -269,15 +318,13 @@ function renderCatalog() {
   };
   const cats = [...new Set([...CAT_OPTS, ...all.map(p => p.category)])];
   const activeChips = Object.entries(S.filters).flatMap(([k, set]) => [...set].map(v => `<button class="chip" data-unf="${k}" data-v="${esc(v)}"><b>${{ category: 'Category', cpu: 'CPU', ram: 'RAM', gpu: 'GPU' }[k]}:</b> ${esc(v)} ✕</button>`));
-  const recent = S.recent.map(byMtm).filter(Boolean).slice(0, 8);
 
   v.innerHTML = `
     <div class="tabs" role="tablist">
       <a class="tab ${S.tab === 'onhand' ? 'active' : ''}" href="#/onhand" role="tab">Onhand<span class="count">${counts.onhand || 0}</span></a>
       <a class="tab ${S.tab === 'incoming' ? 'active' : ''}" href="#/incoming" role="tab">Incoming<span class="count">${counts.incoming || 0}</span></a>
     </div>
-    ${recent.length && !q ? `<section class="recent"><div class="section-title" style="margin-top:0"><h3>Recently viewed</h3><button class="btn btn-sm btn-ghost" id="clearRecent">Clear</button></div>
-      <div class="recent-row">${recent.map(p => `<a class="recent-item" href="#/p/${encodeURIComponent(p.mtm)}">${imgTag(thumb(p), p.model)}<div><div class="t">${esc(p.model)}</div><div class="m">${esc(p.mtm)} · ${peso(effPrice(p))}</div></div></a>`).join('')}</div></section>` : ''}
+    ${!q && S.tab === 'onhand' ? newArrivalsBanner() : ''}
     <div class="catalog">
       <aside class="filters" id="filters" aria-label="Filters">
         <div class="filters-head"><h3>Filters</h3><div><button class="btn btn-sm btn-ghost" id="resetF">Reset</button><button class="btn btn-sm filter-btn" id="closeF">Done</button></div></div>
@@ -318,7 +365,7 @@ function renderCatalog() {
   $('#openF').onclick = openFilters;
   $('#exportBtn').onclick = (e) => { e.stopPropagation(); popMenu(e.currentTarget, [['Excel (.xlsx) - all models', exportAllExcel], ['PDF - all models', exportAllPdf]]); };
   $('#closeF').onclick = closeFilters;
-  if ($('#clearRecent')) $('#clearRecent').onclick = () => { S.recent = []; ls.set('recent', []); renderCatalog(); };
+  bindBanner();
 }
 function openFilters() {
   $('#filters').classList.add('open');
@@ -689,6 +736,7 @@ function editProduct(p) {
       <div class="grid3">${f('e_srp', 'SRP (₱)', d.srp, 'number', 'step="any" min="0"')}${f('e_promo', 'Promo SRP (₱)', d.promoSrp, 'number', 'step="any" min="0"')}${f('e_dp', 'DP (₱)', d.dp, 'number', 'step="any" min="0"')}</div>
       <div class="grid3">${f('e_promoUntil', 'Promo valid until', d.promoUntil, 'date')}${f('e_color', 'Color', d.color)}${f('e_eta', 'ETA (incoming only, e.g. Oct W3 or a date)', d.eta)}</div>
       <div class="grid2">${f('e_bundle', 'Bundled items', d.bundle)}${f('e_added', 'Date added (for Newest sort)', d.added, 'date')}</div>
+      <label class="fopt" style="margin-bottom:12px"><input type="checkbox" id="e_new" ${d.newArrival ? 'checked' : ''}> Feature in the New Arrivals banner</label>
       <h3 style="margin:8px 0 10px">Filters</h3>
       <div class="grid2">
         <div class="field"><label class="fl" for="e_cpub">CPU brand</label><select id="e_cpub"><option value="">—</option>${['AMD', 'Intel'].map(x => `<option ${x === d.cpuBrand ? 'selected' : ''}>${x}</option>`).join('')}</select></div>
@@ -749,6 +797,7 @@ function editProduct(p) {
       quickSpecs: val('e_qs'), srp: num(val('e_srp')) || 0, promoSrp: num(val('e_promo')), dp: num(val('e_dp')) || 0,
       promoUntil: val('e_promoUntil') || '', color: val('e_color'), eta: val('e_status') === 'incoming' ? val('e_eta') : '', bundle: val('e_bundle'), added: val('e_added') || todayISO(),
       cpuBrand: val('e_cpub'), cpu: val('e_cpu'), ram: num(val('e_ram')), gpu: val('e_gpu'), gpuDetail: val('e_gpud'), display: val('e_disp'),
+      newArrival: $('#e_new').checked ? (d.newArrival || (Math.max(0, ...P().map(x => x.newArrival || 0)) + 1)) : 0,
       psrefUrl: val('e_psref'), datasheetUrl: val('e_ds'), productUrl: val('e_pp') || ('https://www.lenovo.com/ph/en/search?text=' + mtm),
       specs: textToSpecs($('#e_specs').value)
     });
@@ -854,9 +903,13 @@ function parseWorkbook(sheets) {
     return { format: 'Catalog export', items, specs };
   }
   // Iontech price list format: one sheet per status with Category | Model | MTM | Specifications | Color | SRP | Promo SRP | Price | Bundle
-  const items = [];
+  const items = [], newList = [];
   for (const s of sheets) {
     const hr = s.rows.findIndex(r => r && r.some(h => norm(h) === 'mtm'));
+    if (/new/i.test(s.name)) { // "New Arrival" tab: models featured in the banner
+      if (hr >= 0) { const mi = s.rows[hr].map(norm).indexOf('mtm'); for (let ri = hr + 1; ri < s.rows.length; ri++) { const r = s.rows[ri]; if (r && /links to full spec/i.test(String(r[0] || ''))) break; if (r && r[mi]) newList.push(String(r[mi]).trim().toUpperCase()); } }
+      continue;
+    }
     if (hr < 0) continue;
     const H = s.rows[hr].map(norm), idx = (...ns) => { for (const n of ns) { const i = H.indexOf(norm(n)); if (i >= 0) return i; } return -1; };
     const status = /incom/i.test(s.name) ? 'incoming' : 'onhand';
@@ -880,6 +933,7 @@ function parseWorkbook(sheets) {
     }
     items.filter(it => it.status === status).forEach(it => { if (links[it.mtm]) it.psrefUrl = links[it.mtm]; });
   }
+  if (sheets.some(s => /new/i.test(s.name))) items.forEach(it => { it.newArrival = newList.indexOf(it.mtm) + 1; });
   return { format: 'Price list', items, specs: {} };
 }
 function excelDate(v) {

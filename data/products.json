@@ -1,7 +1,7 @@
 {
- "version": "20260930192332",
+ "version": "20261001095423",
  "priceListName": "Iontech PL - Lenovo Oct 2026",
- "updatedAt": "2026-09-30",
+ "updatedAt": "2026-10-01",
  "adminPinHash": "b2613e92c6045bb9a608cbaa36a055209fb3c6d2780e42f6778f319917e76163",
  "products": [
   {
@@ -169,7 +169,8 @@
    },
    "added": "2026-10-01",
    "order": 0,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "82XQ01MJPH",
@@ -336,7 +337,8 @@
    },
    "added": "2026-10-01",
    "order": 1,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "83RR007EPH",
@@ -508,7 +510,8 @@
    },
    "added": "2026-10-01",
    "order": 2,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "82XQ023MPH",
@@ -675,7 +678,8 @@
    },
    "added": "2026-10-01",
    "order": 3,
-   "views": 0
+   "views": 0,
+   "newArrival": 1
   },
   {
    "id": "83K800HTPH",
@@ -841,7 +845,8 @@
    },
    "added": "2026-10-01",
    "order": 4,
-   "views": 0
+   "views": 0,
+   "newArrival": 2
   },
   {
    "id": "83UM001PPH",
@@ -851,7 +856,7 @@
    "category": "IdeaPad",
    "status": "onhand",
    "eta": "",
-   "quickSpecs": "15.3\" WUXGA | RAI 5 430 | 2x8GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
+   "quickSpecs": "15.3\" WUXGA Touch | RAI 5 430 | 2x8GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
    "color": "Cosmic Blue",
    "srp": 81995,
    "promoSrp": null,
@@ -1020,7 +1025,8 @@
    },
    "added": "2026-10-01",
    "order": 5,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "83JY00B5PH",
@@ -1199,7 +1205,8 @@
    },
    "added": "2026-10-01",
    "order": 6,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "83TC009QPH",
@@ -1209,7 +1216,7 @@
    "category": "Yoga",
    "status": "onhand",
    "eta": "",
-   "quickSpecs": "14\" WUXGA OLED | Ultra 5 322 | 16GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 3Y PC",
+   "quickSpecs": "14\" WUXGA OLED Touch | Ultra 5 322 | 16GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 3Y PC",
    "color": "Seashell",
    "srp": 115995,
    "promoSrp": null,
@@ -1378,7 +1385,8 @@
    },
    "added": "2026-10-01",
    "order": 7,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "83TN005HPH",
@@ -1561,7 +1569,8 @@
    },
    "added": "2026-10-01",
    "order": 8,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "83JE01NBPH",
@@ -1740,7 +1749,8 @@
    },
    "added": "2026-10-01",
    "order": 9,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "83DV01LYPH",
@@ -1919,7 +1929,8 @@
    },
    "added": "2026-10-01",
    "order": 10,
-   "views": 0
+   "views": 0,
+   "newArrival": 3
   },
   {
    "id": "83Q600AAPH",
@@ -2102,7 +2113,8 @@
    },
    "added": "2026-10-01",
    "order": 11,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "83Q6004PPH",
@@ -2285,7 +2297,8 @@
    },
    "added": "2026-10-01",
    "order": 12,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "83F500JFPH",
@@ -2468,7 +2481,8 @@
    },
    "added": "2026-10-01",
    "order": 13,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "68C4GAC4PH",
@@ -2633,7 +2647,8 @@
    "upgrade": null,
    "added": "2026-10-01",
    "order": 14,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "68C5GAC4PH",
@@ -2798,7 +2813,8 @@
    "upgrade": null,
    "added": "2026-10-01",
    "order": 15,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "68F0GAC3PH",
@@ -2963,7 +2979,8 @@
    "upgrade": null,
    "added": "2026-10-01",
    "order": 16,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "83Y90043PH",
@@ -3142,7 +3159,8 @@
    },
    "added": "2026-10-01",
    "order": 17,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "83UN0024PH",
@@ -3152,7 +3170,7 @@
    "category": "IdeaPad",
    "status": "incoming",
    "eta": "Oct W3",
-   "quickSpecs": "15.3\" WUXGA Touch |R5 216 | 8GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
+   "quickSpecs": "15.3\" WUXGA Touch | R5 216 | 8GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
    "color": "Luna Grey",
    "srp": 79995,
    "promoSrp": null,
@@ -3321,7 +3339,8 @@
    },
    "added": "2026-10-01",
    "order": 18,
-   "views": 0
+   "views": 0,
+   "newArrival": 0
   }
  ]
 }
