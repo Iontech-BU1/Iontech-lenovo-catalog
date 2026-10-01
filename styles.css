@@ -447,3 +447,6 @@ body.has-tray .disclaimer{padding-bottom:90px}
 .hero-img{aspect-ratio:auto;height:250px}
 @media (max-width:900px){ .hero-slide{padding:20px 60px 36px 60px} .hero-img{height:200px} }
 @media (max-width:600px){ .hero-slide{padding:14px 14px 34px 20px} .hero-img{height:150px} }
+/* banner: solid white so the product photo blends in seamlessly */
+.hero{background:#fff}
+.hero-img{border-radius:0;background:#fff}

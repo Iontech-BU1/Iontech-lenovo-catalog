@@ -1,5 +1,5 @@
 /* Service worker: lets the website keep working offline (site files + data + product images. Bump SHELL_VERSION when app files change. */
-const SHELL_VERSION = 'shell-v10';
+const SHELL_VERSION = 'shell-v12';
 const DATA_CACHE = 'data-v1';
 const IMG_CACHE = 'img-v1';
 const SHELL = [
@@ -64,13 +64,21 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // App shell: cache first, update in background.
+  // Site files: network first (so updates show right away), saved copy when offline or slow.
   if (url.origin === location.origin) {
     e.respondWith((async () => {
       const c = await caches.open(SHELL_VERSION);
-      const hit = await c.match(req, { ignoreSearch: true }) || (req.mode === 'navigate' ? await c.match('./index.html') : null);
-      const net = fetch(req).then(res => { if (res.ok && SHELL.some(s => url.pathname.endsWith(s.replace('./', '/')))) c.put(req, res.clone()); return res; }).catch(() => null);
-      return hit || (await net) || new Response('Offline', { status: 503 });
+      const fromCache = async () => (await c.match(req, { ignoreSearch: true })) || (req.mode === 'navigate' ? await c.match('./index.html') : null);
+      try {
+        const res = await Promise.race([
+          fetch(req, { cache: 'no-cache' }),
+          new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), 4000))
+        ]);
+        if (res.ok) c.put(req, res.clone());
+        return res;
+      } catch (_) {
+        return (await fromCache()) || new Response('Offline', { status: 503 });
+      }
     })());
   }
 });
