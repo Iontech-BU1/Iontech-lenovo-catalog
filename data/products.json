@@ -1,5 +1,5 @@
 {
- "version": "20261012153111",
+ "version": "20261012183733",
  "priceListName": "Iontech PL - Lenovo Oct 2026",
  "updatedAt": "2026-10-12",
  "adminPinHash": "b2613e92c6045bb9a608cbaa36a055209fb3c6d2780e42f6778f319917e76163",
@@ -1389,6 +1389,186 @@
    "newArrival": 0
   },
   {
+   "id": "83Y90043PH",
+   "mtm": "83Y90043PH",
+   "model": "LOQ 15IRH11E",
+   "name": "LOQ 15IRH11E",
+   "category": "LOQ",
+   "status": "onhand",
+   "eta": "",
+   "quickSpecs": "15.3\" WUXGA 165Hz | Core 5 205H | 8GB | 512GB | RTX 3050 | Win11 | 2Y Onsite",
+   "color": "Luna Grey",
+   "srp": 87995,
+   "promoSrp": null,
+   "dp": 74795,
+   "bundle": "GX41H70101 Modern Backpack",
+   "cpuBrand": "Intel",
+   "cpu": "Intel Core 5 205H",
+   "ram": 8,
+   "gpu": "RTX 3050",
+   "gpuDetail": "NVIDIA GeForce RTX 3050 6GB GDDR6, Boost Clock 1732MHz, TGP 75W, 142 AI TOPS",
+   "storage": "512GB SSD M.2 2242 PCIe 4.0x4 NVMe",
+   "display": "15.3\" WUXGA (1920x1200) IPS 300nits Anti-glare, 100% sRGB, 165Hz, Low Blue Light",
+   "psrefUrl": "https://psref.lenovo.com/detail/LOQ_15IRH11E?M=83Y90043PH",
+   "datasheetUrl": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/datasheet/LOQ_15IRH11E_Datasheet_EN.pdf",
+   "productUrl": "https://www.lenovo.com/ph/en/search?text=83Y90043PH",
+   "images": [
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT1_03.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT1_01.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT1_02.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT1_04.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT1_05.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT1_06.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT2_01.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT2_02.png"
+   ],
+   "specs": [
+    [
+     "Processor",
+     "Intel Core 5 205H, 8C (4P + 4E) / 12T, P-core 2.2 / 4.8GHz, E-core 1.6 / 3.6GHz, 12MB Intel Smart Cache"
+    ],
+    [
+     "NPU",
+     "None"
+    ],
+    [
+     "Graphics",
+     "NVIDIA GeForce RTX 3050 6GB GDDR6, Boost Clock 1732MHz, TGP 75W, 142 AI TOPS"
+    ],
+    [
+     "Memory",
+     "1x 8GB SODIMM DDR5-5200"
+    ],
+    [
+     "Memory Slots",
+     "Two DDR5 SODIMM slots, dual-channel capable"
+    ],
+    [
+     "Max Memory",
+     "Up to 32GB DDR5-5200"
+    ],
+    [
+     "Storage",
+     "512GB SSD M.2 2242 PCIe 4.0x4 NVMe"
+    ],
+    [
+     "Storage Slot",
+     "Two M.2 2280 PCIe 4.0 x4 slots"
+    ],
+    [
+     "Max Storage Support",
+     "Up to two drives, 2x M.2 SSD\n• M.2 SSD up to 1TB"
+    ],
+    [
+     "Card Reader",
+     "No Card Reader"
+    ],
+    [
+     "Speakers",
+     "Stereo speakers, 2W x2, optimized with Nahimic Audio"
+    ],
+    [
+     "Camera",
+     "HD 720p with E-shutter"
+    ],
+    [
+     "Battery",
+     "60Wh"
+    ],
+    [
+     "Special Features",
+     "AI Chip: LA1"
+    ],
+    [
+     "Display",
+     "15.3\" WUXGA (1920x1200) IPS 300nits Anti-glare, 100% sRGB, 165Hz, Low Blue Light"
+    ],
+    [
+     "Touchscreen",
+     "None"
+    ],
+    [
+     "Color Calibration",
+     "No Color Calibration"
+    ],
+    [
+     "Keyboard",
+     "Purple Backlit, English"
+    ],
+    [
+     "Dimensions (WxDxH)",
+     "344.9 x 254.83 x 20.9-23.25 mm (13.58 x 10.03 x 0.82-0.92 inches)"
+    ],
+    [
+     "Weight",
+     "Starting at 2.1 kg (4.6 lbs)"
+    ],
+    [
+     "Case Color",
+     "Luna Grey"
+    ],
+    [
+     "Operating System",
+     "Windows 11 Home Single Language, English"
+    ],
+    [
+     "Bundled Software",
+     "Office Trial"
+    ],
+    [
+     "WLAN + Bluetooth",
+     "Wi-Fi 6, 802.11ax 2x2 + BT5.3"
+    ],
+    [
+     "Ethernet",
+     "100/1000M (RJ-45)"
+    ],
+    [
+     "Standard Ports",
+     "1x Slim tip (rectangle) power connector\n1x USB-A (USB 10Gbps), with 4.5W output\n1x USB-C (USB 5Gbps), with USB PD 65-100W input / 15W output\n2x USB-A (USB 5Gbps), with 4.5W output\n1x HDMI 2.1, up to 4K/60Hz\n1x Headphone / microphone combo jack (3.5mm)\n1x Ethernet (RJ-45)"
+    ],
+    [
+     "Security Chip",
+     "Firmware TPM 2.0 Enabled"
+    ],
+    [
+     "Fingerprint Reader",
+     "No Fingerprint Reader"
+    ],
+    [
+     "Other Security",
+     "E-shutter"
+    ],
+    [
+     "Base Warranty",
+     "1-year, Courier or Carry-in"
+    ],
+    [
+     "Included Upgrade",
+     "2Y Onsite upgrade from 1Y Courier/Carry-in-GamingEntry(ESS)"
+    ],
+    [
+     "Bundled Accessories",
+     "None"
+    ]
+   ],
+   "upgrade": {
+    "ramInstalled": "8GB DDR5-5200 (1x 8GB SODIMM)",
+    "ramSlots": 2,
+    "ramSlotsFree": 1,
+    "ramMax": "32GB DDR5-5200",
+    "ssdInstalled": "512GB M.2 2242 PCIe 4.0 NVMe",
+    "ssdSlots": 2,
+    "ssdSlotsFree": 1,
+    "ssdMax": "2TB (2x M.2, up to 1TB each)",
+    "recommendation": "Strongly recommended: add an 8GB DDR5-5200 SODIMM for 16GB dual-channel, or replace with 2x 16GB for 32GB. One M.2 2280 slot is free for a second SSD up to 1TB."
+   },
+   "added": "2026-10-01",
+   "order": 8,
+   "views": 0,
+   "newArrival": 3
+  },
+  {
    "id": "83TN005HPH",
    "mtm": "83TN005HPH",
    "model": "LOQ 15AHP11",
@@ -1568,7 +1748,7 @@
     "recommendation": "Add a matching 16GB DDR5-5600 SODIMM in the free slot for 32GB dual-channel (recommended for gaming). One M.2 2280 slot is free for a second SSD up to 2TB."
    },
    "added": "2026-10-01",
-   "order": 8,
+   "order": 9,
    "views": 0,
    "newArrival": 0
   },
@@ -1748,7 +1928,7 @@
     "recommendation": "Add a matching 16GB DDR5-5600 SODIMM in the free slot for 32GB dual-channel. One M.2 2280 PCIe 4.0 slot is free for a second SSD."
    },
    "added": "2026-10-01",
-   "order": 9,
+   "order": 10,
    "views": 0,
    "newArrival": 0
   },
@@ -1928,9 +2108,9 @@
     "recommendation": "Strongly recommended: add an 8GB DDR5-5600 SODIMM for 16GB dual-channel, or replace with 2x 16GB for 32GB. One M.2 2280 slot is free for a second SSD."
    },
    "added": "2026-10-01",
-   "order": 10,
+   "order": 11,
    "views": 0,
-   "newArrival": 3
+   "newArrival": 4
   },
   {
    "id": "83Q600AAPH",
@@ -2112,7 +2292,7 @@
     "recommendation": "Add a matching 16GB DDR5-5600 SODIMM for 32GB dual-channel. One M.2 2280 slot is free for a second SSD up to 2TB."
    },
    "added": "2026-10-01",
-   "order": 11,
+   "order": 12,
    "views": 0,
    "newArrival": 0
   },
@@ -2296,7 +2476,7 @@
     "recommendation": "Add a matching 16GB DDR5-5600 SODIMM for 32GB dual-channel. One M.2 2280 slot is free for a second SSD up to 2TB."
    },
    "added": "2026-10-01",
-   "order": 12,
+   "order": 13,
    "views": 0,
    "newArrival": 0
   },
@@ -2480,7 +2660,7 @@
     "recommendation": "Both memory slots are used: replace with 2x 32GB DDR5-6400 CSODIMM to reach 64GB. One M.2 2280 slot is free for a second SSD up to 2TB (one slot supports PCIe 5.0)."
    },
    "added": "2026-10-01",
-   "order": 13,
+   "order": 14,
    "views": 0,
    "newArrival": 0
   },
@@ -2646,7 +2826,7 @@
    ],
    "upgrade": null,
    "added": "2026-10-01",
-   "order": 14,
+   "order": 15,
    "views": 0,
    "newArrival": 0
   },
@@ -2812,7 +2992,7 @@
    ],
    "upgrade": null,
    "added": "2026-10-01",
-   "order": 15,
+   "order": 16,
    "views": 0,
    "newArrival": 0
   },
@@ -2977,186 +3157,6 @@
     ]
    ],
    "upgrade": null,
-   "added": "2026-10-01",
-   "order": 16,
-   "views": 0,
-   "newArrival": 0
-  },
-  {
-   "id": "83Y90043PH",
-   "mtm": "83Y90043PH",
-   "model": "LOQ 15IRH11E",
-   "name": "LOQ 15IRH11E",
-   "category": "LOQ",
-   "status": "incoming",
-   "eta": "Oct W3",
-   "quickSpecs": "15.3\" WUXGA 165Hz | Core 5 205H | 8GB | 512GB | RTX 3050 | Win11 | 2Y Onsite",
-   "color": "Luna Grey",
-   "srp": 87995,
-   "promoSrp": null,
-   "dp": 74795,
-   "bundle": "GX41H70101 Modern Backpack",
-   "cpuBrand": "Intel",
-   "cpu": "Intel Core 5 205H",
-   "ram": 8,
-   "gpu": "RTX 3050",
-   "gpuDetail": "NVIDIA GeForce RTX 3050 6GB GDDR6, Boost Clock 1732MHz, TGP 75W, 142 AI TOPS",
-   "storage": "512GB SSD M.2 2242 PCIe 4.0x4 NVMe",
-   "display": "15.3\" WUXGA (1920x1200) IPS 300nits Anti-glare, 100% sRGB, 165Hz, Low Blue Light",
-   "psrefUrl": "https://psref.lenovo.com/detail/LOQ_15IRH11E?M=83Y90043PH",
-   "datasheetUrl": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/datasheet/LOQ_15IRH11E_Datasheet_EN.pdf",
-   "productUrl": "https://www.lenovo.com/ph/en/search?text=83Y90043PH",
-   "images": [
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT1_03.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT1_01.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT1_02.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT1_04.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT1_05.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT1_06.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT2_01.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15IRH11E/Compressedimage/LOQ_15IRH11E_CT2_02.png"
-   ],
-   "specs": [
-    [
-     "Processor",
-     "Intel Core 5 205H, 8C (4P + 4E) / 12T, P-core 2.2 / 4.8GHz, E-core 1.6 / 3.6GHz, 12MB Intel Smart Cache"
-    ],
-    [
-     "NPU",
-     "None"
-    ],
-    [
-     "Graphics",
-     "NVIDIA GeForce RTX 3050 6GB GDDR6, Boost Clock 1732MHz, TGP 75W, 142 AI TOPS"
-    ],
-    [
-     "Memory",
-     "1x 8GB SODIMM DDR5-5200"
-    ],
-    [
-     "Memory Slots",
-     "Two DDR5 SODIMM slots, dual-channel capable"
-    ],
-    [
-     "Max Memory",
-     "Up to 32GB DDR5-5200"
-    ],
-    [
-     "Storage",
-     "512GB SSD M.2 2242 PCIe 4.0x4 NVMe"
-    ],
-    [
-     "Storage Slot",
-     "Two M.2 2280 PCIe 4.0 x4 slots"
-    ],
-    [
-     "Max Storage Support",
-     "Up to two drives, 2x M.2 SSD\n• M.2 SSD up to 1TB"
-    ],
-    [
-     "Card Reader",
-     "No Card Reader"
-    ],
-    [
-     "Speakers",
-     "Stereo speakers, 2W x2, optimized with Nahimic Audio"
-    ],
-    [
-     "Camera",
-     "HD 720p with E-shutter"
-    ],
-    [
-     "Battery",
-     "60Wh"
-    ],
-    [
-     "Special Features",
-     "AI Chip: LA1"
-    ],
-    [
-     "Display",
-     "15.3\" WUXGA (1920x1200) IPS 300nits Anti-glare, 100% sRGB, 165Hz, Low Blue Light"
-    ],
-    [
-     "Touchscreen",
-     "None"
-    ],
-    [
-     "Color Calibration",
-     "No Color Calibration"
-    ],
-    [
-     "Keyboard",
-     "Purple Backlit, English"
-    ],
-    [
-     "Dimensions (WxDxH)",
-     "344.9 x 254.83 x 20.9-23.25 mm (13.58 x 10.03 x 0.82-0.92 inches)"
-    ],
-    [
-     "Weight",
-     "Starting at 2.1 kg (4.6 lbs)"
-    ],
-    [
-     "Case Color",
-     "Luna Grey"
-    ],
-    [
-     "Operating System",
-     "Windows 11 Home Single Language, English"
-    ],
-    [
-     "Bundled Software",
-     "Office Trial"
-    ],
-    [
-     "WLAN + Bluetooth",
-     "Wi-Fi 6, 802.11ax 2x2 + BT5.3"
-    ],
-    [
-     "Ethernet",
-     "100/1000M (RJ-45)"
-    ],
-    [
-     "Standard Ports",
-     "1x Slim tip (rectangle) power connector\n1x USB-A (USB 10Gbps), with 4.5W output\n1x USB-C (USB 5Gbps), with USB PD 65-100W input / 15W output\n2x USB-A (USB 5Gbps), with 4.5W output\n1x HDMI 2.1, up to 4K/60Hz\n1x Headphone / microphone combo jack (3.5mm)\n1x Ethernet (RJ-45)"
-    ],
-    [
-     "Security Chip",
-     "Firmware TPM 2.0 Enabled"
-    ],
-    [
-     "Fingerprint Reader",
-     "No Fingerprint Reader"
-    ],
-    [
-     "Other Security",
-     "E-shutter"
-    ],
-    [
-     "Base Warranty",
-     "1-year, Courier or Carry-in"
-    ],
-    [
-     "Included Upgrade",
-     "2Y Onsite upgrade from 1Y Courier/Carry-in-GamingEntry(ESS)"
-    ],
-    [
-     "Bundled Accessories",
-     "None"
-    ]
-   ],
-   "upgrade": {
-    "ramInstalled": "8GB DDR5-5200 (1x 8GB SODIMM)",
-    "ramSlots": 2,
-    "ramSlotsFree": 1,
-    "ramMax": "32GB DDR5-5200",
-    "ssdInstalled": "512GB M.2 2242 PCIe 4.0 NVMe",
-    "ssdSlots": 2,
-    "ssdSlotsFree": 1,
-    "ssdMax": "2TB (2x M.2, up to 1TB each)",
-    "recommendation": "Strongly recommended: add an 8GB DDR5-5200 SODIMM for 16GB dual-channel, or replace with 2x 16GB for 32GB. One M.2 2280 slot is free for a second SSD up to 1TB."
-   },
    "added": "2026-10-01",
    "order": 17,
    "views": 0,
@@ -3350,7 +3350,7 @@
    "category": "IdeaPad",
    "status": "incoming",
    "eta": "Oct W4",
-   "quickSpecs": "15.3\" WUXGA | Core 5 320 | 16GB | 512GB | Win11 | Office 2024 + 1Y M365 | 2Y PC",
+   "quickSpecs": "15.3\" WUXGA | Core 5 320 | 16GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
    "color": "Luna Grey",
    "srp": 76995,
    "promoSrp": null,
@@ -3519,7 +3519,7 @@
    "category": "IdeaPad",
    "status": "incoming",
    "eta": "Nov W1",
-   "quickSpecs": "15.3\" WUXGA | Core 7 350 | 16GB | 512GB | Win11 | Office 2024 + 1Y M365 | 2Y PC",
+   "quickSpecs": "15.3\" WUXGA | Core 7 350 | 16GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
    "color": "Luna Grey",
    "srp": 83995,
    "promoSrp": null,
@@ -3688,7 +3688,7 @@
    "category": "IdeaPad",
    "status": "incoming",
    "eta": "Nov W1",
-   "quickSpecs": "14\" WUXGA | U5 135H | 8GB | 512GB | Win11 | Office 2024 + 1Y M365 | 2Y PC",
+   "quickSpecs": "14\" WUXGA | U5 135H | 8GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
    "color": "Luna Grey",
    "srp": 74995,
    "promoSrp": null,
