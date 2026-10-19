@@ -1,7 +1,7 @@
 {
- "version": "20261012183733",
+ "version": "20261019171327",
  "priceListName": "Iontech PL - Lenovo Oct 2026",
- "updatedAt": "2026-10-12",
+ "updatedAt": "2026-10-19",
  "adminPinHash": "b2613e92c6045bb9a608cbaa36a055209fb3c6d2780e42f6778f319917e76163",
  "products": [
   {
@@ -15,8 +15,8 @@
    "quickSpecs": "15.6\" FHD | R3 30 | 8GB | 256GB | Win11 | Office Home 2024 | 2Y PC",
    "color": "Arctic Grey",
    "srp": 44995,
-   "promoSrp": null,
-   "dp": 38245,
+   "promoSrp": 39995,
+   "dp": 33995,
    "bundle": "B210 Backpack",
    "cpuBrand": "AMD",
    "cpu": "AMD Ryzen 3 30",
@@ -169,6 +169,174 @@
    },
    "added": "2026-10-01",
    "order": 0,
+   "views": 0,
+   "newArrival": 0
+  },
+  {
+   "id": "82XQ0259PH",
+   "mtm": "82XQ0259PH",
+   "model": "IdeaPad Slim 3 15AMN8",
+   "name": "IdeaPad Slim 3 15AMN8",
+   "category": "IdeaPad",
+   "status": "onhand",
+   "eta": "",
+   "quickSpecs": "15.6\" FHD | R3 30 | 8GB | 256GB | Win11 | Office Home 2024 | 2Y PC",
+   "color": "Arctic Grey",
+   "srp": 44995,
+   "promoSrp": 39995,
+   "dp": 33995,
+   "bundle": "B210 Backpack",
+   "cpuBrand": "AMD",
+   "cpu": "AMD Ryzen 3 30",
+   "ram": 8,
+   "gpu": "Integrated",
+   "gpuDetail": "Integrated AMD Radeon 610M Graphics",
+   "storage": "256GB SSD M.2 2242 PCIe 4.0x4 NVMe",
+   "display": "15.6\" FHD (1920x1080) TN 250nits Anti-glare",
+   "psrefUrl": "https://psref.lenovo.com/detail/IdeaPad_Slim_3_15AMN8?M=82XQ0259PH",
+   "datasheetUrl": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad-Slim-3-14-15-16-8_AMD_datasheet_EN.pdf",
+   "productUrl": "https://www.lenovo.com/ph/en/search?text=82XQ0259PH",
+   "images": [
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT1_05.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT1_06.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT2_13.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT2_14.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT2_15.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT2_16.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT2_17.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT2_18.png"
+   ],
+   "specs": [
+    [
+     "Processor",
+     "AMD Ryzen 3 30 (4C / 8T, 2.4 / 4.1GHz, 2MB L2 / 4MB L3)"
+    ],
+    [
+     "Graphics",
+     "Integrated AMD Radeon 610M Graphics"
+    ],
+    [
+     "Memory",
+     "8GB Soldered LPDDR5-5500"
+    ],
+    [
+     "Memory Slots",
+     "Memory soldered to systemboard, no slots, dual-channel"
+    ],
+    [
+     "Max Memory",
+     "8GB soldered memory, not upgradable"
+    ],
+    [
+     "Storage",
+     "256GB SSD M.2 2242 PCIe 4.0x4 NVMe"
+    ],
+    [
+     "Storage Slot",
+     "One M.2 PCIe 3.0 x2 slot"
+    ],
+    [
+     "Max Storage Support",
+     "One drive, up to 1TB M.2 2242 SSD"
+    ],
+    [
+     "Card Reader",
+     "SD Card Reader"
+    ],
+    [
+     "Speakers",
+     "User-facing stereo speakers, 1.5W x2, optimized with Dolby Audio"
+    ],
+    [
+     "Camera",
+     "HD 720p with Privacy Shutter"
+    ],
+    [
+     "Battery",
+     "47Wh"
+    ],
+    [
+     "Display",
+     "15.6\" FHD (1920x1080) TN 250nits Anti-glare"
+    ],
+    [
+     "Touchscreen",
+     "None"
+    ],
+    [
+     "Keyboard",
+     "Non-backlit, English"
+    ],
+    [
+     "Dimensions (WxDxH)",
+     "359.3 x 235 x 17.9 mm (14.15 x 9.25 x 0.70 inches)"
+    ],
+    [
+     "Weight",
+     "Starting at 1.62 kg (3.57 lbs)"
+    ],
+    [
+     "Case Color",
+     "Arctic Grey"
+    ],
+    [
+     "Operating System",
+     "Windows 11 Home Single Language, English"
+    ],
+    [
+     "Bundled Software",
+     "Microsoft 365 Basic + Office Home 2024"
+    ],
+    [
+     "WLAN + Bluetooth",
+     "Wi-Fi 6, 802.11ax 2x2 + BT5.2"
+    ],
+    [
+     "Ethernet",
+     "No Onboard Ethernet"
+    ],
+    [
+     "Standard Ports",
+     "2x USB 3.2 Gen 1\n1x USB-C 3.2 Gen 1 (support data transfer, USB PD 45-65W and DisplayPort 1.2)\n1x HDMI 1.4\n1x Headphone / microphone combo jack (3.5mm)\n1x Card reader\n1x Round tip power connector"
+    ],
+    [
+     "Security Chip",
+     "Firmware TPM 2.0 Enabled"
+    ],
+    [
+     "Fingerprint Reader",
+     "No Fingerprint Reader"
+    ],
+    [
+     "Other Security",
+     "Camera privacy shutter"
+    ],
+    [
+     "Base Warranty",
+     "1-year, Courier or Carry-in"
+    ],
+    [
+     "Included Upgrade",
+     "2Y Premium Care -IPENTRY (ESS)"
+    ],
+    [
+     "Bundled Accessories",
+     "None"
+    ]
+   ],
+   "upgrade": {
+    "ramInstalled": "8GB LPDDR5-5500 (soldered)",
+    "ramSlots": 0,
+    "ramSlotsFree": 0,
+    "ramMax": "8GB (not upgradable)",
+    "ssdInstalled": "256GB M.2 2242 PCIe 4.0 NVMe",
+    "ssdSlots": 1,
+    "ssdSlotsFree": 0,
+    "ssdMax": "1TB (one M.2 2242 drive)",
+    "recommendation": "RAM is soldered and cannot be upgraded. Storage can be replaced with an M.2 2242 PCIe NVMe SSD up to 1TB (slot runs at PCIe 3.0 x2)."
+   },
+   "added": "2026-10-01",
+   "order": 1,
    "views": 0,
    "newArrival": 0
   },
@@ -336,7 +504,7 @@
     "recommendation": "RAM is soldered and cannot be upgraded. The 512GB SSD can be swapped for a 1TB M.2 2242 PCIe NVMe SSD (slot runs at PCIe 3.0 x2)."
    },
    "added": "2026-10-01",
-   "order": 1,
+   "order": 2,
    "views": 0,
    "newArrival": 0
   },
@@ -509,7 +677,7 @@
     "recommendation": "Single SODIMM slot is occupied: replace the 16GB module with a 32GB DDR5-5600 SODIMM to reach 32GB (runs single-channel). SSD can be replaced up to 1TB M.2 2242."
    },
    "added": "2026-10-01",
-   "order": 2,
+   "order": 3,
    "views": 0,
    "newArrival": 0
   },
@@ -524,8 +692,8 @@
    "quickSpecs": "15.6\" FHD | R5 40 | 16GB | 512GB | Win11 | Office Home 2024 | 2Y PC",
    "color": "Arctic Grey",
    "srp": 72995,
-   "promoSrp": null,
-   "dp": 62045,
+   "promoSrp": 60995,
+   "dp": 51845,
    "bundle": "B210 Backpack",
    "cpuBrand": "AMD",
    "cpu": "AMD Ryzen 5 40",
@@ -677,7 +845,7 @@
     "recommendation": "RAM is soldered and cannot be upgraded. The 512GB SSD can be swapped for a 1TB M.2 2242 PCIe NVMe SSD."
    },
    "added": "2026-10-01",
-   "order": 3,
+   "order": 4,
    "views": 0,
    "newArrival": 1
   },
@@ -844,9 +1012,358 @@
     "recommendation": "RAM is already at the 16GB maximum. One M.2 2242 slot is free: add a second SSD up to 1TB for extra storage."
    },
    "added": "2026-10-01",
-   "order": 4,
+   "order": 5,
    "views": 0,
    "newArrival": 2
+  },
+  {
+   "id": "83RR00X0PH",
+   "mtm": "83RR00X0PH",
+   "model": "IdeaPad Slim 3 15IWC11",
+   "name": "IdeaPad Slim 3 15IWC11",
+   "category": "IdeaPad",
+   "status": "onhand",
+   "eta": "",
+   "quickSpecs": "15.3\" WUXGA | Core 5 320 | 16GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
+   "color": "Luna Grey",
+   "srp": 76995,
+   "promoSrp": 66995,
+   "dp": 56945,
+   "bundle": "B210 Backpack",
+   "cpuBrand": "Intel",
+   "cpu": "Intel Core 5 320",
+   "ram": 16,
+   "gpu": "Integrated",
+   "gpuDetail": "Integrated Intel Graphics",
+   "storage": "512GB SSD M.2 2242 PCIe 4.0x4 NVMe",
+   "display": "15.3\" WUXGA (1920x1200) IPS 400nits Anti-glare, 45% NTSC, 60Hz",
+   "psrefUrl": "https://psref.lenovo.com/detail/IdeaPad_Slim_3_15IWC11?M=83RR00X0PH",
+   "datasheetUrl": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad-Slim-3i-14-15-16-Gen-11_Datasheet_EN.pdf",
+   "productUrl": "https://www.lenovo.com/ph/en/search?text=83RR00X0PH",
+   "images": [
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15IWC11/Compressedimage/IdeaPad_Slim_3_15IWC11_CT2_09.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15IWC11/Compressedimage/IdeaPad_Slim_3_15IWC11_CT1_04.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15IWC11/Compressedimage/IdeaPad_Slim_3_15IWC11_CT2_08.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15IWC11/Compressedimage/IdeaPad_Slim_3_15IWC11_CT2_10.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15IWC11/Compressedimage/IdeaPad_Slim_3_15IWC11_CT2_11.png"
+   ],
+   "specs": [
+    [
+     "Processor",
+     "Intel Core 5 320, 6C (2P + 4LPE) / 6T, Max Turbo up to 4.6Ghz, 6MB Intel Smart Cache"
+    ],
+    [
+     "NPU",
+     "Up to 16 TOPS"
+    ],
+    [
+     "Graphics",
+     "Integrated Intel Graphics"
+    ],
+    [
+     "Memory",
+     "1x 16GB SODIMM DDR5-5600"
+    ],
+    [
+     "Memory Slots",
+     "One DDR5 SODIMM slot"
+    ],
+    [
+     "Max Memory",
+     "Up to 32GB DDR5-5600 offering"
+    ],
+    [
+     "Storage",
+     "512GB SSD M.2 2242 PCIe 4.0x4 NVMe"
+    ],
+    [
+     "Storage Slot",
+     "One M.2 2242 PCIe 4.0 x4 slot"
+    ],
+    [
+     "Max Storage Support",
+     "One drive, up to 1TB M.2 2242 SSD"
+    ],
+    [
+     "Card Reader",
+     "SD Card Reader"
+    ],
+    [
+     "Speakers",
+     "Stereo speakers, 2W x2, optimized with Dolby Audio"
+    ],
+    [
+     "Camera",
+     "HD 720p with Privacy Shutter"
+    ],
+    [
+     "Battery",
+     "50Wh"
+    ],
+    [
+     "Display",
+     "15.3\" WUXGA (1920x1200) IPS 400nits Anti-glare, 45% NTSC, 60Hz"
+    ],
+    [
+     "Touchscreen",
+     "None"
+    ],
+    [
+     "Keyboard",
+     "Non-backlit, English"
+    ],
+    [
+     "Dimensions (WxDxH)",
+     "343.4 x 239.5 x 16.9-17.9 mm (13.52 x 9.51 x 0.67-0.70 inches)"
+    ],
+    [
+     "Weight",
+     "Starting at 1.59 kg (3.51 lbs)"
+    ],
+    [
+     "Case Color",
+     "Luna Grey"
+    ],
+    [
+     "Operating System",
+     "Windows 11 Home Single Language, English"
+    ],
+    [
+     "Bundled Software",
+     "Microsoft 365 Basic + Office Home 2024"
+    ],
+    [
+     "WLAN + Bluetooth",
+     "Wi-Fi 6, 802.11ax 2x2 + BT5.3"
+    ],
+    [
+     "Ethernet",
+     "No Onboard Ethernet"
+    ],
+    [
+     "Standard Ports",
+     "2x USB-A (USB 5Gbps)\n1x USB-C (USB 5Gbps), with USB PD 45-65W and DisplayPort 1.2\n1x HDMI 1.4\n1x Headphone / microphone combo jack (3.5mm)\n1x SD card reader\n1x Round tip power connector"
+    ],
+    [
+     "Security Chip",
+     "Firmware TPM 2.0 Enabled"
+    ],
+    [
+     "Fingerprint Reader",
+     "No Fingerprint Reader"
+    ],
+    [
+     "Other Security",
+     "Camera privacy shutter"
+    ],
+    [
+     "Base Warranty",
+     "1-year, Courier or Carry-in"
+    ],
+    [
+     "Included Upgrade",
+     "2Y Premium Care -IPENTRY (ESS)"
+    ],
+    [
+     "Bundled Accessories",
+     "None"
+    ]
+   ],
+   "upgrade": {
+    "ramInstalled": "16GB DDR5-5600 (1x 16GB SODIMM)",
+    "ramSlots": 1,
+    "ramSlotsFree": 0,
+    "ramMax": "32GB DDR5-5600",
+    "ssdInstalled": "512GB M.2 2242 PCIe 4.0 NVMe",
+    "ssdSlots": 1,
+    "ssdSlotsFree": 0,
+    "ssdMax": "1TB (one M.2 2242 drive)",
+    "recommendation": "Single SODIMM slot is occupied: replace the 16GB module with a 32GB DDR5-5600 SODIMM to reach 32GB (runs single-channel). SSD can be replaced up to 1TB M.2 2242."
+   },
+   "added": "2026-10-01",
+   "order": 6,
+   "views": 0,
+   "newArrival": 0
+  },
+  {
+   "id": "83UN0024PH",
+   "mtm": "83UN0024PH",
+   "model": "IdeaPad 5 2-in-1 15AHP11",
+   "name": "IdeaPad 5 2-in-1 15AHP11",
+   "category": "IdeaPad",
+   "status": "onhand",
+   "eta": "",
+   "quickSpecs": "15.3\" WUXGA Touch | R5 216 | 8GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
+   "color": "Luna Grey",
+   "srp": 79995,
+   "promoSrp": null,
+   "dp": 67995,
+   "bundle": "Lenovo Pen + B210 Backpack",
+   "cpuBrand": "AMD",
+   "cpu": "AMD Ryzen 5 216",
+   "ram": 8,
+   "gpu": "Integrated",
+   "gpuDetail": "Integrated AMD Radeon 740M Graphics",
+   "storage": "512GB SSD M.2 2242 PCIe 4.0x4 NVMe",
+   "display": "15.3\" WUXGA (1920x1200) IPS 400nits Glossy, 45% NTSC, 60Hz, TÜV Low Blue Light, Glass, Touch",
+   "psrefUrl": "https://psref.lenovo.com/detail/IdeaPad_5_2_in_1_15AHP11?M=83UN0024PH",
+   "datasheetUrl": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad 5 2-in-1 14_15AGP11_AHP11_datasheet.pdf",
+   "productUrl": "https://www.lenovo.com/ph/en/search?text=83UN0024PH",
+   "images": [
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT1_01.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT2_01.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT1_02.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT1_03.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT1_04.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT1_05.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT1_06.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT2_02.png"
+   ],
+   "specs": [
+    [
+     "Processor",
+     "AMD Ryzen 5 216 (6C / 12T, 2.9 / 4.7GHz, 6MB L2 / 16MB L3)"
+    ],
+    [
+     "AI PC Category",
+     "AI PC"
+    ],
+    [
+     "NPU",
+     "None"
+    ],
+    [
+     "Graphics",
+     "Integrated AMD Radeon 740M Graphics"
+    ],
+    [
+     "Memory",
+     "1x 8GB SODIMM DDR5-5600"
+    ],
+    [
+     "Memory Slots",
+     "Two DDR5 SODIMM slots, dual-channel capable"
+    ],
+    [
+     "Max Memory",
+     "Up to 32GB DDR5-5600 offering"
+    ],
+    [
+     "Storage",
+     "512GB SSD M.2 2242 PCIe 4.0x4 NVMe"
+    ],
+    [
+     "Storage Slot",
+     "Two M.2 slots\n• One M.2 2242 PCIe 4.0 x4 slot\n• One M.2 2280 PCIe 4.0 x4 slot"
+    ],
+    [
+     "Max Storage Support",
+     "Up to two drives, 2x M.2 SSD\n• M.2 2242 SSD up to 1TB"
+    ],
+    [
+     "Card Reader",
+     "microSD Card Reader"
+    ],
+    [
+     "Speakers",
+     "Stereo speakers, 2W x2, optimised with Dolby Audio"
+    ],
+    [
+     "Camera",
+     "FHD 1080p + IR with Privacy Shutter"
+    ],
+    [
+     "Battery",
+     "60Wh"
+    ],
+    [
+     "Display",
+     "15.3\" WUXGA (1920x1200) IPS 400nits Glossy, 45% NTSC, 60Hz, TÜV Low Blue Light, Glass, Touch"
+    ],
+    [
+     "Touchscreen",
+     "OGS, 10-point Multi-touch"
+    ],
+    [
+     "Color Calibration",
+     "No Color Calibration"
+    ],
+    [
+     "Keyboard",
+     "Backlit, English"
+    ],
+    [
+     "Dimensions (WxDxH)",
+     "340.2 x 242 x 17.6 mm (13.39 x 9.53 x 0.69 inches)"
+    ],
+    [
+     "Weight",
+     "Starting at 1.77 kg (3.90 lbs)"
+    ],
+    [
+     "Case Color",
+     "Luna Grey"
+    ],
+    [
+     "Operating System",
+     "Windows 11 Home Single Language, English"
+    ],
+    [
+     "Bundled Software",
+     "Microsoft 365 Basic + Office Home 2024"
+    ],
+    [
+     "WLAN + Bluetooth",
+     "Wi-Fi 7, 802.11be 2x2 + BT5.4"
+    ],
+    [
+     "Ethernet",
+     "No Onboard Ethernet"
+    ],
+    [
+     "Standard Ports",
+     "1x USB-A (USB 5Gbps), Always On\n1x USB-A (USB 5Gbps)\n2x USB-C (USB 10Gbps), with USB PD 45-65W and DisplayPort 1.4\n1x HDMI 2.1, up to 4K/60Hz\n1x Headphone / microphone combo jack (3.5mm)\n1x microSD card reader"
+    ],
+    [
+     "Security Chip",
+     "Firmware TPM 2.0 Enabled"
+    ],
+    [
+     "Fingerprint Reader",
+     "No Fingerprint Reader"
+    ],
+    [
+     "Other Security",
+     "Camera privacy shutter\nIR camera for Windows Hello (facial recognition)"
+    ],
+    [
+     "Base Warranty",
+     "1-year, Courier or Carry-in"
+    ],
+    [
+     "Included Upgrade",
+     "2Y Premium Care -IPMAIN (ESS)"
+    ],
+    [
+     "Bundled Accessories",
+     "None"
+    ]
+   ],
+   "upgrade": {
+    "ramInstalled": "8GB DDR5-5600 (1x 8GB SODIMM)",
+    "ramSlots": 2,
+    "ramSlotsFree": 1,
+    "ramMax": "32GB DDR5-5600",
+    "ssdInstalled": "512GB M.2 2242 PCIe 4.0 NVMe",
+    "ssdSlots": 2,
+    "ssdSlotsFree": 1,
+    "ssdMax": "Two drives (M.2 2242 up to 1TB + free M.2 2280 slot)",
+    "recommendation": "Recommended: add an 8GB DDR5-5600 SODIMM for 16GB dual-channel, or 2x 16GB for 32GB. The M.2 2280 PCIe 4.0 slot is free for a second SSD."
+   },
+   "added": "2026-10-01",
+   "order": 7,
+   "views": 0,
+   "newArrival": 0
   },
   {
    "id": "83UM001PPH",
@@ -1024,7 +1541,7 @@
     "recommendation": "Both RAM slots are used: replace with 2x 16GB DDR5-5600 SODIMM to reach 32GB. The M.2 2280 PCIe 4.0 slot is free for a second SSD."
    },
    "added": "2026-10-01",
-   "order": 5,
+   "order": 8,
    "views": 0,
    "newArrival": 0
   },
@@ -1204,7 +1721,7 @@
     "recommendation": "RAM is soldered and cannot be upgraded. The SSD can be replaced with a 1TB M.2 2242 PCIe 4.0 NVMe drive."
    },
    "added": "2026-10-01",
-   "order": 6,
+   "order": 9,
    "views": 0,
    "newArrival": 0
   },
@@ -1384,7 +1901,7 @@
     "recommendation": "RAM is soldered and cannot be upgraded. The SSD can be replaced with an M.2 2242 PCIe 4.0 NVMe drive up to 2TB."
    },
    "added": "2026-10-01",
-   "order": 7,
+   "order": 10,
    "views": 0,
    "newArrival": 0
   },
@@ -1399,8 +1916,8 @@
    "quickSpecs": "15.3\" WUXGA 165Hz | Core 5 205H | 8GB | 512GB | RTX 3050 | Win11 | 2Y Onsite",
    "color": "Luna Grey",
    "srp": 87995,
-   "promoSrp": null,
-   "dp": 74795,
+   "promoSrp": 75995,
+   "dp": 64595,
    "bundle": "GX41H70101 Modern Backpack",
    "cpuBrand": "Intel",
    "cpu": "Intel Core 5 205H",
@@ -1564,7 +2081,7 @@
     "recommendation": "Strongly recommended: add an 8GB DDR5-5200 SODIMM for 16GB dual-channel, or replace with 2x 16GB for 32GB. One M.2 2280 slot is free for a second SSD up to 1TB."
    },
    "added": "2026-10-01",
-   "order": 8,
+   "order": 11,
    "views": 0,
    "newArrival": 3
   },
@@ -1748,7 +2265,7 @@
     "recommendation": "Add a matching 16GB DDR5-5600 SODIMM in the free slot for 32GB dual-channel (recommended for gaming). One M.2 2280 slot is free for a second SSD up to 2TB."
    },
    "added": "2026-10-01",
-   "order": 9,
+   "order": 12,
    "views": 0,
    "newArrival": 0
   },
@@ -1928,7 +2445,7 @@
     "recommendation": "Add a matching 16GB DDR5-5600 SODIMM in the free slot for 32GB dual-channel. One M.2 2280 PCIe 4.0 slot is free for a second SSD."
    },
    "added": "2026-10-01",
-   "order": 10,
+   "order": 13,
    "views": 0,
    "newArrival": 0
   },
@@ -1943,8 +2460,8 @@
    "quickSpecs": "15.6\" FHD 144Hz | i7-14650HX | 8GB | 512GB | RTX 4050 | Win11 | 2Y PC",
    "color": "Luna Grey",
    "srp": 110995,
-   "promoSrp": null,
-   "dp": 94345,
+   "promoSrp": 90995,
+   "dp": 77345,
    "bundle": "GX41H70101 Modern Backpack",
    "cpuBrand": "Intel",
    "cpu": "Intel Core i7-14650HX",
@@ -2108,7 +2625,7 @@
     "recommendation": "Strongly recommended: add an 8GB DDR5-5600 SODIMM for 16GB dual-channel, or replace with 2x 16GB for 32GB. One M.2 2280 slot is free for a second SSD."
    },
    "added": "2026-10-01",
-   "order": 11,
+   "order": 14,
    "views": 0,
    "newArrival": 4
   },
@@ -2292,7 +2809,7 @@
     "recommendation": "Add a matching 16GB DDR5-5600 SODIMM for 32GB dual-channel. One M.2 2280 slot is free for a second SSD up to 2TB."
    },
    "added": "2026-10-01",
-   "order": 12,
+   "order": 15,
    "views": 0,
    "newArrival": 0
   },
@@ -2476,7 +2993,7 @@
     "recommendation": "Add a matching 16GB DDR5-5600 SODIMM for 32GB dual-channel. One M.2 2280 slot is free for a second SSD up to 2TB."
    },
    "added": "2026-10-01",
-   "order": 13,
+   "order": 16,
    "views": 0,
    "newArrival": 0
   },
@@ -2660,7 +3177,7 @@
     "recommendation": "Both memory slots are used: replace with 2x 32GB DDR5-6400 CSODIMM to reach 64GB. One M.2 2280 slot is free for a second SSD up to 2TB (one slot supports PCIe 5.0)."
    },
    "added": "2026-10-01",
-   "order": 14,
+   "order": 17,
    "views": 0,
    "newArrival": 0
   },
@@ -2826,7 +3343,7 @@
    ],
    "upgrade": null,
    "added": "2026-10-01",
-   "order": 15,
+   "order": 18,
    "views": 0,
    "newArrival": 0
   },
@@ -2992,7 +3509,7 @@
    ],
    "upgrade": null,
    "added": "2026-10-01",
-   "order": 16,
+   "order": 19,
    "views": 0,
    "newArrival": 0
   },
@@ -3158,356 +3675,7 @@
    ],
    "upgrade": null,
    "added": "2026-10-01",
-   "order": 17,
-   "views": 0,
-   "newArrival": 0
-  },
-  {
-   "id": "83UN0024PH",
-   "mtm": "83UN0024PH",
-   "model": "IdeaPad 5 2-in-1 15AHP11",
-   "name": "IdeaPad 5 2-in-1 15AHP11",
-   "category": "IdeaPad",
-   "status": "incoming",
-   "eta": "Oct W3",
-   "quickSpecs": "15.3\" WUXGA Touch | R5 216 | 8GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
-   "color": "Luna Grey",
-   "srp": 79995,
-   "promoSrp": null,
-   "dp": 67995,
-   "bundle": "Lenovo Pen + B210 Backpack",
-   "cpuBrand": "AMD",
-   "cpu": "AMD Ryzen 5 216",
-   "ram": 8,
-   "gpu": "Integrated",
-   "gpuDetail": "Integrated AMD Radeon 740M Graphics",
-   "storage": "512GB SSD M.2 2242 PCIe 4.0x4 NVMe",
-   "display": "15.3\" WUXGA (1920x1200) IPS 400nits Glossy, 45% NTSC, 60Hz, TÜV Low Blue Light, Glass, Touch",
-   "psrefUrl": "https://psref.lenovo.com/detail/IdeaPad_5_2_in_1_15AHP11?M=83UN0024PH",
-   "datasheetUrl": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad 5 2-in-1 14_15AGP11_AHP11_datasheet.pdf",
-   "productUrl": "https://www.lenovo.com/ph/en/search?text=83UN0024PH",
-   "images": [
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT1_01.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT2_01.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT1_02.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT1_03.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT1_04.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT1_05.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT1_06.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_5_2_in_1_15AHP11/Compressedimage/IdeaPad_5_2_in_1_15AHP11_CT2_02.png"
-   ],
-   "specs": [
-    [
-     "Processor",
-     "AMD Ryzen 5 216 (6C / 12T, 2.9 / 4.7GHz, 6MB L2 / 16MB L3)"
-    ],
-    [
-     "AI PC Category",
-     "AI PC"
-    ],
-    [
-     "NPU",
-     "None"
-    ],
-    [
-     "Graphics",
-     "Integrated AMD Radeon 740M Graphics"
-    ],
-    [
-     "Memory",
-     "1x 8GB SODIMM DDR5-5600"
-    ],
-    [
-     "Memory Slots",
-     "Two DDR5 SODIMM slots, dual-channel capable"
-    ],
-    [
-     "Max Memory",
-     "Up to 32GB DDR5-5600 offering"
-    ],
-    [
-     "Storage",
-     "512GB SSD M.2 2242 PCIe 4.0x4 NVMe"
-    ],
-    [
-     "Storage Slot",
-     "Two M.2 slots\n• One M.2 2242 PCIe 4.0 x4 slot\n• One M.2 2280 PCIe 4.0 x4 slot"
-    ],
-    [
-     "Max Storage Support",
-     "Up to two drives, 2x M.2 SSD\n• M.2 2242 SSD up to 1TB"
-    ],
-    [
-     "Card Reader",
-     "microSD Card Reader"
-    ],
-    [
-     "Speakers",
-     "Stereo speakers, 2W x2, optimised with Dolby Audio"
-    ],
-    [
-     "Camera",
-     "FHD 1080p + IR with Privacy Shutter"
-    ],
-    [
-     "Battery",
-     "60Wh"
-    ],
-    [
-     "Display",
-     "15.3\" WUXGA (1920x1200) IPS 400nits Glossy, 45% NTSC, 60Hz, TÜV Low Blue Light, Glass, Touch"
-    ],
-    [
-     "Touchscreen",
-     "OGS, 10-point Multi-touch"
-    ],
-    [
-     "Color Calibration",
-     "No Color Calibration"
-    ],
-    [
-     "Keyboard",
-     "Backlit, English"
-    ],
-    [
-     "Dimensions (WxDxH)",
-     "340.2 x 242 x 17.6 mm (13.39 x 9.53 x 0.69 inches)"
-    ],
-    [
-     "Weight",
-     "Starting at 1.77 kg (3.90 lbs)"
-    ],
-    [
-     "Case Color",
-     "Luna Grey"
-    ],
-    [
-     "Operating System",
-     "Windows 11 Home Single Language, English"
-    ],
-    [
-     "Bundled Software",
-     "Microsoft 365 Basic + Office Home 2024"
-    ],
-    [
-     "WLAN + Bluetooth",
-     "Wi-Fi 7, 802.11be 2x2 + BT5.4"
-    ],
-    [
-     "Ethernet",
-     "No Onboard Ethernet"
-    ],
-    [
-     "Standard Ports",
-     "1x USB-A (USB 5Gbps), Always On\n1x USB-A (USB 5Gbps)\n2x USB-C (USB 10Gbps), with USB PD 45-65W and DisplayPort 1.4\n1x HDMI 2.1, up to 4K/60Hz\n1x Headphone / microphone combo jack (3.5mm)\n1x microSD card reader"
-    ],
-    [
-     "Security Chip",
-     "Firmware TPM 2.0 Enabled"
-    ],
-    [
-     "Fingerprint Reader",
-     "No Fingerprint Reader"
-    ],
-    [
-     "Other Security",
-     "Camera privacy shutter\nIR camera for Windows Hello (facial recognition)"
-    ],
-    [
-     "Base Warranty",
-     "1-year, Courier or Carry-in"
-    ],
-    [
-     "Included Upgrade",
-     "2Y Premium Care -IPMAIN (ESS)"
-    ],
-    [
-     "Bundled Accessories",
-     "None"
-    ]
-   ],
-   "upgrade": {
-    "ramInstalled": "8GB DDR5-5600 (1x 8GB SODIMM)",
-    "ramSlots": 2,
-    "ramSlotsFree": 1,
-    "ramMax": "32GB DDR5-5600",
-    "ssdInstalled": "512GB M.2 2242 PCIe 4.0 NVMe",
-    "ssdSlots": 2,
-    "ssdSlotsFree": 1,
-    "ssdMax": "Two drives (M.2 2242 up to 1TB + free M.2 2280 slot)",
-    "recommendation": "Recommended: add an 8GB DDR5-5600 SODIMM for 16GB dual-channel, or 2x 16GB for 32GB. The M.2 2280 PCIe 4.0 slot is free for a second SSD."
-   },
-   "added": "2026-10-01",
-   "order": 18,
-   "views": 0,
-   "newArrival": 0
-  },
-  {
-   "id": "83RR00X0PH",
-   "mtm": "83RR00X0PH",
-   "model": "IdeaPad Slim 3 15IWC11",
-   "name": "IdeaPad Slim 3 15IWC11",
-   "category": "IdeaPad",
-   "status": "incoming",
-   "eta": "Oct W4",
-   "quickSpecs": "15.3\" WUXGA | Core 5 320 | 16GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
-   "color": "Luna Grey",
-   "srp": 76995,
-   "promoSrp": null,
-   "dp": 65445,
-   "bundle": "B210 Backpack",
-   "cpuBrand": "Intel",
-   "cpu": "Intel Core 5 320",
-   "ram": 16,
-   "gpu": "Integrated",
-   "gpuDetail": "Integrated Intel Graphics",
-   "storage": "512GB SSD M.2 2242 PCIe 4.0x4 NVMe",
-   "display": "15.3\" WUXGA (1920x1200) IPS 400nits Anti-glare, 45% NTSC, 60Hz",
-   "psrefUrl": "https://psref.lenovo.com/detail/IdeaPad_Slim_3_15IWC11?M=83RR00X0PH",
-   "datasheetUrl": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad-Slim-3i-14-15-16-Gen-11_Datasheet_EN.pdf",
-   "productUrl": "https://www.lenovo.com/ph/en/search?text=83RR00X0PH",
-   "images": [
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15IWC11/Compressedimage/IdeaPad_Slim_3_15IWC11_CT2_09.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15IWC11/Compressedimage/IdeaPad_Slim_3_15IWC11_CT1_04.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15IWC11/Compressedimage/IdeaPad_Slim_3_15IWC11_CT2_08.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15IWC11/Compressedimage/IdeaPad_Slim_3_15IWC11_CT2_10.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15IWC11/Compressedimage/IdeaPad_Slim_3_15IWC11_CT2_11.png"
-   ],
-   "specs": [
-    [
-     "Processor",
-     "Intel Core 5 320, 6C (2P + 4LPE) / 6T, Max Turbo up to 4.6Ghz, 6MB Intel Smart Cache"
-    ],
-    [
-     "NPU",
-     "Up to 16 TOPS"
-    ],
-    [
-     "Graphics",
-     "Integrated Intel Graphics"
-    ],
-    [
-     "Memory",
-     "1x 16GB SODIMM DDR5-5600"
-    ],
-    [
-     "Memory Slots",
-     "One DDR5 SODIMM slot"
-    ],
-    [
-     "Max Memory",
-     "Up to 32GB DDR5-5600 offering"
-    ],
-    [
-     "Storage",
-     "512GB SSD M.2 2242 PCIe 4.0x4 NVMe"
-    ],
-    [
-     "Storage Slot",
-     "One M.2 2242 PCIe 4.0 x4 slot"
-    ],
-    [
-     "Max Storage Support",
-     "One drive, up to 1TB M.2 2242 SSD"
-    ],
-    [
-     "Card Reader",
-     "SD Card Reader"
-    ],
-    [
-     "Speakers",
-     "Stereo speakers, 2W x2, optimized with Dolby Audio"
-    ],
-    [
-     "Camera",
-     "HD 720p with Privacy Shutter"
-    ],
-    [
-     "Battery",
-     "50Wh"
-    ],
-    [
-     "Display",
-     "15.3\" WUXGA (1920x1200) IPS 400nits Anti-glare, 45% NTSC, 60Hz"
-    ],
-    [
-     "Touchscreen",
-     "None"
-    ],
-    [
-     "Keyboard",
-     "Non-backlit, English"
-    ],
-    [
-     "Dimensions (WxDxH)",
-     "343.4 x 239.5 x 16.9-17.9 mm (13.52 x 9.51 x 0.67-0.70 inches)"
-    ],
-    [
-     "Weight",
-     "Starting at 1.59 kg (3.51 lbs)"
-    ],
-    [
-     "Case Color",
-     "Luna Grey"
-    ],
-    [
-     "Operating System",
-     "Windows 11 Home Single Language, English"
-    ],
-    [
-     "Bundled Software",
-     "Microsoft 365 Basic + Office Home 2024"
-    ],
-    [
-     "WLAN + Bluetooth",
-     "Wi-Fi 6, 802.11ax 2x2 + BT5.3"
-    ],
-    [
-     "Ethernet",
-     "No Onboard Ethernet"
-    ],
-    [
-     "Standard Ports",
-     "2x USB-A (USB 5Gbps)\n1x USB-C (USB 5Gbps), with USB PD 45-65W and DisplayPort 1.2\n1x HDMI 1.4\n1x Headphone / microphone combo jack (3.5mm)\n1x SD card reader\n1x Round tip power connector"
-    ],
-    [
-     "Security Chip",
-     "Firmware TPM 2.0 Enabled"
-    ],
-    [
-     "Fingerprint Reader",
-     "No Fingerprint Reader"
-    ],
-    [
-     "Other Security",
-     "Camera privacy shutter"
-    ],
-    [
-     "Base Warranty",
-     "1-year, Courier or Carry-in"
-    ],
-    [
-     "Included Upgrade",
-     "2Y Premium Care -IPENTRY (ESS)"
-    ],
-    [
-     "Bundled Accessories",
-     "None"
-    ]
-   ],
-   "upgrade": {
-    "ramInstalled": "16GB DDR5-5600 (1x 16GB SODIMM)",
-    "ramSlots": 1,
-    "ramSlotsFree": 0,
-    "ramMax": "32GB DDR5-5600",
-    "ssdInstalled": "512GB M.2 2242 PCIe 4.0 NVMe",
-    "ssdSlots": 1,
-    "ssdSlotsFree": 0,
-    "ssdMax": "1TB (one M.2 2242 drive)",
-    "recommendation": "Single SODIMM slot is occupied: replace the 16GB module with a 32GB DDR5-5600 SODIMM to reach 32GB (runs single-channel). SSD can be replaced up to 1TB M.2 2242."
-   },
-   "added": "2026-10-01",
-   "order": 19,
+   "order": 20,
    "views": 0,
    "newArrival": 0
   },
@@ -3676,7 +3844,7 @@
     "recommendation": "Single SODIMM slot is occupied: replace the 16GB module with a 32GB DDR5-5600 SODIMM to reach 32GB (runs single-channel). SSD can be replaced up to 1TB M.2 2242."
    },
    "added": "2026-10-01",
-   "order": 20,
+   "order": 21,
    "views": 0,
    "newArrival": 0
   },
@@ -3846,7 +4014,7 @@
     "recommendation": "Strongly recommended: add an 8GB DDR5-5600 SODIMM for 16GB dual-channel (this also enables Intel Arc graphics). One M.2 2280 PCIe 4.0 slot is free for a second SSD."
    },
    "added": "2026-10-01",
-   "order": 21,
+   "order": 22,
    "views": 0,
    "newArrival": 0
   }

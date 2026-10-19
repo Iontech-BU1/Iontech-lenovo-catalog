@@ -1,5 +1,5 @@
 /* Service worker: lets the website keep working offline (site files + data + product images. Bump SHELL_VERSION when app files change. */
-const SHELL_VERSION = 'shell-v14';
+const SHELL_VERSION = 'shell-v15';
 const DATA_CACHE = 'data-v1';
 const IMG_CACHE = 'img-v1';
 const SHELL = [
