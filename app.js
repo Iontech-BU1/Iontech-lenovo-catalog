@@ -85,7 +85,8 @@ function markEdited() {
 /* ================= product helpers ================= */
 const promoActive = (p) => !!(p.promoSrp && (!p.promoUntil || todayISO() <= p.promoUntil));
 const effPrice = (p) => promoActive(p) ? p.promoSrp : (p.srp || 0);
-const statusLabel = (p) => p.status === 'incoming' ? 'Incoming' : 'Onhand';
+const TAB_LABEL = { onhand: 'Onhand', tablets: 'Tablets', incoming: 'Incoming' };
+const statusLabel = (p) => TAB_LABEL[p.status] || 'Onhand';
 const specVal = (p, name) => { const s = (p.specs || []).find(x => x[0] === name); return s ? s[1] : ''; };
 const ramKey = (p) => p.category === 'Monitor' || !p.ram ? null : ([8, 16, 24, 32].includes(p.ram) ? p.ram + 'GB' : 'Other');
 const gpuKey = (p) => p.category === 'Monitor' || !p.gpu ? null : (GPU_OPTS.includes(p.gpu) ? p.gpu : 'Other');
@@ -127,7 +128,7 @@ function sortList(list) {
     'price-desc': (x, y) => effPrice(y) - effPrice(x),
     'category': (x, y) => catIdx(x.category) - catIdx(y.category) || effPrice(x) - effPrice(y),
     'newest': (x, y) => String(y.added || '').localeCompare(String(x.added || '')) || (y.order ?? 0) - (x.order ?? 0),
-    'availability': (x, y) => (x.status === 'onhand' ? 0 : 1) - (y.status === 'onhand' ? 0 : 1) || (x.order ?? 0) - (y.order ?? 0),
+    'availability': (x, y) => (x.status === 'incoming' ? 1 : 0) - (y.status === 'incoming' ? 1 : 0) || (x.order ?? 0) - (y.order ?? 0),
     'default': (x, y) => (x.order ?? 0) - (y.order ?? 0)
   }[s] || ((x, y) => (x.order ?? 0) - (y.order ?? 0));
   return a.sort(cmp);
@@ -305,12 +306,12 @@ function renderCatalog() {
   const v = $('#view');
   const all = P();
   const q = S.q.trim();
-  const counts = { onhand: 0, incoming: 0, all: 0 };
+  const counts = { onhand: 0, tablets: 0, incoming: 0, all: 0 };
   all.forEach(p => { if (matches(p, q) && passFilters(p)) { counts[p.status] = (counts[p.status] || 0) + 1; counts.all++; } });
   const base = all.filter(p => inTab(p, S.tab) && matches(p, q));
   const list = sortList(base.filter(p => passFilters(p)));
-  const otherTab = S.tab === 'onhand' ? 'incoming' : S.tab === 'incoming' ? 'onhand' : null;
-  const otherN = otherTab ? counts[otherTab] : 0;
+  const others = Object.keys(TAB_LABEL).filter(k => k !== S.tab && counts[k]);
+  const otherN = others.reduce((a, k) => a + counts[k], 0);
 
   const opt = (key, value, label) => {
     const n = base.filter(p => passFilters(p, key) && ({ category: p.category, cpu: cpuKey(p), ram: ramKey(p), gpu: gpuKey(p) }[key]) === value).length;
@@ -322,6 +323,7 @@ function renderCatalog() {
   v.innerHTML = `
     <div class="tabs" role="tablist">
       <a class="tab ${S.tab === 'onhand' ? 'active' : ''}" href="#/onhand" role="tab">Onhand<span class="count">${counts.onhand || 0}</span></a>
+      <a class="tab ${S.tab === 'tablets' ? 'active' : ''}" href="#/tablets" role="tab">Tablets<span class="count">${counts.tablets || 0}</span></a>
       <a class="tab ${S.tab === 'incoming' ? 'active' : ''}" href="#/incoming" role="tab">Incoming<span class="count">${counts.incoming || 0}</span></a>
     </div>
     ${!q && S.tab === 'onhand' ? newArrivalsBanner() : ''}
@@ -329,7 +331,7 @@ function renderCatalog() {
       <aside class="filters" id="filters" aria-label="Filters">
         <div class="filters-head"><h3>Filters</h3><div><button class="btn btn-sm btn-ghost" id="resetF">Reset</button><button class="btn btn-sm filter-btn" id="closeF">Done</button></div></div>
         <div class="fgroup"><h4>Product Category</h4>${cats.map(c => opt('category', c)).join('')}</div>
-        <div class="fgroup"><h4>CPU Brand</h4>${opt('cpu', 'AMD')}${opt('cpu', 'Intel')}</div>
+        <div class="fgroup"><h4>CPU Brand</h4>${['AMD', 'Intel', ...(all.some(p => p.cpuBrand === 'MediaTek') ? ['MediaTek'] : [])].map(c => opt('cpu', c)).join('')}</div>
         <div class="fgroup"><h4>Memory (RAM)</h4>${RAM_OPTS.map(r => opt('ram', r, r === 'Other' ? 'Other configurations' : r)).join('')}</div>
         <div class="fgroup"><h4>Graphics (GPU)</h4>${GPU_OPTS.map(g => opt('gpu', g, g === 'Integrated' ? 'Integrated Graphics' : g === 'Other' ? 'Other GPU options' : g)).join('')}</div>
       </aside>
@@ -346,7 +348,7 @@ function renderCatalog() {
           <button class="btn btn-sm ${S.view === 'list' ? 'on' : ''}" data-view="list" aria-label="List view" title="List view">☰</button>
         </div>
         ${activeChips.length ? `<div class="chips" style="margin-bottom:12px">${activeChips.join('')}</div>` : ''}
-        ${q && otherN ? `<div class="search-note">${otherN} more match${otherN === 1 ? '' : 'es'} for “${esc(q)}” in <a href="#/${otherTab}">${otherTab === 'incoming' ? 'Incoming' : 'Onhand'}</a>.</div>` : ''}
+        ${q && otherN ? `<div class="search-note">${otherN} more match${otherN === 1 ? '' : 'es'} for “${esc(q)}” in ${others.map(k => `<a href="#/${k}">${TAB_LABEL[k]}</a> (${counts[k]})`).join(', ')}.</div>` : ''}
         ${list.length ? `<div class="grid ${S.view}">${list.map(card).join('')}</div>`
           : `<div class="empty"><h3>No products found</h3><p>${q ? 'Try a different search term, or ' : ''}clear some filters.</p><button class="btn" id="resetF2">Clear search &amp; filters</button></div>`}
       </section>
@@ -414,7 +416,7 @@ function alternatives(p) {
       else if ((GPU_TIER[x.gpu] ?? 0) > (GPU_TIER[p.gpu] ?? 0)) why.push('faster GPU (' + x.gpu + ')');
       if (x.ram && x.ram !== p.ram) why.push(x.ram + 'GB RAM');
     }
-    if (x.status === 'onhand') s += .7;
+    if (x.status !== 'incoming') s += .7;
     const diff = effPrice(x) - effPrice(p);
     why.unshift(diff === 0 ? 'same price' : (diff < 0 ? peso(-diff) + ' cheaper' : peso(diff) + ' more'));
     why.push(statusLabel(x).toLowerCase());
@@ -729,7 +731,7 @@ function editProduct(p) {
       <div class="grid3">
         ${f('e_mtm', 'MTM *', d.mtm, 'text', 'required')}
         <div class="field"><label class="fl" for="e_cat">Category</label><select id="e_cat">${cats.map(x => `<option ${x === d.category ? 'selected' : ''}>${esc(x)}</option>`).join('')}</select></div>
-        <div class="field"><label class="fl" for="e_status">Inventory</label><select id="e_status"><option value="onhand" ${d.status === 'onhand' ? 'selected' : ''}>On Hand</option><option value="incoming" ${d.status === 'incoming' ? 'selected' : ''}>Incoming</option></select></div>
+        <div class="field"><label class="fl" for="e_status">Inventory</label><select id="e_status"><option value="onhand" ${d.status === 'onhand' ? 'selected' : ''}>On Hand</option><option value="tablets" ${d.status === 'tablets' ? 'selected' : ''}>Tablets</option><option value="incoming" ${d.status === 'incoming' ? 'selected' : ''}>Incoming</option></select></div>
       </div>
       <div class="grid2">${f('e_model', 'Model name *', d.model, 'text', 'required')}${f('e_name', 'Full product name', d.name)}</div>
       <div class="field"><label class="fl" for="e_qs">Key / quick specifications (separate with |)</label><input type="text" id="e_qs" value="${esc(d.quickSpecs || '')}"></div>
@@ -739,7 +741,7 @@ function editProduct(p) {
       <label class="fopt" style="margin-bottom:12px"><input type="checkbox" id="e_new" ${d.newArrival ? 'checked' : ''}> Feature in the New Arrivals banner</label>
       <h3 style="margin:8px 0 10px">Filters</h3>
       <div class="grid2">
-        <div class="field"><label class="fl" for="e_cpub">CPU brand</label><select id="e_cpub"><option value="">—</option>${['AMD', 'Intel'].map(x => `<option ${x === d.cpuBrand ? 'selected' : ''}>${x}</option>`).join('')}</select></div>
+        <div class="field"><label class="fl" for="e_cpub">CPU brand</label><select id="e_cpub"><option value="">—</option>${['AMD', 'Intel', 'MediaTek'].map(x => `<option ${x === d.cpuBrand ? 'selected' : ''}>${x}</option>`).join('')}</select></div>
         ${f('e_cpu', 'CPU', d.cpu)}
         ${f('e_ram', 'RAM (GB)', d.ram, 'number', 'min="0"')}
         <div class="field"><label class="fl" for="e_gpu">GPU</label><input type="text" id="e_gpu" list="gpuList" value="${esc(d.gpu || '')}"><datalist id="gpuList">${GPU_OPTS.map(g => `<option value="${g}">`).join('')}</datalist></div>
@@ -865,7 +867,7 @@ function exportPricelist() {
     rows.push([], [], ['Links to Full specifications'], ...list.map(p => [p.model, p.mtm, p.psrefUrl]));
     return { name, rows, widths: [12, 24, 14, 80, 14, 10, 10, 10, 28] };
   };
-  download(XLSXLite.write([sheet('onhand', 'Onhand'), sheet('incoming', 'Incoming')]), `${S.data.priceListName || 'Pricelist'} (export ${todayISO()}).xlsx`);
+  download(XLSXLite.write([sheet('onhand', 'Onhand'), sheet('tablets', 'Tablets'), sheet('incoming', 'Incoming')].filter(Boolean)), `${S.data.priceListName || 'Pricelist'} (export ${todayISO()}).xlsx`);
 }
 function exportTemplate() {
   download(XLSXLite.write([{ name: 'Products', rows: [XCOLS.map(c => c[0]), ['On Hand', 'IdeaPad', 'IdeaPad Slim 3 15AMN8', '82XQ01YCPH', 'IdeaPad Slim 3 15AMN8', '15.6" FHD | R3 30 | 8GB | 256GB | Win11', 'Arctic Grey', 44995, '', '', 38245, 'B210 Backpack']], widths: XCOLS.map(() => 16) }, { name: 'Specs', rows: [['MTM', 'Spec', 'Value']] }]), 'Lenovo Catalog Template.xlsx');
@@ -885,7 +887,7 @@ function parseWorkbook(sheets) {
       const g = (n) => { const i = idx(n); return i < 0 ? undefined : r[i]; };
       const it = { mtm: String(g('MTM')).trim().toUpperCase() };
       const set = (k, v, f = (x) => x) => { if (v !== undefined) it[k] = v === '' ? '' : f(v); };
-      set('status', g('Status'), v => /incom/i.test(v) ? 'incoming' : 'onhand');
+      set('status', g('Status'), v => /incom/i.test(v) ? 'incoming' : /tablet/i.test(v) ? 'tablets' : 'onhand');
       set('category', g('Category'), v => /visual/i.test(v) ? 'Monitor' : String(v).trim());
       set('model', g('Model'), String); set('name', g('Full Name'), String); set('quickSpecs', g('Specifications'), String); set('color', g('Color'), String);
       set('srp', g('SRP'), num); set('promoSrp', g('Promo SRP'), num); set('promoUntil', g('Promo Until'), excelDate); set('dp', g('DP') !== undefined ? g('DP') : g('Dealer Price'), num);
@@ -912,7 +914,7 @@ function parseWorkbook(sheets) {
     }
     if (hr < 0) continue;
     const H = s.rows[hr].map(norm), idx = (...ns) => { for (const n of ns) { const i = H.indexOf(norm(n)); if (i >= 0) return i; } return -1; };
-    const status = /incom/i.test(s.name) ? 'incoming' : 'onhand';
+    const status = /incom/i.test(s.name) ? 'incoming' : /tablet/i.test(s.name) ? 'tablets' : 'onhand';
     const links = {};
     let end = s.rows.length;
     s.rows.forEach((r, ri) => {
@@ -945,7 +947,7 @@ function guessFields(it) {
   const t = (it.quickSpecs || '') + ' ' + (it.model || '');
   const g = {};
   if (it.category !== 'Monitor') {
-    if (/ryzen|\bR[3579]\b|RAI|AMD/i.test(t)) g.cpuBrand = 'AMD'; else if (/intel|core|i[3579]-|ultra/i.test(t)) g.cpuBrand = 'Intel';
+    if (/mediatek|dimensity|\bMTD\b/i.test(t)) g.cpuBrand = 'MediaTek'; else if (/ryzen|\bR[3579]\b|RAI|AMD/i.test(t)) g.cpuBrand = 'AMD'; else if (/intel|core|i[3579]-|ultra/i.test(t)) g.cpuBrand = 'Intel';
     const ram = /(\d+)x(\d+)GB/i.exec(t) || /\|\s*(\d+)GB\s*\|/i.exec(t); if (ram) g.ram = ram[2] ? +ram[1] * +ram[2] : +ram[1];
     const gpu = /RTX\s*(\d{4})\s*(Ti)?/i.exec(t); g.gpu = gpu ? 'RTX ' + gpu[1] + (gpu[2] ? ' Ti' : '') : 'Integrated';
   }
@@ -1072,7 +1074,7 @@ function adminSettings() {
 
 /* ================= export all models (Excel / PDF) ================= */
 function exportRows() {
-  const groups = [['onhand', 'Onhand'], ['incoming', 'Incoming']].map(([k, l]) => [l, sortList(P().filter(p => p.status === k))]);
+  const groups = [['onhand', 'Onhand'], ['tablets', 'Tablets'], ['incoming', 'Incoming']].map(([k, l]) => [l, sortList(P().filter(p => p.status === k))]);
   const anyPromo = P().some(promoActive);
   return { groups, anyPromo };
 }
@@ -1229,7 +1231,7 @@ function route() {
   if (r === 'p' && parts[1]) { S.route = 'detail'; setNav('catalog'); renderDetail(parts.slice(1).join('/')); }
   else if (r === 'compare') { S.route = 'compare'; setNav('compare'); renderCompare(); }
   else if (r === 'admin' && ADMIN_MODE) { S.route = 'admin'; setNav('admin'); renderAdmin(); }
-  else { S.route = 'catalog'; S.tab = r === 'incoming' ? 'incoming' : 'onhand'; setNav('catalog'); renderCatalog(); }
+  else { S.route = 'catalog'; S.tab = TAB_LABEL[r] ? r : 'onhand'; setNav('catalog'); renderCatalog(); }
   updateCompareUI();
 }
 

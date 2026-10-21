@@ -1,7 +1,7 @@
 {
- "version": "20261019171327",
+ "version": "20261021122134",
  "priceListName": "Iontech PL - Lenovo Oct 2026",
- "updatedAt": "2026-10-19",
+ "updatedAt": "2026-10-21",
  "adminPinHash": "b2613e92c6045bb9a608cbaa36a055209fb3c6d2780e42f6778f319917e76163",
  "products": [
   {
@@ -351,8 +351,8 @@
    "quickSpecs": "15.6\" FHD | R3 30 | 8GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
    "color": "Arctic Grey",
    "srp": 50995,
-   "promoSrp": null,
-   "dp": 43345,
+   "promoSrp": 44995,
+   "dp": 38245,
    "bundle": "B210 Backpack",
    "cpuBrand": "AMD",
    "cpu": "AMD Ryzen 3 30",
@@ -847,7 +847,7 @@
    "added": "2026-10-01",
    "order": 4,
    "views": 0,
-   "newArrival": 1
+   "newArrival": 0
   },
   {
    "id": "83K800HTPH",
@@ -1014,7 +1014,7 @@
    "added": "2026-10-01",
    "order": 5,
    "views": 0,
-   "newArrival": 2
+   "newArrival": 0
   },
   {
    "id": "83RR00X0PH",
@@ -1183,7 +1183,7 @@
    "added": "2026-10-01",
    "order": 6,
    "views": 0,
-   "newArrival": 0
+   "newArrival": 1
   },
   {
    "id": "83UN0024PH",
@@ -1363,7 +1363,7 @@
    "added": "2026-10-01",
    "order": 7,
    "views": 0,
-   "newArrival": 0
+   "newArrival": 2
   },
   {
    "id": "83UM001PPH",
@@ -1726,6 +1726,182 @@
    "newArrival": 0
   },
   {
+   "id": "83QM0096PH",
+   "mtm": "83QM0096PH",
+   "model": "Yoga Slim 7 14IPH11",
+   "name": "Yoga Slim 7 14IPH11",
+   "category": "Yoga",
+   "status": "onhand",
+   "eta": "",
+   "quickSpecs": "14\" WUXGA OLED | Ultra 7 355 | 16GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 3Y PC",
+   "color": "Seashell",
+   "srp": 119995,
+   "promoSrp": null,
+   "dp": 101995,
+   "bundle": "Yoga Tote Sleeve",
+   "cpuBrand": "Intel",
+   "cpu": "Intel Core Ultra 7 355",
+   "ram": 16,
+   "gpu": "Integrated",
+   "gpuDetail": "Integrated Intel Graphics",
+   "storage": "512GB SSD M.2 2242 PCIe 4.0x4 NVMe",
+   "display": "14\" WUXGA (1920x1200) OLED 600nits (peak) / 400nits (typical) Glossy, 100% DCI-P3, 100% sRGB, 60Hz, Eyesafe, Dolby Vision, Flicker Free, DisplayHDR True Black 500, X-Rite",
+   "psrefUrl": "https://psref.lenovo.com/detail/Yoga_Slim_7_14IPH11?M=83QM0096PH",
+   "datasheetUrl": "",
+   "productUrl": "https://www.lenovo.com/ph/en/search?text=83QM0096PH",
+   "images": [
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Yoga/Yoga_Slim_7_14IPH11/Compressedimage/Yoga_Slim_7_14IPH11_CT2_11.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Yoga/Yoga_Slim_7_14IPH11/Compressedimage/Yoga_Slim_7_14IPH11_CT1_11.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Yoga/Yoga_Slim_7_14IPH11/Compressedimage/Yoga_Slim_7_14IPH11_CT2_10.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Yoga/Yoga_Slim_7_14IPH11/Compressedimage/Yoga_Slim_7_14IPH11_CT1_12.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Yoga/Yoga_Slim_7_14IPH11/Compressedimage/Yoga_Slim_7_14IPH11_CT2_12.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Yoga/Yoga_Slim_7_14IPH11/Compressedimage/Yoga_Slim_7_14IPH11_CT2_13.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Yoga/Yoga_Slim_7_14IPH11/Compressedimage/Yoga_Slim_7_14IPH11_CT1_17.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Yoga/Yoga_Slim_7_14IPH11/Compressedimage/Yoga_Slim_7_14IPH11_CT2_14.png"
+   ],
+   "specs": [
+    [
+     "Processor",
+     "Intel Core Ultra 7 355, 8C (4P + 4LPE) / 8T, Max Turbo up to 4.7GHz, 12MB Intel Smart Cache"
+    ],
+    [
+     "NPU",
+     "Up to 49 TOPS"
+    ],
+    [
+     "Graphics",
+     "Integrated Intel Graphics"
+    ],
+    [
+     "Memory",
+     "16GB Soldered LPDDR5X-7467"
+    ],
+    [
+     "Memory Slots",
+     "Memory soldered to systemboard, no slots, dual-channel"
+    ],
+    [
+     "Max Memory",
+     "16GB soldered memory, not upgradable"
+    ],
+    [
+     "Storage",
+     "512GB SSD M.2 2242 PCIe 4.0x4 NVMe"
+    ],
+    [
+     "Storage Slot",
+     "One M.2 2242 PCIe 4.0 x4 slot"
+    ],
+    [
+     "Max Storage Support",
+     "One drive, up to 2TB M.2 2242 SSD"
+    ],
+    [
+     "Card Reader",
+     "No Card Reader"
+    ],
+    [
+     "Speakers",
+     "4 stereo speakers, 2W x2 (woofers), 2W x2 (tweeters), optimised with Dolby Atmos, Smart Amplifier (AMP)"
+    ],
+    [
+     "Camera",
+     "5.0MP + IR with E-shutter"
+    ],
+    [
+     "Battery",
+     "70Wh"
+    ],
+    [
+     "Display",
+     "14\" WUXGA (1920x1200) OLED 600nits (peak) / 400nits (typical) Glossy, 100% DCI-P3, 100% sRGB, 60Hz, Eyesafe, Dolby Vision, Flicker Free, DisplayHDR True Black 500, X-Rite"
+    ],
+    [
+     "Touchscreen",
+     "None"
+    ],
+    [
+     "Color Calibration",
+     "X-Rite Factory Color Calibration"
+    ],
+    [
+     "Keyboard",
+     "Backlit, English"
+    ],
+    [
+     "Dimensions (WxDxH)",
+     "312 x 221 x 13.9 mm (12.28 x 8.70 x 0.55 inches)"
+    ],
+    [
+     "Weight",
+     "Starting at 1.14 kg (2.51 lbs)"
+    ],
+    [
+     "Case Color",
+     "Seashell"
+    ],
+    [
+     "Operating System",
+     "Windows 11 Home, English"
+    ],
+    [
+     "Bundled Software",
+     "Microsoft 365 Basic + Office Home 2024"
+    ],
+    [
+     "WLAN + Bluetooth",
+     "Wi-Fi 7, 802.11be 2x2 + BT5.4"
+    ],
+    [
+     "Ethernet",
+     "No Onboard Ethernet"
+    ],
+    [
+     "Standard Ports",
+     "3x Thunderbolt 4, with USB PD 45-65W and DisplayPort 2.1"
+    ],
+    [
+     "Security Chip",
+     "Firmware TPM 2.0 Enabled"
+    ],
+    [
+     "Fingerprint Reader",
+     "No Fingerprint Reader"
+    ],
+    [
+     "Other Security",
+     "Ultrasonic Human Presence Detection\nE-shutter\nIR camera for Windows Hello (facial recognition)"
+    ],
+    [
+     "Base Warranty",
+     "1-year, Courier or Carry-in"
+    ],
+    [
+     "Included Upgrade",
+     "3Y Premium Care -IPPREM (ESS)"
+    ],
+    [
+     "Bundled Accessories",
+     "Lenovo Yoga Tote Sleeve 14\" (Seashell)"
+    ]
+   ],
+   "upgrade": {
+    "ramInstalled": "16GB LPDDR5X-7467 (soldered)",
+    "ramSlots": 0,
+    "ramSlotsFree": 0,
+    "ramMax": "16GB (not upgradable)",
+    "ssdInstalled": "512GB M.2 2242 PCIe 4.0 NVMe",
+    "ssdSlots": 1,
+    "ssdSlotsFree": 0,
+    "ssdMax": "2TB (one M.2 2242 drive)",
+    "recommendation": "RAM is soldered and cannot be upgraded. The SSD can be replaced with an M.2 2242 PCIe 4.0 NVMe drive up to 2TB."
+   },
+   "added": "2026-10-01",
+   "order": 10,
+   "views": 0,
+   "newArrival": 0
+  },
+  {
    "id": "83TC009QPH",
    "mtm": "83TC009QPH",
    "model": "Yoga 7 2-in-1 14IPH11",
@@ -1901,7 +2077,7 @@
     "recommendation": "RAM is soldered and cannot be upgraded. The SSD can be replaced with an M.2 2242 PCIe 4.0 NVMe drive up to 2TB."
    },
    "added": "2026-10-01",
-   "order": 10,
+   "order": 11,
    "views": 0,
    "newArrival": 0
   },
@@ -2081,193 +2257,9 @@
     "recommendation": "Strongly recommended: add an 8GB DDR5-5200 SODIMM for 16GB dual-channel, or replace with 2x 16GB for 32GB. One M.2 2280 slot is free for a second SSD up to 1TB."
    },
    "added": "2026-10-01",
-   "order": 11,
-   "views": 0,
-   "newArrival": 3
-  },
-  {
-   "id": "83TN005HPH",
-   "mtm": "83TN005HPH",
-   "model": "LOQ 15AHP11",
-   "name": "LOQ 15AHP11",
-   "category": "LOQ",
-   "status": "onhand",
-   "eta": "",
-   "quickSpecs": "15.3\" WUXGA 165Hz | Ryzen 7 250 | 16GB | 512GB | RTX 5050 | Win11 | Office Home 2024 + Lenovo AI Now | 2Y PC",
-   "color": "Luna Grey",
-   "srp": 110995,
-   "promoSrp": null,
-   "dp": 94345,
-   "bundle": "GX41H70101 Modern Backpack",
-   "cpuBrand": "AMD",
-   "cpu": "AMD Ryzen 7 250",
-   "ram": 16,
-   "gpu": "RTX 5050",
-   "gpuDetail": "NVIDIA GeForce RTX 5050 8GB GDDR7, Boost Clock 2662MHz, TGP 115W, 440 AI TOPS",
-   "storage": "512GB SSD M.2 2242 PCIe 4.0x4 NVMe",
-   "display": "15.3\" WUXGA (1920x1200) IPS 300nits Anti-glare, 100% sRGB, 165Hz, FreeSync, G-SYNC, Low Blue Light",
-   "psrefUrl": "https://psref.lenovo.com/Detail/LOQ_15AHP11?M=83TN005HPH",
-   "datasheetUrl": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/datasheet/LOQ_15AHP11_Datasheet_EN.pdf",
-   "productUrl": "https://www.lenovo.com/ph/en/search?text=83TN005HPH",
-   "images": [
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15AHP11/Compressedimage/LOQ_15AHP11_CT1_03.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15AHP11/Compressedimage/LOQ_15AHP11_CT1_01.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15AHP11/Compressedimage/LOQ_15AHP11_CT1_02.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15AHP11/Compressedimage/LOQ_15AHP11_CT1_04.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15AHP11/Compressedimage/LOQ_15AHP11_CT1_05.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15AHP11/Compressedimage/LOQ_15AHP11_CT1_06.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15AHP11/Compressedimage/LOQ_15AHP11_CT1_07.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/LOQ/LOQ_15AHP11/Compressedimage/LOQ_15AHP11_CT1_08.png"
-   ],
-   "specs": [
-    [
-     "Processor",
-     "AMD Ryzen 7 250 (8C / 16T, 3.3 / 5.1GHz, 8MB L2 / 16MB L3)"
-    ],
-    [
-     "AI PC Category",
-     "AI PC, AI-Powered Gaming PC"
-    ],
-    [
-     "NPU",
-     "Integrated AMD Ryzen AI, up to 16 TOPS"
-    ],
-    [
-     "Graphics",
-     "NVIDIA GeForce RTX 5050 8GB GDDR7, Boost Clock 2662MHz, TGP 115W, 440 AI TOPS"
-    ],
-    [
-     "Memory",
-     "1x 16GB SODIMM DDR5-5600"
-    ],
-    [
-     "Memory Slots",
-     "Two DDR5 SODIMM slots, dual-channel capable"
-    ],
-    [
-     "Max Memory",
-     "Up to 32GB DDR5-5600 offering"
-    ],
-    [
-     "Storage",
-     "512GB SSD M.2 2242 PCIe 4.0x4 NVMe"
-    ],
-    [
-     "Storage Slot",
-     "Two M.2 slots • One M.2 2280 PCIe 4.0 x4 slot • One M.2 2280 PCIe 4.0 x2 slot"
-    ],
-    [
-     "Max Storage Support",
-     "Up to two drives, 2x M.2 SSD • M.2 2242 SSD up to 2TB each"
-    ],
-    [
-     "Card Reader",
-     "No Card Reader"
-    ],
-    [
-     "Speakers",
-     "Stereo speakers, 2W x2, optimized with Nahimic Audio"
-    ],
-    [
-     "Camera",
-     "5.0MP with E-shutter"
-    ],
-    [
-     "Battery",
-     "60Wh"
-    ],
-    [
-     "Special Features",
-     "AI Chip: LA1"
-    ],
-    [
-     "Display",
-     "15.3\" WUXGA (1920x1200) IPS 300nits Anti-glare, 100% sRGB, 165Hz, FreeSync, G-SYNC, Low Blue Light"
-    ],
-    [
-     "Touchscreen",
-     "None"
-    ],
-    [
-     "Color Calibration",
-     "Factory Color Calibration"
-    ],
-    [
-     "Keyboard",
-     "1-Zone RGB Backlit, English"
-    ],
-    [
-     "Dimensions (WxDxH)",
-     "344.9 x 254.83 x 20.9-23.25 mm (13.58 x 10.03 x 0.82-0.92 inches)"
-    ],
-    [
-     "Weight",
-     "Starting at 2.1 kg (4.6 lbs)"
-    ],
-    [
-     "Case Color",
-     "Luna Grey"
-    ],
-    [
-     "Operating System",
-     "Windows 11 Home Single Language, English"
-    ],
-    [
-     "Bundled Software",
-     "Office Home 2024 + Lenovo AI Now"
-    ],
-    [
-     "WLAN + Bluetooth",
-     "Wi-Fi 6, 802.11ax 2x2 + BT5.3"
-    ],
-    [
-     "Ethernet",
-     "100/1000M (RJ-45)"
-    ],
-    [
-     "Standard Ports",
-     "1x Slim tip (rectangle) power connector\n1x USB-A (USB 10Gbps), with 4.5W output\n2x USB-A (USB 5Gbps), with 4.5W output\n1x USB-C (USB4 40Gbps), with USB PD 65-100W input / 15W output and DisplayPort 1.4\n1x HDMI 2.1, up to 8K/60Hz\n1x Headphone / microphone combo jack (3.5mm)\n1x Ethernet (RJ-45)"
-    ],
-    [
-     "Security Chip",
-     "Firmware TPM 2.0 Enabled"
-    ],
-    [
-     "Fingerprint Reader",
-     "No Fingerprint Reader"
-    ],
-    [
-     "Other Security",
-     "E-shutter"
-    ],
-    [
-     "Base Warranty",
-     "1-year, Courier or Carry-in"
-    ],
-    [
-     "Included Upgrade",
-     "2Y Premium Care -IPENTRY (ESS)"
-    ],
-    [
-     "Bundled Accessories",
-     "None"
-    ]
-   ],
-   "upgrade": {
-    "ramInstalled": "16GB DDR5-5600 (1x 16GB SODIMM)",
-    "ramSlots": 2,
-    "ramSlotsFree": 1,
-    "ramMax": "32GB DDR5-5600",
-    "ssdInstalled": "512GB M.2 2242 PCIe 4.0 NVMe",
-    "ssdSlots": 2,
-    "ssdSlotsFree": 1,
-    "ssdMax": "4TB (2x M.2, up to 2TB each)",
-    "recommendation": "Add a matching 16GB DDR5-5600 SODIMM in the free slot for 32GB dual-channel (recommended for gaming). One M.2 2280 slot is free for a second SSD up to 2TB."
-   },
-   "added": "2026-10-01",
    "order": 12,
    "views": 0,
-   "newArrival": 0
+   "newArrival": 3
   },
   {
    "id": "83JE01NBPH",
@@ -3182,163 +3174,135 @@
    "newArrival": 0
   },
   {
-   "id": "68C4GAC4PH",
-   "mtm": "68C4GAC4PH",
-   "model": "Legion 24-10",
-   "name": "Legion 24-10 Monitor",
-   "category": "Monitor",
-   "status": "onhand",
+   "id": "ZAFR1084PH",
+   "mtm": "ZAFR1084PH",
+   "model": "Idea Tab",
+   "name": "Idea Tab",
+   "category": "Tablet",
+   "status": "tablets",
    "eta": "",
-   "quickSpecs": "23.8\" FHD IPS | 240Hz | 2x HDMI 1x DP | LTPS | 3Y CCI",
-   "color": "Black",
-   "srp": 7495,
+   "quickSpecs": "11\" 2.5K | MTD 6300 | 6GB | 128GB | 1Y CCI",
+   "color": "Luna Grey",
+   "srp": 18995,
    "promoSrp": null,
-   "dp": 6370,
-   "bundle": "",
-   "cpuBrand": "",
-   "cpu": "",
-   "ram": null,
-   "gpu": "",
-   "gpuDetail": "",
-   "storage": "",
-   "display": "23.8\" 1920x1080 240Hz",
-   "psrefUrl": "https://psref.lenovo.com/detail/Legion_24_10_Monitor?M=68C4GAC4PH",
-   "datasheetUrl": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/datasheet/Legion-24-10-Monitor_Gaming_Datasheet_9593R4-201125_AEM.pdf",
-   "productUrl": "https://www.lenovo.com/ph/en/search?text=68C4GAC4PH",
+   "dp": 17095,
+   "bundle": "Tab Pen",
+   "cpuBrand": "MediaTek",
+   "cpu": "MediaTek Dimensity 6300",
+   "ram": 6,
+   "gpu": "Integrated",
+   "gpuDetail": "Integrated Arm Mali-G57 MC2 GPU",
+   "storage": "128GB UFS 2.2",
+   "display": "11\" 2.5K (2560x1600) IPS 500nits Anti-fingerprint, 72% NTSC, 90Hz, Touch",
+   "psrefUrl": "https://psref.lenovo.com/detail/Idea_Tab?M=ZAFR1084PH",
+   "datasheetUrl": "",
+   "productUrl": "https://www.lenovo.com/ph/en/search?text=ZAFR1084PH",
    "images": [
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_24_10_Monitor/Compressedimage/Lenovo_Legion_24_10_CT1_03.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_24_10_Monitor/Compressedimage/Lenovo_Legion_24_10_CT1_01.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_24_10_Monitor/Compressedimage/Lenovo_Legion_24_10_CT1_02.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_24_10_Monitor/Compressedimage/Lenovo_Legion_24_10_CT1_04.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_24_10_Monitor/Compressedimage/Lenovo_Legion_24_10_CT2_01.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_24_10_Monitor/Compressedimage/Lenovo_Legion_24_10_CT2_02.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_24_10_Monitor/Compressedimage/Lenovo_Legion_24_10_CT2_03.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_24_10_Monitor/Compressedimage/Lenovo_Legion_24_10_CT2_04.png"
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab/Compressedimage/Idea_Tab_CT1_05.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab/Compressedimage/Idea_Tab_CT1_06.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab/Compressedimage/Idea_Tab_CT2_01.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab/Compressedimage/Idea_Tab_CT2_03.png"
    ],
    "specs": [
     [
-     "Display Size",
-     "23.8\""
+     "Processor",
+     "MediaTek Dimensity 6300 (8C, 2x A76 @2.4GHz + 6x A55@2.0GHz)"
     ],
     [
-     "Panel",
-     "In-Plane Switching (IPS)"
+     "Graphics",
+     "Integrated Arm Mali-G57 MC2 GPU"
     ],
     [
-     "Backlight",
-     "WLED"
+     "Memory",
+     "6GB Soldered LPDDR4X"
     ],
     [
-     "Aspect Ratio",
-     "16:9"
+     "Storage",
+     "128GB UFS 2.2"
     ],
     [
-     "Resolution",
-     "1920x1080"
+     "Card Reader",
+     "microSD Card Slot"
     ],
     [
-     "Refresh Rate",
-     "240Hz"
-    ],
-    [
-     "Response Time",
-     "0.5 ms (MPRT) / 1 ms (Level 4) / 2 ms (Level 3) / 3 ms (Level 2) / 4 ms (Level 1)"
-    ],
-    [
-     "Brightness",
-     "300 cd/m²"
-    ],
-    [
-     "Contrast Ratio",
-     "1000:1"
-    ],
-    [
-     "Color Gamut",
-     "99% sRGB"
-    ],
-    [
-     "Color Support",
-     "16.7 Million"
-    ],
-    [
-     "View Angle (H / V)",
-     "178° / 178°"
-    ],
-    [
-     "Pixel Pitch",
-     "0.2745x0.2745 mm"
-    ],
-    [
-     "Screen Surface Treatment",
-     "Anti-glare"
-    ],
-    [
-     "Curvature",
-     "None"
-    ],
-    [
-     "Sync Technology",
-     "AMD FreeSync Premium, VESA Adaptive Sync"
-    ],
-    [
-     "Special Features",
-     "HDR10 Compliance\nAMD FreeSync Premium\nVESA Adaptive Sync\nLenovo Artery (Accessories and Display Manager) support\nGaming Console Support\nNatural Low Blue Light"
-    ],
-    [
-     "Rear Ports",
-     "2x HDMI 2.1 TMDS\n1x DisplayPort 1.4 (HBR3)\n1x audio-out (3.5mm)"
+     "Max Storage Support",
+     "128GB UFS 2.2 on systemboard\nmicroSD card, supports up to 2TB (exFAT)"
     ],
     [
      "Speakers",
-     "None"
+     "4 speakers, optimized with Dolby Atmos"
     ],
     [
      "Camera",
+     "Front 5.0MP / Rear 8.0MP"
+    ],
+    [
+     "VoiceCall",
+     "No"
+    ],
+    [
+     "Sensors",
+     "Accelerometer sensor\nAmbient light sensor (ALS)\nHall sensor"
+    ],
+    [
+     "Battery",
+     "7040mAh (Typical)"
+    ],
+    [
+     "Display",
+     "11\" 2.5K (2560x1600) IPS 500nits Anti-fingerprint, 72% NTSC, 90Hz, Touch"
+    ],
+    [
+     "Touchscreen",
+     "In-cell, 10-point Multi-touch"
+    ],
+    [
+     "Keyboard",
      "None"
     ],
     [
-     "Stand",
-     "Tilt, Swivel, Pivot, Height Adjust Stand"
-    ],
-    [
-     "Mounting",
-     "Supports VESA mount 100 x 100 mm"
-    ],
-    [
-     "Side Bezel Width",
-     "2.4 mm"
-    ],
-    [
-     "Power Consumption (Typical / Maximum)",
-     "20W / 34W"
-    ],
-    [
      "Dimensions (WxDxH)",
-     "Lowest Position | 540.4 x 214.0 x 408.3 mm\nHighest Position | 540.4 x 214.0 x 543.3 mm\nHead Only | 540.4 x 40.8 x 325.3 mm"
+     "254.59 x 166.15 x 6.99 mm (10.02 x 6.54 x 0.28 inches)"
     ],
     [
      "Weight",
-     "Monitor With Stand | 5.0 kg (11.0 lbs)\nMonitor Head Only | 3.9 kg (8.6 lbs)"
+     "480 g ± 10 g (1.06 lbs ± 0.02 lbs)"
     ],
     [
      "Case Color",
-     "Raven Black"
-    ],
-    [
-     "Ergonomic Certification",
-     "Eyesafe Display 2.0, TÜV Low Blue Light (Hardware solution)"
+     "Luna Grey"
     ],
     [
      "Operating System",
-     "Support Windows 10, Windows 11"
+     "Android 15 or Later"
     ],
     [
-     "In the Box",
-     "Monitor with stand\n1x HDMI 2.0 cable (1.8m)\n1x Power cable (1.8m)\n4x Screws\nQuick setup guide\nWarranty booklet"
+     "WLAN + Bluetooth",
+     "Wi-Fi 5, 802.11ac 1x1 + BT5.2"
+    ],
+    [
+     "Location Services",
+     "GPS + GLONASS + Galileo"
+    ],
+    [
+     "Standard Ports",
+     "1x USB-C (Hi-Speed USB / USB 2.0), with charging\n1x Headphone / microphone combo jack (3.5mm)\n1x Card slot"
+    ],
+    [
+     "Fingerprint Reader",
+     "No Fingerprint Reader"
     ],
     [
      "Base Warranty",
-     "3-year limited warranty"
+     "1-year, Carry-in"
+    ],
+    [
+     "Bundled Accessories",
+     "Lenovo Tab Pen"
+    ],
+    [
+     "Dust and Water Resistant",
+     "IP52"
     ]
    ],
    "upgrade": null,
@@ -3348,168 +3312,568 @@
    "newArrival": 0
   },
   {
-   "id": "68C5GAC4PH",
-   "mtm": "68C5GAC4PH",
-   "model": "Legion 27-10",
-   "name": "Legion 27-10 Monitor",
-   "category": "Monitor",
-   "status": "onhand",
+   "id": "ZAFM0280PH",
+   "mtm": "ZAFM0280PH",
+   "model": "Idea Tab",
+   "name": "Idea Tab",
+   "category": "Tablet",
+   "status": "tablets",
    "eta": "",
-   "quickSpecs": "27\" FHD IPS | 240Hz | 2x HDMI 1x DP | LTPS | 3Y CCI",
-   "color": "Black",
-   "srp": 8995,
-   "promoSrp": null,
-   "dp": 7645,
-   "bundle": "",
-   "cpuBrand": "",
-   "cpu": "",
-   "ram": null,
-   "gpu": "",
-   "gpuDetail": "",
-   "storage": "",
-   "display": "27\" 1920x1080 240Hz",
-   "psrefUrl": "https://psref.lenovo.com/detail/Legion_27_10_Monitor?M=68C5GAC4PH",
-   "datasheetUrl": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/datasheet/Legion-27-10-Monitor_Gaming_Datasheet_9582R4-201125_AEM.pdf",
-   "productUrl": "https://www.lenovo.com/ph/en/search?text=68C5GAC4PH",
+   "quickSpecs": "11\" 2.5K | MTD 6300 | 8GB | 128GB | 1Y CCI | 5G+ WIFI",
+   "color": "Polar Blue",
+   "srp": 24995,
+   "promoSrp": 22995,
+   "dp": 20695,
+   "bundle": "Folio Keyboard + Tab Pen",
+   "cpuBrand": "MediaTek",
+   "cpu": "MediaTek Dimensity 6300",
+   "ram": 8,
+   "gpu": "Integrated",
+   "gpuDetail": "Integrated Arm Mali-G57 MC2 GPU",
+   "storage": "128GB UFS 2.2",
+   "display": "11\" 2.5K (2560x1600) IPS 500nits Anti-fingerprint, 72% NTSC, 90Hz, Touch",
+   "psrefUrl": "https://psref.lenovo.com/detail/Idea_Tab?M=ZAFM0280PH",
+   "datasheetUrl": "",
+   "productUrl": "https://www.lenovo.com/ph/en/search?text=ZAFM0280PH",
    "images": [
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_27_10_Monitor/Compressedimage/Lenovo_Legion_27_10_CT2_01.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_27_10_Monitor/Compressedimage/Lenovo_Legion_27_10_CT1_01.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_27_10_Monitor/Compressedimage/Lenovo_Legion_27_10_CT1_02.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_27_10_Monitor/Compressedimage/Lenovo_Legion_27_10_CT2_02.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_27_10_Monitor/Compressedimage/Lenovo_Legion_27_10_CT2_03.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_27_10_Monitor/Compressedimage/Lenovo_Legion_27_10_CT2_04.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_27_10_Monitor/Compressedimage/Lenovo_Legion_27_10_CT2_05.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Monitors/Legion_27_10_Monitor/Compressedimage/Lenovo_Legion_27_10_CT2_06.png"
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab/Compressedimage/Idea_Tab_CT1_13.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab/Compressedimage/Idea_Tab_CT1_11.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab/Compressedimage/Idea_Tab_CT1_14.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab/Compressedimage/Idea_Tab_CT2_05.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab/Compressedimage/Idea_Tab_CT2_07.png"
    ],
    "specs": [
     [
-     "Display Size",
-     "27\""
+     "Processor",
+     "MediaTek Dimensity 6300 (8C, 2x A76 @2.4GHz + 6x A55@2.0GHz)"
     ],
     [
-     "Panel",
-     "In-Plane Switching (IPS)"
+     "Graphics",
+     "Integrated Arm Mali-G57 MC2 GPU"
     ],
     [
-     "Backlight",
-     "WLED"
+     "Memory",
+     "8GB Soldered LPDDR4X"
     ],
     [
-     "Aspect Ratio",
-     "16:9"
+     "Storage",
+     "128GB UFS 2.2"
     ],
     [
-     "Resolution",
-     "1920x1080"
+     "Card Reader",
+     "Nano-SIM & microSD Card Slot"
     ],
     [
-     "Refresh Rate",
-     "240Hz"
-    ],
-    [
-     "Response Time",
-     "0.5 ms (MPRT) / 1 ms (Level 4) / 2 ms (Level 3) / 3 ms (Level 2) / 4 ms (Level 1)"
-    ],
-    [
-     "Brightness",
-     "300 cd/m²"
-    ],
-    [
-     "Contrast Ratio",
-     "1000:1"
-    ],
-    [
-     "Color Gamut",
-     "99% sRGB (CIE 1931)"
-    ],
-    [
-     "Color Support",
-     "16.7 Million"
-    ],
-    [
-     "View Angle (H / V)",
-     "178° / 178°"
-    ],
-    [
-     "Pixel Pitch",
-     "0.3108x0.3108 mm"
-    ],
-    [
-     "Screen Surface Treatment",
-     "Anti-glare"
-    ],
-    [
-     "Curvature",
-     "None"
-    ],
-    [
-     "Sync Technology",
-     "NVIDIA G-SYNC Compatible, VESA Adaptive Sync, AMD FreeSync Premium"
-    ],
-    [
-     "Special Features",
-     "HDR10 Compliance\nNVIDIA G-SYNC Compatible\nAMD FreeSync Premium\nVESA Adaptive Sync\nLenovo Artery (Accessories and Display Manager) support\nGaming Console Support\nNatural Low Blue Light"
-    ],
-    [
-     "Rear Ports",
-     "2x HDMI 2.1 TMDS\n1x DisplayPort 1.4 (HBR3)\n1x audio-out (3.5mm)"
+     "Max Storage Support",
+     "128GB UFS 2.2 on systemboard\nmicroSD card, supports up to 2TB (exFAT)"
     ],
     [
      "Speakers",
-     "None"
+     "4 speakers, optimized with Dolby Atmos"
     ],
     [
      "Camera",
-     "None"
+     "Front 5.0MP / Rear 8.0MP"
     ],
     [
-     "Stand",
-     "Tilt, Swivel, Pivot, Height Adjust Stand"
+     "VoiceCall",
+     "Voice Call"
     ],
     [
-     "Mounting",
-     "Supports VESA mount 100 x 100 mm"
+     "Sensors",
+     "Accelerometer sensor\nAmbient light sensor (ALS)\nHall sensor"
     ],
     [
-     "Side Bezel Width",
-     "1.8 mm"
+     "Battery",
+     "7040mAh (Typical)"
     ],
     [
-     "Power Consumption (Typical / Maximum)",
-     "20W / 36W"
+     "Display",
+     "11\" 2.5K (2560x1600) IPS 500nits Anti-fingerprint, 72% NTSC, 90Hz, Touch"
+    ],
+    [
+     "Touchscreen",
+     "In-cell, 10-point Multi-touch"
+    ],
+    [
+     "Keyboard",
+     "Non-backlit, English (US)"
     ],
     [
      "Dimensions (WxDxH)",
-     "Lowest Position | 613.1 x 214.0 x 401.5 mm\nHighest Position | 613.1 x 214.0 x 536.5 mm\nHead Only | 613.1 x 42.3 x 366.4 mm"
+     "254.59 x 166.15 x 6.99 mm (10.02 x 6.54 x 0.28 inches)"
     ],
     [
      "Weight",
-     "Monitor With Stand | 6 kg (13.2 lbs)\nMonitor Head Only | 3.9 kg (8.6 lbs)"
+     "480 g ± 10 g (1.06 lbs ± 0.02 lbs)"
     ],
     [
      "Case Color",
-     "Raven Black"
-    ],
-    [
-     "Ergonomic Certification",
-     "Eyesafe Display 2.0, TÜV Low Blue Light (Hardware solution)"
+     "Polar Blue"
     ],
     [
      "Operating System",
-     "Support Windows 10, Windows 11"
+     "Android 15 or Later"
     ],
     [
-     "In the Box",
-     "Monitor with stand\n1x HDMI 2.0 cable (1.8m)\n1x Power cable (1.8m)\n4x Screws\nQuick setup guide\nWarranty booklet"
+     "WLAN + Bluetooth",
+     "Wi-Fi 5, 802.11ac 1x1 + BT5.2"
+    ],
+    [
+     "WWAN",
+     "5G Sub-6 GHz"
+    ],
+    [
+     "Location Services",
+     "GPS + GLONASS + Galileo + A-GPS"
+    ],
+    [
+     "Standard Ports",
+     "1x USB-C (Hi-Speed USB / USB 2.0), with charging\n1x Headphone / microphone combo jack (3.5mm)\n1x Card slot"
+    ],
+    [
+     "Fingerprint Reader",
+     "No Fingerprint Reader"
     ],
     [
      "Base Warranty",
-     "3-year limited warranty"
+     "1-year, Carry-in"
+    ],
+    [
+     "Bundled Accessories",
+     "Lenovo Folio Keyboard + Lenovo Tab Pen"
+    ],
+    [
+     "Dust and Water Resistant",
+     "IP52"
     ]
    ],
    "upgrade": null,
    "added": "2026-10-01",
    "order": 19,
+   "views": 0,
+   "newArrival": 0
+  },
+  {
+   "id": "ZAFM0245PH",
+   "mtm": "ZAFM0245PH",
+   "model": "Idea Tab",
+   "name": "Idea Tab",
+   "category": "Tablet",
+   "status": "tablets",
+   "eta": "",
+   "quickSpecs": "11\" 2.5K | MTD 6300 | 8GB | 128GB | 1Y CCI | 5G+ WIFI",
+   "color": "Luna Grey",
+   "srp": 24995,
+   "promoSrp": 22995,
+   "dp": 20695,
+   "bundle": "Folio Keyboard + Tab Pen",
+   "cpuBrand": "MediaTek",
+   "cpu": "MediaTek Dimensity 6300",
+   "ram": 8,
+   "gpu": "Integrated",
+   "gpuDetail": "Integrated Arm Mali-G57 MC2 GPU",
+   "storage": "128GB UFS 2.2",
+   "display": "11\" 2.5K (2560x1600) IPS 500nits Anti-fingerprint, 72% NTSC, 90Hz, Touch",
+   "psrefUrl": "https://psref.lenovo.com/detail/Idea_Tab?M=ZAFM0245PH",
+   "datasheetUrl": "",
+   "productUrl": "https://www.lenovo.com/ph/en/search?text=ZAFM0245PH",
+   "images": [
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab/Compressedimage/Idea_Tab_CT1_05.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab/Compressedimage/Idea_Tab_CT1_07.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab/Compressedimage/Idea_Tab_CT2_01.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab/Compressedimage/Idea_Tab_CT2_03.png"
+   ],
+   "specs": [
+    [
+     "Processor",
+     "MediaTek Dimensity 6300 (8C, 2x A76 @2.4GHz + 6x A55@2.0GHz)"
+    ],
+    [
+     "Graphics",
+     "Integrated Arm Mali-G57 MC2 GPU"
+    ],
+    [
+     "Memory",
+     "8GB Soldered LPDDR4X"
+    ],
+    [
+     "Storage",
+     "128GB UFS 2.2"
+    ],
+    [
+     "Card Reader",
+     "Nano-SIM & microSD Card Slot"
+    ],
+    [
+     "Max Storage Support",
+     "128GB UFS 2.2 on systemboard\nmicroSD card, supports up to 2TB (exFAT)"
+    ],
+    [
+     "Speakers",
+     "4 speakers, optimized with Dolby Atmos"
+    ],
+    [
+     "Camera",
+     "Front 5.0MP / Rear 8.0MP"
+    ],
+    [
+     "VoiceCall",
+     "Voice Call"
+    ],
+    [
+     "Sensors",
+     "Accelerometer sensor\nAmbient light sensor (ALS)\nHall sensor"
+    ],
+    [
+     "Battery",
+     "7040mAh (Typical)"
+    ],
+    [
+     "Display",
+     "11\" 2.5K (2560x1600) IPS 500nits Anti-fingerprint, 72% NTSC, 90Hz, Touch"
+    ],
+    [
+     "Touchscreen",
+     "In-cell, 10-point Multi-touch"
+    ],
+    [
+     "Keyboard",
+     "Non-backlit, English (US)"
+    ],
+    [
+     "Dimensions (WxDxH)",
+     "254.59 x 166.15 x 6.99 mm (10.02 x 6.54 x 0.28 inches)"
+    ],
+    [
+     "Weight",
+     "480 g ± 10 g (1.06 lbs ± 0.02 lbs)"
+    ],
+    [
+     "Case Color",
+     "Luna Grey"
+    ],
+    [
+     "Operating System",
+     "Android 15 or Later"
+    ],
+    [
+     "WLAN + Bluetooth",
+     "Wi-Fi 5, 802.11ac 1x1 + BT5.2"
+    ],
+    [
+     "WWAN",
+     "5G Sub-6 GHz"
+    ],
+    [
+     "Location Services",
+     "GPS + GLONASS + Galileo + A-GPS"
+    ],
+    [
+     "Standard Ports",
+     "1x USB-C (Hi-Speed USB / USB 2.0), with charging\n1x Headphone / microphone combo jack (3.5mm)\n1x Card slot"
+    ],
+    [
+     "Fingerprint Reader",
+     "No Fingerprint Reader"
+    ],
+    [
+     "Base Warranty",
+     "1-year, Carry-in"
+    ],
+    [
+     "Bundled Accessories",
+     "Lenovo Folio Keyboard + Lenovo Tab Pen"
+    ],
+    [
+     "Dust and Water Resistant",
+     "IP52"
+    ]
+   ],
+   "upgrade": null,
+   "added": "2026-10-01",
+   "order": 20,
+   "views": 0,
+   "newArrival": 0
+  },
+  {
+   "id": "ZAE40017PH",
+   "mtm": "ZAE40017PH",
+   "model": "Idea Tab Pro",
+   "name": "Idea Tab Pro",
+   "category": "Tablet",
+   "status": "tablets",
+   "eta": "",
+   "quickSpecs": "12.7\" 3K | MTD 8300 | 8GB | 256GB | 1Y CCI",
+   "color": "Luna Grey",
+   "srp": 27995,
+   "promoSrp": null,
+   "dp": 25195,
+   "bundle": "Tab Pen Plus",
+   "cpuBrand": "MediaTek",
+   "cpu": "MediaTek Dimensity 8300",
+   "ram": 8,
+   "gpu": "Integrated",
+   "gpuDetail": "Integrated ARM G615 MC5",
+   "storage": "256GB UFS 4.0",
+   "display": "12.7\" 3K (2944x1840) LTPS, IPS 400nits, Glossy, 144Hz, Touch",
+   "psrefUrl": "https://psref.lenovo.com/detail/Idea_Tab_Pro?M=ZAE40017PH",
+   "datasheetUrl": "",
+   "productUrl": "https://www.lenovo.com/ph/en/search?text=ZAE40017PH",
+   "images": [
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab_Pro/Compressedimage/Idea_Tab_Pro_CT1_04.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab_Pro/Compressedimage/Idea_Tab_Pro_CT2_01.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab_Pro/Compressedimage/Idea_Tab_Pro_CT2_02.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab_Pro/Compressedimage/Idea_Tab_Pro_CT2_04.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab_Pro/Compressedimage/Idea_Tab_Pro_CT1_03.png"
+   ],
+   "specs": [
+    [
+     "Processor",
+     "MediaTek Dimensity 8300 (8C, 1x A715 @3.35GHz + 3x A715@3.2GHz + 4x A510@2.2GHz)"
+    ],
+    [
+     "Graphics",
+     "Integrated ARM G615 MC5"
+    ],
+    [
+     "Memory",
+     "8GB Soldered LPDDR5X"
+    ],
+    [
+     "Storage",
+     "256GB UFS 4.0"
+    ],
+    [
+     "Card Reader",
+     "microSD Card Slot"
+    ],
+    [
+     "Max Storage Support",
+     "256GB UFS 4.0 on systemboard\nmicroSD card, supports up to 1TB (exFAT)"
+    ],
+    [
+     "Speakers",
+     "4 JBL speakers, optimized with Dolby Atmos"
+    ],
+    [
+     "Camera",
+     "Front 8.0MP / Rear 13.0MP with Flashlight"
+    ],
+    [
+     "VoiceCall",
+     "No"
+    ],
+    [
+     "Sensors",
+     "Accelerometer + Gyroscope sensor\nHall sensor\nRGB sensor"
+    ],
+    [
+     "Battery",
+     "10200mAh (Typical)"
+    ],
+    [
+     "Display",
+     "12.7\" 3K (2944x1840) LTPS, IPS 400nits, Glossy, 144Hz, Touch"
+    ],
+    [
+     "Touchscreen",
+     "In-cell, 10-point Multi-touch"
+    ],
+    [
+     "Keyboard",
+     "None"
+    ],
+    [
+     "Dimensions (WxDxH)",
+     "291.8 x 189.1 x 6.9 mm excluding camera bump (11.49 x 7.44 x 0.27 inches)"
+    ],
+    [
+     "Weight",
+     "Around 620 g (1.37 lbs)"
+    ],
+    [
+     "Case Color",
+     "Luna Grey"
+    ],
+    [
+     "Operating System",
+     "Android 14 or Later"
+    ],
+    [
+     "WLAN + Bluetooth",
+     "Wi-Fi 6E, 802.11ax 2x2 + BT5.3"
+    ],
+    [
+     "Location Services",
+     "GPS + GLONASS + Galileo"
+    ],
+    [
+     "Standard Ports",
+     "1x USB-C (USB 5Gbps / USB 3.2 Gen 1), with charging, DP-Out and audio\n1x microSD card slot\n1x Pogo pin connector (3-point)"
+    ],
+    [
+     "Fingerprint Reader",
+     "Touch Style, Integrated in Power Button"
+    ],
+    [
+     "Base Warranty",
+     "1-year, Carry-in"
+    ],
+    [
+     "Bundled Accessories",
+     "Lenovo Tab Pen Plus"
+    ],
+    [
+     "Dust and Water Resistant",
+     "IP52"
+    ]
+   ],
+   "upgrade": null,
+   "added": "2026-10-01",
+   "order": 21,
+   "views": 0,
+   "newArrival": 0
+  },
+  {
+   "id": "ZAGF0151PH",
+   "mtm": "ZAGF0151PH",
+   "model": "Idea Tab Plus",
+   "name": "Idea Tab Plus",
+   "category": "Tablet",
+   "status": "tablets",
+   "eta": "",
+   "quickSpecs": "12.1\" 2.5K | MTD 6400 | 8GB | 256GB | 1Y CCI",
+   "color": "Luna Grey",
+   "srp": 32995,
+   "promoSrp": 30995,
+   "dp": 27895,
+   "bundle": "Folio Keyboard + Tab Pen + E310 True Wireless Stereo Earbuds",
+   "cpuBrand": "MediaTek",
+   "cpu": "MediaTek Dimensity 6400",
+   "ram": 8,
+   "gpu": "Integrated",
+   "gpuDetail": "Integrated Arm Mali-G57 MC2 GPU",
+   "storage": "256GB UFS 2.2",
+   "display": "12.1\" 2.5K (2560x1600) IPS 600nits (typical) / 800nits (HBM), 96% DCI-P3, 90Hz, Touch",
+   "psrefUrl": "https://psref.lenovo.com/detail/Idea_Tab_Plus?M=ZAGF0151PH",
+   "datasheetUrl": "",
+   "productUrl": "https://www.lenovo.com/ph/en/search?text=ZAGF0151PH",
+   "images": [
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab_Plus/Compressedimage/Idea_Tab_Plus_CT1_04.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab_Plus/Compressedimage/Idea_Tab_Plus_CT2_05.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab_Plus/Compressedimage/Idea_Tab_Plus_CT2_06.png",
+    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Lenovo_Tablets/Idea_Tab_Plus/Compressedimage/Idea_Tab_Plus_CT2_07.png"
+   ],
+   "specs": [
+    [
+     "Processor",
+     "MediaTek Dimensity 6400 (8C, 2x A76 @2.5GHz + 6x A55@2.0GHz)"
+    ],
+    [
+     "Graphics",
+     "Integrated Arm Mali-G57 MC2 GPU"
+    ],
+    [
+     "Memory",
+     "8GB Soldered LPDDR4X"
+    ],
+    [
+     "Storage",
+     "256GB UFS 2.2"
+    ],
+    [
+     "Card Reader",
+     "Nano-SIM & microSD Card Slot"
+    ],
+    [
+     "Max Storage Support",
+     "256GB UFS 2.2 on systemboard\nmicroSD card, supports up to 2TB (exFAT)"
+    ],
+    [
+     "Speakers",
+     "4 speakers, optimized with Dolby Atmos"
+    ],
+    [
+     "Camera",
+     "Front 8.0MP / Rear 13.0MP"
+    ],
+    [
+     "VoiceCall",
+     "Voice Call"
+    ],
+    [
+     "Sensors",
+     "Accelerometer sensor\nAmbient light sensor (ALS)\nHall sensor"
+    ],
+    [
+     "Battery",
+     "10200mAh (Typical)"
+    ],
+    [
+     "Display",
+     "12.1\" 2.5K (2560x1600) IPS 600nits (typical) / 800nits (HBM), 96% DCI-P3, 90Hz, Touch"
+    ],
+    [
+     "Touchscreen",
+     "10-point Multi-touch"
+    ],
+    [
+     "Keyboard",
+     "Non-backlit, English (US)"
+    ],
+    [
+     "Dimensions (WxDxH)",
+     "278.8 x 181.05 x 6.49 mm (10.98 x 7.13 x 0.26 inches)"
+    ],
+    [
+     "Weight",
+     "Around 530 g (1.17 lbs)"
+    ],
+    [
+     "Case Color",
+     "Luna Grey"
+    ],
+    [
+     "Operating System",
+     "Android 15 or Later"
+    ],
+    [
+     "WLAN + Bluetooth",
+     "Wi-Fi 5, 802.11ac 1x1 + BT5.2"
+    ],
+    [
+     "WWAN",
+     "5G Sub-6 GHz"
+    ],
+    [
+     "Location Services",
+     "GPS + GLONASS + Galileo + A-GPS"
+    ],
+    [
+     "Standard Ports",
+     "1x USB-C (Hi-Speed USB / USB 2.0), with charging\n1x Card slot\n1x Pogo pin connector (3-point)"
+    ],
+    [
+     "Fingerprint Reader",
+     "No Fingerprint Reader"
+    ],
+    [
+     "Base Warranty",
+     "1-year, Carry-in"
+    ],
+    [
+     "Bundled Accessories",
+     "Lenovo Folio Keyboard for Idea Tab Plus + Lenovo Tab Pen + Lenovo E310 True Wireless Stereo Earbuds"
+    ],
+    [
+     "Dust and Water Resistant",
+     "IP52"
+    ]
+   ],
+   "upgrade": null,
+   "added": "2026-10-01",
+   "order": 22,
    "views": 0,
    "newArrival": 0
   },
@@ -3675,7 +4039,7 @@
    ],
    "upgrade": null,
    "added": "2026-10-01",
-   "order": 20,
+   "order": 23,
    "views": 0,
    "newArrival": 0
   },
@@ -3844,7 +4208,7 @@
     "recommendation": "Single SODIMM slot is occupied: replace the 16GB module with a 32GB DDR5-5600 SODIMM to reach 32GB (runs single-channel). SSD can be replaced up to 1TB M.2 2242."
    },
    "added": "2026-10-01",
-   "order": 21,
+   "order": 24,
    "views": 0,
    "newArrival": 0
   },
@@ -4014,7 +4378,7 @@
     "recommendation": "Strongly recommended: add an 8GB DDR5-5600 SODIMM for 16GB dual-channel (this also enables Intel Arc graphics). One M.2 2280 PCIe 4.0 slot is free for a second SSD."
    },
    "added": "2026-10-01",
-   "order": 22,
+   "order": 25,
    "views": 0,
    "newArrival": 0
   }

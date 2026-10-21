@@ -4,7 +4,7 @@ This folder is the public website. Upload everything in it to GitHub.
 
 What's on the site
 ------------------
-- Catalog with two tabs: Onhand and Incoming.
+- Catalog with three tabs: Onhand, Tablets and Incoming.
 - Filters for category, CPU brand, RAM and GPU, plus a search that updates as you type.
 - Five sort options, and a grid or list view.
 - A Copy button on every product card. One click copies the model, MTM, specs, SRP and DP.
