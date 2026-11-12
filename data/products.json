@@ -1,7 +1,7 @@
 {
- "version": "20261021122134",
- "priceListName": "Iontech PL - Lenovo Oct 2026",
- "updatedAt": "2026-10-21",
+ "version": "20261112135622",
+ "priceListName": "Iontech PL - Lenovo Nov 2026",
+ "updatedAt": "2026-11-12",
  "adminPinHash": "b2613e92c6045bb9a608cbaa36a055209fb3c6d2780e42f6778f319917e76163",
  "products": [
   {
@@ -341,174 +341,6 @@
    "newArrival": 0
   },
   {
-   "id": "82XQ01MJPH",
-   "mtm": "82XQ01MJPH",
-   "model": "IdeaPad Slim 3 15AMN8",
-   "name": "IdeaPad Slim 3 15AMN8",
-   "category": "IdeaPad",
-   "status": "onhand",
-   "eta": "",
-   "quickSpecs": "15.6\" FHD | R3 30 | 8GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
-   "color": "Arctic Grey",
-   "srp": 50995,
-   "promoSrp": 44995,
-   "dp": 38245,
-   "bundle": "B210 Backpack",
-   "cpuBrand": "AMD",
-   "cpu": "AMD Ryzen 3 30",
-   "ram": 8,
-   "gpu": "Integrated",
-   "gpuDetail": "Integrated AMD Radeon 610M Graphics",
-   "storage": "512GB SSD M.2 2242 PCIe 4.0x4 NVMe",
-   "display": "15.6\" FHD (1920x1080) TN 250nits Anti-glare",
-   "psrefUrl": "https://psref.lenovo.com/detail/IdeaPad_Slim_3_15AMN8?M=82XQ01MJPH",
-   "datasheetUrl": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/datasheet/IdeaPad-Slim-3-14-15-16-8_AMD_datasheet_EN.pdf",
-   "productUrl": "https://www.lenovo.com/ph/en/search?text=82XQ01MJPH",
-   "images": [
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT1_05.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT1_06.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT2_13.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT2_14.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT2_15.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT2_16.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT2_17.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/IdeaPad/IdeaPad_Slim_3_15AMN8/Compressedimage/IdeaPad_Slim_3_15AMN8_CT2_18.png"
-   ],
-   "specs": [
-    [
-     "Processor",
-     "AMD Ryzen 3 30 (4C / 8T, 2.4 / 4.1GHz, 2MB L2 / 4MB L3)"
-    ],
-    [
-     "Graphics",
-     "Integrated AMD Radeon 610M Graphics"
-    ],
-    [
-     "Memory",
-     "8GB Soldered LPDDR5-5500"
-    ],
-    [
-     "Memory Slots",
-     "Memory soldered to systemboard, no slots, dual-channel"
-    ],
-    [
-     "Max Memory",
-     "8GB soldered memory, not upgradable"
-    ],
-    [
-     "Storage",
-     "512GB SSD M.2 2242 PCIe 4.0x4 NVMe"
-    ],
-    [
-     "Storage Slot",
-     "One M.2 PCIe 3.0 x2 slot"
-    ],
-    [
-     "Max Storage Support",
-     "One drive, up to 1TB M.2 2242 SSD"
-    ],
-    [
-     "Card Reader",
-     "SD Card Reader"
-    ],
-    [
-     "Speakers",
-     "User-facing stereo speakers, 1.5W x2, optimized with Dolby Audio"
-    ],
-    [
-     "Camera",
-     "HD 720p with Privacy Shutter"
-    ],
-    [
-     "Battery",
-     "47Wh"
-    ],
-    [
-     "Display",
-     "15.6\" FHD (1920x1080) TN 250nits Anti-glare"
-    ],
-    [
-     "Touchscreen",
-     "None"
-    ],
-    [
-     "Keyboard",
-     "Non-backlit, English"
-    ],
-    [
-     "Dimensions (WxDxH)",
-     "359.3 x 235 x 17.9 mm (14.15 x 9.25 x 0.70 inches)"
-    ],
-    [
-     "Weight",
-     "Starting at 1.62 kg (3.57 lbs)"
-    ],
-    [
-     "Case Color",
-     "Arctic Grey"
-    ],
-    [
-     "Operating System",
-     "Windows 11 Home Single Language, English"
-    ],
-    [
-     "Bundled Software",
-     "Microsoft 365 Basic + Office Home 2024"
-    ],
-    [
-     "WLAN + Bluetooth",
-     "Wi-Fi 6, 802.11ax 2x2 + BT5.2"
-    ],
-    [
-     "Ethernet",
-     "No Onboard Ethernet"
-    ],
-    [
-     "Standard Ports",
-     "2x USB 3.2 Gen 1\n1x USB-C 3.2 Gen 1 (support data transfer, USB PD 45-65W and DisplayPort 1.2)\n1x HDMI 1.4\n1x Headphone / microphone combo jack (3.5mm)\n1x Card reader\n1x Round tip power connector"
-    ],
-    [
-     "Security Chip",
-     "Firmware TPM 2.0 Enabled"
-    ],
-    [
-     "Fingerprint Reader",
-     "No Fingerprint Reader"
-    ],
-    [
-     "Other Security",
-     "Camera privacy shutter"
-    ],
-    [
-     "Base Warranty",
-     "1-year, Courier or Carry-in"
-    ],
-    [
-     "Included Upgrade",
-     "2Y Premium Care -IPENTRY (ESS)"
-    ],
-    [
-     "Bundled Accessories",
-     "None"
-    ]
-   ],
-   "upgrade": {
-    "ramInstalled": "8GB LPDDR5-5500 (soldered)",
-    "ramSlots": 0,
-    "ramSlotsFree": 0,
-    "ramMax": "8GB (not upgradable)",
-    "ssdInstalled": "512GB M.2 2242 PCIe 4.0 NVMe",
-    "ssdSlots": 1,
-    "ssdSlotsFree": 0,
-    "ssdMax": "1TB (one M.2 2242 drive)",
-    "recommendation": "RAM is soldered and cannot be upgraded. The 512GB SSD can be swapped for a 1TB M.2 2242 PCIe NVMe SSD (slot runs at PCIe 3.0 x2)."
-   },
-   "added": "2026-10-01",
-   "order": 2,
-   "views": 0,
-   "newArrival": 0
-  },
-  {
    "id": "83RR007EPH",
    "mtm": "83RR007EPH",
    "model": "IdeaPad Slim 3 15IWC11",
@@ -677,7 +509,7 @@
     "recommendation": "Single SODIMM slot is occupied: replace the 16GB module with a 32GB DDR5-5600 SODIMM to reach 32GB (runs single-channel). SSD can be replaced up to 1TB M.2 2242."
    },
    "added": "2026-10-01",
-   "order": 3,
+   "order": 2,
    "views": 0,
    "newArrival": 0
   },
@@ -845,7 +677,7 @@
     "recommendation": "RAM is soldered and cannot be upgraded. The 512GB SSD can be swapped for a 1TB M.2 2242 PCIe NVMe SSD."
    },
    "added": "2026-10-01",
-   "order": 4,
+   "order": 3,
    "views": 0,
    "newArrival": 0
   },
@@ -1012,7 +844,7 @@
     "recommendation": "RAM is already at the 16GB maximum. One M.2 2242 slot is free: add a second SSD up to 1TB for extra storage."
    },
    "added": "2026-10-01",
-   "order": 5,
+   "order": 4,
    "views": 0,
    "newArrival": 0
   },
@@ -1181,9 +1013,9 @@
     "recommendation": "Single SODIMM slot is occupied: replace the 16GB module with a 32GB DDR5-5600 SODIMM to reach 32GB (runs single-channel). SSD can be replaced up to 1TB M.2 2242."
    },
    "added": "2026-10-01",
-   "order": 6,
+   "order": 5,
    "views": 0,
-   "newArrival": 1
+   "newArrival": 0
   },
   {
    "id": "83UN0024PH",
@@ -1361,9 +1193,9 @@
     "recommendation": "Recommended: add an 8GB DDR5-5600 SODIMM for 16GB dual-channel, or 2x 16GB for 32GB. The M.2 2280 PCIe 4.0 slot is free for a second SSD."
    },
    "added": "2026-10-01",
-   "order": 7,
+   "order": 6,
    "views": 0,
-   "newArrival": 2
+   "newArrival": 0
   },
   {
    "id": "83UM001PPH",
@@ -1541,7 +1373,7 @@
     "recommendation": "Both RAM slots are used: replace with 2x 16GB DDR5-5600 SODIMM to reach 32GB. The M.2 2280 PCIe 4.0 slot is free for a second SSD."
    },
    "added": "2026-10-01",
-   "order": 8,
+   "order": 7,
    "views": 0,
    "newArrival": 0
   },
@@ -1721,7 +1553,7 @@
     "recommendation": "RAM is soldered and cannot be upgraded. The SSD can be replaced with a 1TB M.2 2242 PCIe 4.0 NVMe drive."
    },
    "added": "2026-10-01",
-   "order": 9,
+   "order": 8,
    "views": 0,
    "newArrival": 0
   },
@@ -1897,7 +1729,7 @@
     "recommendation": "RAM is soldered and cannot be upgraded. The SSD can be replaced with an M.2 2242 PCIe 4.0 NVMe drive up to 2TB."
    },
    "added": "2026-10-01",
-   "order": 10,
+   "order": 9,
    "views": 0,
    "newArrival": 0
   },
@@ -2077,7 +1909,7 @@
     "recommendation": "RAM is soldered and cannot be upgraded. The SSD can be replaced with an M.2 2242 PCIe 4.0 NVMe drive up to 2TB."
    },
    "added": "2026-10-01",
-   "order": 11,
+   "order": 10,
    "views": 0,
    "newArrival": 0
   },
@@ -2257,9 +2089,9 @@
     "recommendation": "Strongly recommended: add an 8GB DDR5-5200 SODIMM for 16GB dual-channel, or replace with 2x 16GB for 32GB. One M.2 2280 slot is free for a second SSD up to 1TB."
    },
    "added": "2026-10-01",
-   "order": 12,
+   "order": 11,
    "views": 0,
-   "newArrival": 3
+   "newArrival": 0
   },
   {
    "id": "83JE01NBPH",
@@ -2437,7 +2269,7 @@
     "recommendation": "Add a matching 16GB DDR5-5600 SODIMM in the free slot for 32GB dual-channel. One M.2 2280 PCIe 4.0 slot is free for a second SSD."
    },
    "added": "2026-10-01",
-   "order": 13,
+   "order": 12,
    "views": 0,
    "newArrival": 0
   },
@@ -2617,9 +2449,9 @@
     "recommendation": "Strongly recommended: add an 8GB DDR5-5600 SODIMM for 16GB dual-channel, or replace with 2x 16GB for 32GB. One M.2 2280 slot is free for a second SSD."
    },
    "added": "2026-10-01",
-   "order": 14,
+   "order": 13,
    "views": 0,
-   "newArrival": 4
+   "newArrival": 0
   },
   {
    "id": "83Q600AAPH",
@@ -2801,7 +2633,7 @@
     "recommendation": "Add a matching 16GB DDR5-5600 SODIMM for 32GB dual-channel. One M.2 2280 slot is free for a second SSD up to 2TB."
    },
    "added": "2026-10-01",
-   "order": 15,
+   "order": 14,
    "views": 0,
    "newArrival": 0
   },
@@ -2985,191 +2817,7 @@
     "recommendation": "Add a matching 16GB DDR5-5600 SODIMM for 32GB dual-channel. One M.2 2280 slot is free for a second SSD up to 2TB."
    },
    "added": "2026-10-01",
-   "order": 16,
-   "views": 0,
-   "newArrival": 0
-  },
-  {
-   "id": "83F500JFPH",
-   "mtm": "83F500JFPH",
-   "model": "Legion Pro 7 FIFA",
-   "name": "Legion Pro 7 16IAX10H",
-   "category": "Legion",
-   "status": "onhand",
-   "eta": "",
-   "quickSpecs": "16\" WQXGA OLED 240Hz | Ultra 9 275HX | 2x16GB | 1TB | RTX 5070Ti | Win11 | Office Home 2024 + Lenovo AI Now | 3Y LUS",
-   "color": "Eclipse Black",
-   "srp": 230995,
-   "promoSrp": null,
-   "dp": 196345,
-   "bundle": "GX41M53147 GB700 Backpack",
-   "cpuBrand": "Intel",
-   "cpu": "Intel Core Ultra 9 275HX",
-   "ram": 32,
-   "gpu": "RTX 5070 Ti",
-   "gpuDetail": "NVIDIA GeForce RTX 5070 Ti 12GB GDDR7, Boost Clock 2220MHz, TGP 140W, 992 AI TOPS",
-   "storage": "1TB SSD M.2 2242 PCIe 4.0x4 NVMe",
-   "display": "16\" WQXGA (2560x1600) OLED 500nits (typical) / 1100nits (peak) Glossy, 100% DCI-P3, 240Hz, DisplayHDR True Black 1000, Dolby Vision, G-SYNC, Low Blue Light, High Gaming Performance, Flicker Free",
-   "psrefUrl": "https://psref.lenovo.com/l/Detail/Legion_Pro_7_16IAX10H?M=83F500JFPH",
-   "datasheetUrl": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/datasheet/Legion_Pro_7_16IAX10H_Datasheet_EN .pdf",
-   "productUrl": "https://www.lenovo.com/ph/en/search?text=83F500JFPH",
-   "images": [
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Legion/Legion_Pro_7_16IAX10H/Compressedimage/Legion_Pro_7_16IAX10H_CT1_03.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Legion/Legion_Pro_7_16IAX10H/Compressedimage/Legion_Pro_7_16IAX10H_CT1_01.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Legion/Legion_Pro_7_16IAX10H/Compressedimage/Legion_Pro_7_16IAX10H_CT1_02.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Legion/Legion_Pro_7_16IAX10H/Compressedimage/Legion_Pro_7_16IAX10H_CT1_04.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Legion/Legion_Pro_7_16IAX10H/Compressedimage/Legion_Pro_7_16IAX10H_CT1_05.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Legion/Legion_Pro_7_16IAX10H/Compressedimage/Legion_Pro_7_16IAX10H_CT1_06.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Legion/Legion_Pro_7_16IAX10H/Compressedimage/Legion_Pro_7_16IAX10H_CT1_07.png",
-    "https://psrefstuff.lenovo.com/syspool//Sys/Image/Legion/Legion_Pro_7_16IAX10H/Compressedimage/Legion_Pro_7_16IAX10H_CT1_08.png"
-   ],
-   "specs": [
-    [
-     "Processor",
-     "Intel Core Ultra 9 275HX, 24C (8P + 16E) / 24T, Max Turbo up to 5.4GHz, 36MB Intel Smart Cache"
-    ],
-    [
-     "AI PC Category",
-     "AI-Powered Gaming PC"
-    ],
-    [
-     "NPU",
-     "Integrated Intel AI Boost, up to 13 TOPS"
-    ],
-    [
-     "Graphics",
-     "NVIDIA GeForce RTX 5070 Ti 12GB GDDR7, Boost Clock 2220MHz, TGP 140W, 992 AI TOPS"
-    ],
-    [
-     "Memory",
-     "2x 16GB CSODIMM DDR5-6400"
-    ],
-    [
-     "Memory Slots",
-     "Two DDR5 CSODIMM slots, dual-channel capable"
-    ],
-    [
-     "Max Memory",
-     "Up to 64GB DDR5-6400 offering"
-    ],
-    [
-     "Storage",
-     "1TB SSD M.2 2242 PCIe 4.0x4 NVMe"
-    ],
-    [
-     "Storage Slot",
-     "Two M.2 slots • One M.2 2280 PCIe 5.0 x4 slot • One M.2 2280 PCIe 4.0 x4 slot"
-    ],
-    [
-     "Max Storage Support",
-     "Up to two drives, 2x M.2 SSD • M.2 2242 SSD up to 1TB • M.2 2280 SSD up to 2TB"
-    ],
-    [
-     "Card Reader",
-     "No Card Reader"
-    ],
-    [
-     "Speakers",
-     "4 stereo speakers, 2W x2 (woofers), 2W x2 (tweeters), optimized with Nahimic Audio, Smart Amplifier (AMP)"
-    ],
-    [
-     "Camera",
-     "5.0MP with E-shutter"
-    ],
-    [
-     "Battery",
-     "80Wh"
-    ],
-    [
-     "Special Features",
-     "AI Chip: LA3"
-    ],
-    [
-     "Display",
-     "16\" WQXGA (2560x1600) OLED 500nits (typical) / 1100nits (peak) Glossy, 100% DCI-P3, 240Hz, DisplayHDR True Black 1000, Dolby Vision, G-SYNC, Low Blue Light, High Gaming Performance, Flicker Free"
-    ],
-    [
-     "Touchscreen",
-     "None"
-    ],
-    [
-     "Color Calibration",
-     "Factory Color Calibration"
-    ],
-    [
-     "Keyboard",
-     "Per-key RGB Backlit, English"
-    ],
-    [
-     "Dimensions (WxDxH)",
-     "364.38 x 275.94 x 21.9-26.65 mm (14.35 x 10.86 x 0.86-1.05 inches)"
-    ],
-    [
-     "Weight",
-     "Starting at 2.57 kg (5.67 lbs)"
-    ],
-    [
-     "Case Color",
-     "Eclipse Black"
-    ],
-    [
-     "Operating System",
-     "Windows 11 Home Single Language, English"
-    ],
-    [
-     "Bundled Software",
-     "Office Home 2024 + Lenovo AI Now"
-    ],
-    [
-     "WLAN + Bluetooth",
-     "Wi-Fi 7, 802.11be 2x2 + BT5.4"
-    ],
-    [
-     "Ethernet",
-     "2.5GbE (RJ-45)"
-    ],
-    [
-     "Standard Ports",
-     "1x Slim tip (rectangle) power connector\n2x USB-A (USB 5Gbps / USB 3.2 Gen 1)\n1x USB-A (USB 10Gbps / USB 3.2 Gen 2), Always On\n1x USB-C (USB 10Gbps / USB 3.2 Gen 2), with USB PD 95-100W and DisplayPort 2.1\n1x Thunderbolt 4 / USB4 40Gbps (support data transfer and DisplayPort 2.1)\n1x HDMI 2.1, up to 8K/60Hz\n1x Headphone / microphone combo jack (3.5mm)\n1x Ethernet (2.5GbE RJ-45)"
-    ],
-    [
-     "Security Chip",
-     "Firmware TPM 2.0 Enabled"
-    ],
-    [
-     "Fingerprint Reader",
-     "No Fingerprint Reader"
-    ],
-    [
-     "Other Security",
-     "E-shutter"
-    ],
-    [
-     "Base Warranty",
-     "1-year, Courier or Carry-in"
-    ],
-    [
-     "Included Upgrade",
-     "3Y Legion Ultimate Support -IPPREM (ESS)"
-    ],
-    [
-     "Bundled Accessories",
-     "4 Switchable Keycaps"
-    ]
-   ],
-   "upgrade": {
-    "ramInstalled": "32GB DDR5-6400 (2x 16GB CSODIMM)",
-    "ramSlots": 2,
-    "ramSlotsFree": 0,
-    "ramMax": "64GB DDR5-6400",
-    "ssdInstalled": "1TB M.2 2242 PCIe 4.0 NVMe",
-    "ssdSlots": 2,
-    "ssdSlotsFree": 1,
-    "ssdMax": "3TB (M.2 2242 up to 1TB + M.2 2280 up to 2TB)",
-    "recommendation": "Both memory slots are used: replace with 2x 32GB DDR5-6400 CSODIMM to reach 64GB. One M.2 2280 slot is free for a second SSD up to 2TB (one slot supports PCIe 5.0)."
-   },
-   "added": "2026-10-01",
-   "order": 17,
+   "order": 15,
    "views": 0,
    "newArrival": 0
   },
@@ -3307,7 +2955,7 @@
    ],
    "upgrade": null,
    "added": "2026-10-01",
-   "order": 18,
+   "order": 16,
    "views": 0,
    "newArrival": 0
   },
@@ -3450,7 +3098,7 @@
    ],
    "upgrade": null,
    "added": "2026-10-01",
-   "order": 19,
+   "order": 17,
    "views": 0,
    "newArrival": 0
   },
@@ -3592,7 +3240,7 @@
    ],
    "upgrade": null,
    "added": "2026-10-01",
-   "order": 20,
+   "order": 18,
    "views": 0,
    "newArrival": 0
   },
@@ -3731,7 +3379,7 @@
    ],
    "upgrade": null,
    "added": "2026-10-01",
-   "order": 21,
+   "order": 19,
    "views": 0,
    "newArrival": 0
   },
@@ -3873,7 +3521,7 @@
    ],
    "upgrade": null,
    "added": "2026-10-01",
-   "order": 22,
+   "order": 20,
    "views": 0,
    "newArrival": 0
   },
@@ -3884,7 +3532,7 @@
    "name": "Lenovo L34W-4C Monitor",
    "category": "Monitor",
    "status": "incoming",
-   "eta": "Oct W4",
+   "eta": "Dec W1",
    "quickSpecs": "34\" WQHD CURVE | 120Hz | 1ms | 2x HDMI 1x DP | 3Y CCI",
    "color": "Cloud Grey",
    "srp": 15995,
@@ -4039,7 +3687,7 @@
    ],
    "upgrade": null,
    "added": "2026-10-01",
-   "order": 23,
+   "order": 21,
    "views": 0,
    "newArrival": 0
   },
@@ -4049,8 +3697,8 @@
    "model": "IdeaPad Slim 3 15IWC11",
    "name": "IdeaPad Slim 3 15IWC11",
    "category": "IdeaPad",
-   "status": "incoming",
-   "eta": "Nov W1",
+   "status": "onhand",
+   "eta": "",
    "quickSpecs": "15.3\" WUXGA | Core 7 350 | 16GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
    "color": "Luna Grey",
    "srp": 83995,
@@ -4207,10 +3855,10 @@
     "ssdMax": "1TB (one M.2 2242 drive)",
     "recommendation": "Single SODIMM slot is occupied: replace the 16GB module with a 32GB DDR5-5600 SODIMM to reach 32GB (runs single-channel). SSD can be replaced up to 1TB M.2 2242."
    },
-   "added": "2026-10-01",
-   "order": 24,
+   "added": "2026-11-12",
+   "order": 22,
    "views": 0,
-   "newArrival": 0
+   "newArrival": 1
   },
   {
    "id": "83V60062PH",
@@ -4218,8 +3866,8 @@
    "model": "IdeaPad Slim 5 14IMH10",
    "name": "IdeaPad Slim 5 14IMH10",
    "category": "IdeaPad",
-   "status": "incoming",
-   "eta": "Nov W1",
+   "status": "onhand",
+   "eta": "",
    "quickSpecs": "14\" WUXGA | U5 135H | 8GB | 512GB | Win11 | Office Home 2024 + 1Y M365 | 2Y PC",
    "color": "Luna Grey",
    "srp": 74995,
@@ -4377,10 +4025,10 @@
     "ssdMax": "2 drives (M.2 2242 up to 1TB + free M.2 2280 slot)",
     "recommendation": "Strongly recommended: add an 8GB DDR5-5600 SODIMM for 16GB dual-channel (this also enables Intel Arc graphics). One M.2 2280 PCIe 4.0 slot is free for a second SSD."
    },
-   "added": "2026-10-01",
-   "order": 25,
+   "added": "2026-11-12",
+   "order": 23,
    "views": 0,
-   "newArrival": 0
+   "newArrival": 2
   }
  ]
 }
